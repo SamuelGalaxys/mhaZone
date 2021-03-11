@@ -89,20 +89,16 @@
 						<a href='https://www.symptoma.kr/ko/info/covid-19#info'>시간표</a> 
 
 						<!----
-
 						<li class="nav-item">
 							<a href="forms.html">
 								<i class="la la-bullseye"></i>
 								<p>건의 게시판</p>
-
 							</a>
 						</li>
-
 						<li class="nav-item">
 							<a href="forms.html">
 								<i class="la la-instagram"></i>
 								<p>@samuelgalaxys</p>
-
 							</a>
 						</li>
  
@@ -169,7 +165,7 @@
 											   <td style = "background : White ;">개인QT</td>
 												<td style = "background : #36e364;" rowspan="2"><a href="https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09">수요 예배</a></td>
 											   <td style = "background : White ;">개인QT</td>
-											   <td style = "background : Yellow ;"><a href="나도 아직 링크 없어ㅋㅋㅋㅋ">영어QT(아직링크없음)</a></td>
+											   <td style = "background : Yellow ;"><a href="나도 아직 링크 없어ㅋㅋㅋㅋ">영어QT</a></td>
 											  </tr>
 											   <tr>
 											   <th style = "background : #d9c6a7  ;">1교시 <br>(9:00-9:45) </br></th>
@@ -262,15 +258,15 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header bg-primary">
-					<h6 class="modal-title"><i class="la la-info-circle"></i> 서버 점검 안내</h6>
+					<h6 class="modal-title"><i class="la la-info-circle"></i> 알 림</h6>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body text-center">									
-					<p>일시 : 오늘 오후 6시~10시 </p>
+					<p>현재수업 바로가기 버튼(한국) 완성.</p>
  					<p></p>
-					<b>ddddddd.</b></p>
+					<b>현재수업 바로가기 버튼(필리핀) 추가중. </b></p>
 				    </br>
 					<p>git@github.com:SamuelGalaxys/GreenNewdeal.git </p>
 				    </b><p>Accessible Github users: SamuelGalaxys, Esther03-web</p>
@@ -317,14 +313,87 @@ var hours = now.getHours();
 var mins = now.getMinutes();
 
  
-
+const btnElement = document.getElementById('classnow');
  
-function classnow_click() {
 
- 
-	
+
 if (week[now.getDay()] == "MON") {
    alert('오늘 요일: ' + week[d.getDay()] + '요s일');
+
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 한국어QT
+   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
+    btnElement.innerText = '바로가기 :: 한국어QT';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
+   if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: 수학';
+    }
+   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
+    btnElement.innerText = '바로가기 :: 수학';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 진로와 직업
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: 진로와 직업';
+    }
+   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+    btnElement.innerText = '바로가기 :: 진로와 직업';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 체육
+   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: 체육';
+    }
+   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+    btnElement.innerText = '바로가기 :: 체육';
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+	
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
+   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시
+   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시
+   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+    
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시
+   if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+    
+
+
 
 }
 	
@@ -333,12 +402,165 @@ if (week[now.getDay()] == "MON") {
 if (week[now.getDay()] == "TUE") {
    alert('오늘 요일: ' + week[d.getDay()] + '요s일');
 
+
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
+   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 트리고
+   if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
+    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
+    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 한국사
+   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
+   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
+   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+    
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 자율
+   if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+    
+
+
+
+
+
 }
 	
 
 
 if (week[now.getDay()] == "WED") {
    alert('오늘 요일: ' + hours[d.getHours()] + '요s일');
+
+
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 수요예배
+   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 수요예배
+   if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 컴퓨터
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
+   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 토플
+   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
+   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+    
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
+   if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+    
+
 
 }
 	
@@ -347,21 +569,77 @@ if (week[now.getDay()] == "WED") {
 if (week[now.getDay()] == "THU") {
  
   
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
+   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 한국사
+   if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+
    //   시간시작  -  시간끝           분시작  -  분끝             :: 성경
-   if(hours >= "10" & hours <= "11" & mins >= "40" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/87276081538?pwd=REx6bFRJeCtRbitMNlF1VWRrS2pxUT09#success', '_blank'); 
+   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
-   if(hours >= "10" & hours <= "11" & mins >= "40" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
     }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
+   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 트리고
+   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+
+    }
+
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
-   if(hours >= "15" & hours <= "15" & mins >= "5" & mins <= "55"){
-	window.open('https://classroom.google.com/u/1/c/Mjc3NTgwOTY4MzE5', '_blank'); 
+   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
     }
+    
+ 
+ 
 
+ 
 	  
 }
 	
@@ -369,6 +647,470 @@ if (week[now.getDay()] == "THU") {
 
 if (week[now.getDay()] == "FRI") {
    alert('오늘 요일: ' + week[d.getDay()] + '요s일');
+
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 영어QT
+   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
+	btnElement.innerText = '영어큐티중';
+
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+   if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
+	btnElement.innerText = '바로가기 이용가능 :: 국어';
+    }
+   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
+	btnElement.innerText = '바로가기 이용가능 :: 국어';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 수학';
+
+    }
+   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 수학';
+
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
+   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 LIT';
+
+    }
+   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 LIT';
+
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+	btnElement.innerText = '바로가기 이용가능 :: Physics';
+    }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
+	btnElement.innerText = '바로가기 이용가능 :: Physics';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 토플
+   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 TOEFL';
+
+    }
+   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 TOEFL';
+
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = '바로가기 이용가능 :: EP';
+    }
+   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+	btnElement.innerText = '바로가기 이용가능 :: EP';
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 씨에이
+   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+	btnElement.innerText = '(실시간 수업만 작동) :: 현재 CA 활동 중';
+
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+function classnow_click() {
+
+ 
+	 
+if (week[now.getDay()] == "MON") {
+   alert('오늘 요일: ' + week[d.getDay()] + '요s일');
+
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 한국어QT
+   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
+	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
+   if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
+	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    }
+   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
+	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 진로와 직업
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    }
+   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 체육
+   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+	window.open('https://us05web.zoom.us/j/2321692413?pwd=TDREaC9CN0FEYXdzejFoMTFEMVZxZz09#success', '_blank'); 
+    }
+   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+	window.open('https://us05web.zoom.us/j/2321692413?pwd=TDREaC9CN0FEYXdzejFoMTFEMVZxZz09#success', '_blank'); 
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+	  
+    }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
+	  
+    }
+
+	
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
+   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+	window.open('https://us02web.zoom.us/j/81752030114?pwd=VE5wV3hmZGNuSm1TaWZGT3dxZkVLZz09#success', '_blank'); 
+    }
+   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+	window.open('https://us02web.zoom.us/j/81752030114?pwd=VE5wV3hmZGNuSm1TaWZGT3dxZkVLZz09#success', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시
+   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+	
+    }
+   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+	  
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시
+   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+	window.open('https://us02web.zoom.us/j/7955892462?pwd=QzQ3Smk5Z1lTODhJaWRoWTduL1QwZz09#success', '_blank'); 
+    }
+    
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시
+   if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
+	  
+    }
+    
+
+
+
+}
+	
+
+
+if (week[now.getDay()] == "TUE") {
+   alert('오늘 요일: ' + week[d.getDay()] + '요s일');
+
+
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
+   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
+	 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 트리고
+   if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
+	window.open('https://us02web.zoom.us/j/84130576448?pwd=VnRJYUVvV0pGbFNBdWN4K3V3MEgzdz09#success', '_blank'); 
+    }
+   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
+	window.open('https://us02web.zoom.us/j/84130576448?pwd=VnRJYUVvV0pGbFNBdWN4K3V3MEgzdz09#success', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+	window.open('https://classroom.google.com/u/1/c/Mjc3NTgwOTY4MzE5', '_blank'); 
+    }
+   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+	window.open('https://classroom.google.com/u/1/c/Mjc3NTgwOTY4MzE5', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 한국사
+   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+	window.open('https://classroom.google.com/u/1/c/Mjc3NTgwOTY4MzE5', '_blank'); 
+    }
+   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+	window.open('https://classroom.google.com/u/1/c/Mjc3NTgwOTY4MzE5', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+	window.open('https://us02web.zoom.us/j/84111539137?pwd=TTlZOGhZUlVxTUFYbEVSNXRFeEdMQT09#success', '_blank'); 
+    }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
+	window.open('https://us02web.zoom.us/j/84111539137?pwd=TTlZOGhZUlVxTUFYbEVSNXRFeEdMQT09#success', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
+   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+	  
+    }
+   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+	  
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+	  
+    }
+   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+	 
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
+   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+	window.open('https://classroom.google.com/u/1/c/Mjc2Mjc1NTEwOTM1', '_blank'); 
+    }
+    
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 자율
+   if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
+	 
+    }
+    
+
+
+
+
+
+}
+	
+
+
+if (week[now.getDay()] == "WED") {
+   alert('오늘 요일: ' + hours[d.getHours()] + '요s일');
+
+
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 수요예배
+   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
+	window.open('https://classroom.google.com/u/1/c/Mjc2Mjc1NTEwOTM1', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 수요예배
+   if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
+	window.open('https://classroom.google.com/u/1/c/Mjc2Mjc1NTEwOTM1', '_blank'); 
+    }
+   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
+	window.open('https://classroom.google.com/u/1/c/Mjc2Mjc1NTEwOTM1', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 컴퓨터
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+	window.open('https://us04web.zoom.us/j/9325144802?pwd=K1hCU3hWSGJiSXZkaVM4NlQ3L1pOdz09', '_blank'); 
+    }
+   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+	window.open('https://us04web.zoom.us/j/9325144802?pwd=K1hCU3hWSGJiSXZkaVM4NlQ3L1pOdz09', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
+   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+	 
+    }
+   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+	  
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+	window.open('https://classroom.google.com/u/1/c/Mjc3NTczOTkwNTcy', '_blank'); 
+    }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
+	window.open('https://classroom.google.com/u/1/c/Mjc3NTczOTkwNTcy', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+	  
+    }
+   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+	  
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 토플
+   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+	window.open('https://us02web.zoom.us/j/84056392706?pwd=NXI0YXVNTHVEZVhpaU81dTlUYnVzZz09#success', '_blank'); 
+    }
+   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+	window.open('https://us02web.zoom.us/j/84056392706?pwd=NXI0YXVNTHVEZVhpaU81dTlUYnVzZz09#success', '_blank'); 
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
+   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+	 
+    }
+    
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
+   if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
+	 
+    }
+    
+
+
+}
+	
+
+
+if (week[now.getDay()] == "THU") {
+ 
+  
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
+   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
+	 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 한국사
+   if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
+	 
+    }
+   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
+	 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+	 
+    }
+   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+	 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 성경
+   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+	window.open('https://us02web.zoom.us/j/87276081538?pwd=REx6bFRJeCtRbitMNlF1VWRrS2pxUT09#success', '_blank'); 
+    }
+   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+	window.open('https://us02web.zoom.us/j/87276081538?pwd=REx6bFRJeCtRbitMNlF1VWRrS2pxUT09#success', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
+	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
+   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+	window.open('https://classroom.google.com/u/1/c/Mjc2Mjc1NTEwOTM1', '_blank'); 
+    }
+   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+	window.open('https://classroom.google.com/u/1/c/Mjc2Mjc1NTEwOTM1', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 트리고
+   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+	 
+    }
+   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+	  
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
+   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+	window.open('https://classroom.google.com/u/1/c/Mjc3NTgwOTY4MzE5', '_blank'); 
+    }
+    
+ 
+ 
+
+ 
+	  
+}
+	
+
+
+if (week[now.getDay()] == "FRI") {
+   alert('오늘 요일: ' + week[d.getDay()] + '요s일');
+
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 영어QT
+   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
+	 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+   if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
+	window.open('https://us02web.zoom.us/j/84111539137?pwd=TTlZOGhZUlVxTUFYbEVSNXRFeEdMQT09#success', '_blank'); 
+    }
+   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
+	window.open('https://us02web.zoom.us/j/84111539137?pwd=TTlZOGhZUlVxTUFYbEVSNXRFeEdMQT09#success', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+	 
+    }
+   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+	 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
+   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+	  
+    }
+   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+	  
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+	window.open('https://us02web.zoom.us/j/81752030114?pwd=VE5wV3hmZGNuSm1TaWZGT3dxZkVLZz09#success', '_blank'); 
+    }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
+	window.open('https://us02web.zoom.us/j/81752030114?pwd=VE5wV3hmZGNuSm1TaWZGT3dxZkVLZz09#success', '_blank'); 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 토플
+   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+	 
+    }
+   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+	 
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+	window.open('https://classroom.google.com/u/1/c/Mjc3NTczOTkwNTcy', '_blank'); 
+    }
+   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+	window.open('https://classroom.google.com/u/1/c/Mjc3NTczOTkwNTcy', '_blank'); 
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 씨에이
+   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+	 
+    }
+    
+    
+
+
 
 }
 
@@ -385,7 +1127,7 @@ if (week[now.getDay()] == "FRI") {
 
 
 $(document).ready(function () {
-      //  $("#modalUpdate").modal('show');
+        $("#modalUpdate").modal('show');
         
 
     });
