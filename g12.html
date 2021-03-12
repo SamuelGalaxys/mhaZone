@@ -258,16 +258,17 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-header bg-primary">
-					<h6 class="modal-title"><i class="la la-info-circle"></i> 알 림</h6>
+					<h6 class="modal-title"><i class="la la-info-circle"></i> 알림</h6>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-				<div class="modal-body text-center">									
-					<p>현재수업 바로가기 버튼(한국) 완성.</p>
- 					<p></p>
-					<b>현재수업 바로가기 버튼(필리핀) 추가중. </b></p>
-				    </br>
+				<div class="modal-body text-center">
+					<b>현재수업 바로가기 버튼(한국) 완성.  </b></p>
+									
+					<p> <b> '바로가기 이용가능'</b>이라 표시되면 버튼을 이용해 수업 바로가기를 이용할 수 있어. 필리핀 시간대 전용 버튼은 따로 제작중</p>
+ 					<p>일부 수업의 줌 링크가 확실하지 않아. 국어와 네이선쌤 과목의 링크는 확실하지 않으니 이 두가지의 경우는 카톡을 체크하는 것도 좋을 것 같아. 그리고 네이선쌤 과목은 전부 클래스룸으로 연결되게 했어.</p>
+ 				    </br>
 					<p>git@github.com:SamuelGalaxys/GreenNewdeal.git </p>
 				    </b><p>Accessible Github users: SamuelGalaxys, Esther03-web</p>
 				    </b><p>Version : 1.1</p>
@@ -646,10 +647,9 @@ if (week[now.getDay()] == "THU") {
 
 
 if (week[now.getDay()] == "FRI") {
-   alert('오늘 요일: ' + week[d.getDay()] + '요s일');
 
-
-
+	
+ 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 영어QT
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
 	btnElement.innerText = '영어큐티중';
@@ -676,10 +676,12 @@ if (week[now.getDay()] == "FRI") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+	 
 	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 LIT';
 
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+ 
 	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 LIT';
 
     }
