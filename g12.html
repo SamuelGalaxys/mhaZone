@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -172,7 +172,7 @@
 											   <td style = "background : Yellow "><a href="https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09">수학</a></td>
 											   <td style = "background : Yellow  ;"><a href="https://us02web.zoom.us/j/84130576448?pwd=VnRJYUVvV0pGbFNBdWN4K3V3MEgzdz09">Trigonometry</a></td>
 											   <td style = "background : White  ;">한국사</td>
-											   <td style = "background : Yellow  ;"><a href="https://us02web.zoom.us/j/9778904060?pwd=dUY3QlZic09ZNndVdDE5ZkNtM3NHZz09">국어</a></td>
+											   <td style = "background : Yellow  ;"><a href="https://us02web.zoom.us/j/84111539137?pwd=TTlZOGhZUlVxTUFYbEVSNXRFeEdMQT09">국어</a></td>
 											  
 											   </tr>
 											   <tr>
@@ -306,13 +306,7 @@
 
 <script>
 
-$(document).ready(function () {
-        $("#modalUpdate").modal('show');
-        
 
-    });
-	
-	
 var now = new Date();
 var week = new Array('SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT');
 var hours = now.getHours();
@@ -664,11 +658,9 @@ if (week[now.getDay()] == "FRI") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-	const btnElement = document.getElementById('classnow');
 	btnElement.innerText = '바로가기 이용가능 :: 국어';
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-	const btnElement = document.getElementById('classnow');
 	btnElement.innerText = '바로가기 이용가능 :: 국어';
     }
 
@@ -733,7 +725,7 @@ if (week[now.getDay()] == "FRI") {
 
 
 
-
+}
 
 
 
@@ -789,7 +781,6 @@ if (week[now.getDay()] == "MON") {
 	  
     }
 
-	
 	
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
@@ -1135,7 +1126,11 @@ if (week[now.getDay()] == "FRI") {
 }
 
 
- 
+$(document).ready(function () {
+        $("#modalUpdate").modal('show');
+        
+
+    });
 
 	//alert("-서버 점검 안내- \n \n 일시 : 오늘 오후 6시~9시 \n mhaZone으로 새롭게 찾아옵니다. \n \n git@github.com:SamuelGalaxys/GreenNewdeal.git \nAccessible Github users: SamuelGalaxys, Esther03-web \n Virsion 0.2");
  
