@@ -141,7 +141,7 @@
 									<div class="card-header">
 										<div class="card-title">12시간표</div>
 										<div class="card-category">불규칙한건 클래스룸으로<a class="link" href="#">-</a></div>
-										<button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right">지금은 쉬는 시간이거나 수업이 없거나! (실시간 수업만 작동)</button>
+										<button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right">바로가기 :: 현재 수업이 없습니다.</button>
 
 									</div>
 
@@ -264,14 +264,11 @@
 					</button>
 				</div>
 				<div class="modal-body text-center">
-					<b>현재수업 바로가기 버튼(한국) 완성.  </b></p>
+					<b>필리핀꺼 만드는중. 컴 설정에 들어가서 시간대를 한국 시간대로 바꿔줘! 그럼 바로가기 버튼 원활하게 사용가능할거야! </b></p>
 									
-					<p> <b> '바로가기 이용가능'</b>이라 표시되면 버튼을 이용해 수업 바로가기를 이용할 수 있어. 필리핀 시간대 전용 버튼은 따로 제작중</p>
- 					<p>일부 수업의 줌 링크가 확실하지 않아. 국어와 네이선쌤 과목의 링크는 확실하지 않으니 이 두가지의 경우는 카톡을 체크하는 것도 좋을 것 같아. 그리고 네이선쌤 과목은 전부 클래스룸으로 연결되게 했어.</p>
+					<p> <b> -필리핀 시간대는 개발중</p>
  				    </br>
-					<p>git@github.com:SamuelGalaxys/GreenNewdeal.git </p>
-				    </b><p>Accessible Github users: SamuelGalaxys, Esther03-web</p>
-				    </b><p>Version : 1.1</p>
+					 
 
 				</div>
 				<div class="modal-footer">
@@ -304,6 +301,51 @@
 
  <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=dc10cc57469569c48954dbe458322007ceeaa62a'></script>
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/802215/t/3"></script>
+
+
+<script>
+	
+	$(document).ready(function () {
+			$("#modalUpdate").modal('show');
+			
+	
+		});
+	
+		//alert("-서버 점검 안내- \n \n 일시 : 오늘 오후 6시~9시 \n mhaZone으로 새롭게 찾아옵니다. \n \n git@github.com:SamuelGalaxys/GreenNewdeal.git \nAccessible Github users: SamuelGalaxys, Esther03-web \n Virsion 0.2");
+	 
+	
+	
+		
+	
+		
+		$('#displayNotif').on('click', function(){
+			var placementFrom = $('#notify_placement_from option:selected').val();
+			var placementAlign = $('#notify_placement_align option:selected').val();
+			var state = $('#notify_state option:selected').val();
+			var style = $('#notify_style option:selected').val();
+			var content = {};
+	
+			content.message = 'Turning standard Bootstrap alerts into "notify" like notifications';
+			content.title = 'Bootstrap notify';
+			if (style == "withicon") {
+				content.icon = 'la la-bell';
+			} else {
+				content.icon = 'none';
+			}
+			content.url = 'index.html';
+			content.target = '_blank';
+	
+			$.notify(content,{
+				type: state,
+				placement: {
+					from: placementFrom,
+					align: placementAlign
+				},
+				time: 1000,
+			});
+		});
+	</script>
+
 
 <script>
 
@@ -355,41 +397,41 @@ if (week[now.getDay()] == "MON") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '국어 수업 중';
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '국어 수업 중';
     }
 
 	
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    btnElement.innerText = '바로가기 :: Physics';
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    btnElement.innerText = '바로가기 :: Physics';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    btnElement.innerText = 'LIT 수업 중';
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = 'LIT 수업 중';
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    btnElement.innerText = '바로가기 :: Grammar';
     }
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = 'IS 수업 중';
 
     }
     
