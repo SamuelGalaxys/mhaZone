@@ -166,25 +166,16 @@
 					<div class="container-fluid">
 						
 						
-						<h4 class="page-title">자유게시판</h4>
+						<h4 class="page-title">자유게시판<a> . </a> <button style="margin-right: 40px;" type="button" class="button button-contactForm btn_1 boxed-btn btn btn-primary create">  글 작성하기</button> </h4>
+						 
+
 
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-8" id="scrollz" style="overflow:scroll;width:auto; height:1100px;">
 
 
-								<div id="scrollz" class="card" style="overflow:scroll;width:auto; height:490px;">
-									<div class="card-header">
-										<div class="card-title">mhaZone BOARD</div>
-									</div>
-									<div class="card-body">
-										<div class="card-sub">
-											게시물들. 
-										</div>
-										<div class="thanksList"></div>
+								<div class="thanksList"></div>
 
-										
-									</div>
-								</div>
 
 
 								 
@@ -194,35 +185,55 @@
 
 							</div>
 
-							<div class="col-md-6">
+							<div class="col-md-4">
 								 
 
 
  
+								 
+								
+								
+
+
 								<div class="card">
 									<div class="card-header">
-										<div class="card-title"><a style="color: rgb(29, 30, 31);">자유게시판 쓰기</a></div>
+										<div class="card-title"><a style="color: rgb(29, 30, 31);">이미지가 있는 광고#1</a></div>
 									</div>
 									<div class="form-group">			 
    
  									<div class="card-body">
-										<textarea class="form-control w-100" rows="1" name="subject" id="subject" cols="30" placeholder="제목"></textarea></br>
-										<textarea class="form-control w-100" rows="7" name="comment" id="comment" cols="30" placeholder="내용을 입력해 주세요. 비속어는 차단될 수 있습니다."></textarea></br>
+										
+										<img src="mhazone.png" style="width: 250px; height: auto; margin: 0px auto;">
 
-										<div class="card-sub">		
- 							
-											    삭제기능은 아직 없으므로 김기훈에게 문의. 
-											<button type="button" class="button button-contactForm btn_1 boxed-btn btn btn-primary write" id="write" name="write">공지 업로드</button> 
+										<div class="card-title" style="text-align: left;">게시물을 이미지로 홍보하세요.</br>동아리 포스터 등, 이미지로 홍보하세요.</br>김기훈에게 문의 바랍니다!</div>
+								    </br></br></br>
  
-										</div>
- 
+
 									</div>
 
  								    </div>
 
 						        </div>
-								
-								
+
+								<div class="card">
+									<div class="card-header">
+										<div class="card-title"><a style="color: rgb(29, 30, 31);">이미지가 있는 광고#2</a></div>
+									</div>
+									<div class="form-group">			 
+   
+ 									<div class="card-body">
+										
+										<img src="mhazone.png" style="width: 250px; height: auto; margin: 0px auto;">
+
+										<div class="card-title" style="text-align: left;">게시물을 이미지로 홍보하세요.</br>동아리 포스터 등, 이미지로 홍보하세요.</br>김기훈에게 문의 바랍니다!</div>
+								    </br></br></br>
+ 
+									
+									</div>
+
+ 								    </div>
+
+						        </div>
 
 
 
@@ -346,18 +357,13 @@
 	
     //2초후 실행
     setTimeout(function() {
-    	var element = document.getElementById("scrollz");
-        element.scrollTop = element.scrollHeight;
+    //	var element = document.getElementById("scrollz");
+    //    element.scrollTop = element.scrollHeight;  //스크롤 내리기
 		$("#modalUpdateN").modal('show');
 
-    }, 2000);
+    }, 1000);
 
-    //3초후 실행
-    setTimeout(function() {
-    	var element = document.getElementById("scrollmodal");
-        element.scrollTop = element.scrollHeight;
- 
-    }, 3300);
+     
 
     //스크롤 자동으로 내리기
     //setInterval(updateScroll,1000);   
@@ -426,6 +432,26 @@
 				alert("로그인이 필요한 서비스 입니다.")
 			}
 		});
+
+
+		$(document).on('click', '.create', function () {
+
+			var seseionCheck = document.getElementById("loginmenu").textContent;
+
+ 			if (seseionCheck == "로그아웃") {
+				window.location.href = "create.html"
+
+			} else {
+				alert("로그인이 필요한 서비스 입니다.")
+				window.location.href = "loginform.html"
+
+			}
+			
+
+
+		});
+
+
 	});
 
 
@@ -514,7 +540,8 @@
                 " <span STYLE=\"color: black; font-size: 11pt\">" + "</br>" + comment + "</span></h4>" +
                 "<p STYLE=\"color: black; font-size: 10pt\">" + "<i class=\"la la-user\">" + "</i>" + name + " :: " + createtime + "</p></div></div>";
 
-            $(".thanksList").append(html);
+         //   $(".thanksList").append(html);   //아래로 붙이기
+            $(".thanksList").prepend(html);   //위로 붙이기
 
  
 
@@ -546,7 +573,7 @@
                 " <span STYLE=\"color: black; font-size: 11pt\">" + "</br>" + comment + "</span></h4>" +
                 "<p STYLE=\"color: black; font-size: 8pt\">" + name + " :: " + createtime + "</p></div></div>";
 
-            $(".noticelist").append(html);
+            $(".noticelist").prepend(html);
 
  
 

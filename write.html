@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
 	<link rel="stylesheet" href="css/ready.css">
 	<link rel="stylesheet" href="css/demo.css">
+	<script src="js/includeHTML.js"></script>
+
 </head>
 <body>
 	<div class="wrapper">
@@ -93,70 +95,12 @@
 				<div class="scrollbar-inner sidebar-wrapper">
 					
 					
-					<ul class="nav">
+					<nav include-html="nav.html"></nav>
 
-						<li class="nav-item">
-							<a href="index.html">
-								<i class="la la-home"></i>
-								<p>홈</p>
-
-							</a>
-						</li>
-						<!---->
-						<li class="nav-item">
-							<a href="g12.html">
-								<i class="la la-bell"></i>
-								<p>12학년</p>
-
-							</a>
-						</li>
-
-						<li class="nav-item">
-							<a href="g11.html">
-								<i class="la la-bell"></i>
-								<p>11학년</p>
-
-							</a>
-						</li>
-
-						<li class="nav-item">
-							<a href="g10.html">
-								<i class="la la-bell"></i>
-								<p>10학년</p>
-
-							</a>
-						</li>
-
-						<li class="nav-item">
-							<a href="tables.html">
-								<i class="la la-pencil"></i>
-								<p>자유게시판</p>
-
-							</a>
-						</li>
- 
-						<li class="nav-item">
-							<a href="write.html">
-								<i class="la la-info-circle"></i>
-								<p>마한아 공지</p>
-
-							</a>
-						</li>
-
-						<li class="nav-item">
-							<a href="loginform.html"  id="loginmenu" style="color: black;">
-								<i class="la la-user"></i>
-								<p>로그인</p>
-
-							</a>
-						</li>
-
-						
-						  
-					 
+					
 
 
-					</ul>
+
 				</div>
 			</div>
 
@@ -346,7 +290,9 @@
 		});
 	});
 </script>
-
+<script>
+    includeHTML();
+</script>
 
 <script src="js/time.js"></script>
 <!--login유무 session js 파일 -->
@@ -354,29 +300,8 @@
 <!--스크립트 부분. 자신의 스크립트 코드로 변경하세요! -->
 <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 <script>
-
-//시작시 실행
-    window.onload = function() {
-    	//alert("eee");
-     	var element = document.getElementById("scrollz");
-        element.scrollTop = element.scrollHeight;
-    };
  
-//2초후 실행
-    setTimeout(function() {
-    	var element = document.getElementById("scrollz");
-        element.scrollTop = element.scrollHeight;
-		//$("#modalUpdateN").modal('show');
-
-    }, 2000);
-
-//3초후 실행
-    setTimeout(function() {
-    	var element = document.getElementById("scrollmodal");
-        element.scrollTop = element.scrollHeight;
- 
-    }, 3300);
-
+  
 
     //스크롤 자동으로 내리기
     //setInterval(updateScroll,1000);   
@@ -546,7 +471,7 @@
                 " <span STYLE=\"color: black; font-size: 11pt\">" + "</br>" + comment + "</span></h4>" +
                 "<p STYLE=\"color: black; font-size: 10pt\">" + "<i class=\"la la-user\">" + "</i>" + name + " :: " + createtime + "</p></div></div>";
 
-            $(".noticelist").append(html);
+            $(".noticelist").prepend(html);
 
 	}
 
