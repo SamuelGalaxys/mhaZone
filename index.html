@@ -121,7 +121,7 @@
 								    </br></br></br>
 								    <p style="margin: 0px auto; color: black;"><a href="g10.html">10학년, </a><a href="g11.html"> 11학년, </a><a href="g12.html"> 12학년, </a><a href="table.html"> 자유게시판, </a><a href="write.html"> 마한아 공지</a></p>
 								    </br></br>
-									<button type="button" href="loginform.html" style="width: 20%;margin: 0px auto;" class="button button-contactForm btn_1 boxed-btn btn btn-primary write" name="logins">시작하기</button> 
+									<button type="button" href="loginform.html" style="width: 20%;margin: 0px auto;" class="button button-contactForm btn_1 boxed-btn btn btn-primary write" onclick="logins_onclick" name="logins">시작하기</button> 
 								    </br></br></br>
 									 
 								</div>
@@ -253,6 +253,16 @@
 </script>
 
 <script>
+	function logins_onclick() {
+	
+		window.location.href = "loginform.html"
+
+	}
+
+
+
+
+
 	$('#displayNotif').on('click', function(){
 		var placementFrom = $('#notify_placement_from option:selected').val();
 		var placementAlign = $('#notify_placement_align option:selected').val();
@@ -279,6 +289,11 @@
 			time: 1000,
 		});
 	});
+
+
+
+
+
 </script>
 
 
