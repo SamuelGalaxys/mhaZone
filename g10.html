@@ -138,7 +138,7 @@
 
 									<div class="card-header">
 										<div class="card-title">10학년 시간표</div>
-										<div class="card-category">불규칙한건 클래스룸으로<a class="link" href="#">-</a></div>
+										<div class="card-category">"바로 가기 이용 가능"이라 뜬다면 버튼을 클릭하여 실시간 수업 바로가기 사용이 가능합니다. 버튼은 수업 시작 5분 전부터 표시됩니다. 만약 작동이 안되거나 이상한 링크로 다이렉트된다면 카톡 또는 클래스룸을 확인해 주세요.<a class="link" href="#">-</a></div>
 										<button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right">현재수업 바로가기 (실시간 수업만 작동)</button>
 
 									</div>
@@ -308,7 +308,7 @@
 <script>
 	
 $(document).ready(function () {
-        $("#modalUpdate").modal('show');
+      //  $("#modalUpdate").modal('show');
         
 
     });
@@ -377,18 +377,18 @@ if (week[now.getDay()] == "MON") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 수학';
+    btnElement.innerText = '바로가기 :: 국어';
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-    btnElement.innerText = '바로가기 :: 수학';
+    btnElement.innerText = '바로가기 :: 국어';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 진로와 직업
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 진로와 직업';
+    btnElement.innerText = '리트 수업중';
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-    btnElement.innerText = '바로가기 :: 진로와 직업';
+    btnElement.innerText = '리트 수업중';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 체육
@@ -402,41 +402,41 @@ if (week[now.getDay()] == "MON") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 수학';
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 수학';
     }
 
 	
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    btnElement.innerText = '바로가기 이용가능 :: GRAM';
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    btnElement.innerText = '바로가기 이용가능 :: GRAM';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    btnElement.innerText = '바로가기 이용가능 :: BIO';
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: BIO';
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    btnElement.innerText = 'EP';
     }
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = 'Pcycho';
 
     }
     
@@ -455,71 +455,71 @@ if (week[now.getDay()] == "TUE") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '-';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 트리고
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    btnElement.innerText = '바로가기 이용가능 :: 한국사';
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    btnElement.innerText = '바로가기 이용가능 :: 한국사';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-    btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+    btnElement.innerText = '바로가기 이용가능 :: 국어';
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 국어';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 한국사
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 수학';
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 수학';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '한문';
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '한문';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: EP';
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: EP';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: Psycho';
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: Psycho';
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: BIO';
     }
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 자율
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = ' LIT';
 
     }
     
@@ -540,71 +540,71 @@ if (week[now.getDay()] == "WED") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 수요예배
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 수요예배';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 수요예배
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 수요예배';
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 수요예배';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 컴퓨터
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 한문';
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 한문';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '중국어';
 
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '중국어';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 수학';
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 수학';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: Psycho';
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: Psycho';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 토플
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: BIO';
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: BIO';
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: LIT';
 
     }
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = 'EP';
 
     }
     
@@ -620,68 +620,68 @@ if (week[now.getDay()] == "THU") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '-';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 한국사
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: Psycho';
 
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: Psycho';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 성경';
 
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 성경';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 성경
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 한국사';
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: 한국사';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '국어 중';
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '국어 중';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: EXC';
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: EXC';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 트리고
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = 'LIT';
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '바로가기 이용가능 :: EP';
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = 'ㅋㅋㅋㅋㅋㅋㅋㅋㅋ';
+	btnElement.innerText = '창의적 체험활동';
     }
     
  
@@ -699,70 +699,70 @@ if (week[now.getDay()] == "FRI") {
  
    //   시간시작  -  시간끝           분시작  -  분끝             :: 영어QT
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	btnElement.innerText = '영어큐티중';
+	btnElement.innerText = '영어큐티중(링크없음)';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-	btnElement.innerText = '바로가기 이용가능 :: 국어';
+	btnElement.innerText = '수학';
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-	btnElement.innerText = '바로가기 이용가능 :: 국어';
+	btnElement.innerText = '수학';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 수학';
+	btnElement.innerText = '중국어';
 
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 수학';
+	btnElement.innerText = '중국어';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
 	 
-	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 LIT';
+	btnElement.innerText = '국어';
 
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
  
-	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 LIT';
+	btnElement.innerText = '국어';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	btnElement.innerText = '바로가기 이용가능 :: Physics';
+	btnElement.innerText = 'EXC';
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	btnElement.innerText = '바로가기 이용가능 :: Physics';
+	btnElement.innerText = 'EXC';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 토플
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 TOEFL';
+	btnElement.innerText = '바로가기 이용가능 :: Gram';
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-	btnElement.innerText = '(실시간 수업만 작동) :: 현재는 TOEFL';
+	btnElement.innerText = '바로가기 이용가능 :: Gram';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = '바로가기 이용가능 :: EP';
+	btnElement.innerText = 'BIO';
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = '바로가기 이용가능 :: EP';
+	btnElement.innerText = 'BIO';
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 씨에이
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = '(실시간 수업만 작동) :: 현재 CA 활동 중';
+	btnElement.innerText = 'CA';
 
     }
     
@@ -824,10 +824,11 @@ if (week[now.getDay()] == "MON") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	  
+	  alert("현재 줌 수업이 없거나 링크가 없습니다.");
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	  
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
 
 	
@@ -842,10 +843,12 @@ if (week[now.getDay()] == "MON") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	  
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
 
 
@@ -911,18 +914,22 @@ if (week[now.getDay()] == "TUE") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	  
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-	  
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	  
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
 
 
@@ -974,10 +981,12 @@ if (week[now.getDay()] == "WED") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-	  
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
@@ -1007,12 +1016,14 @@ if (week[now.getDay()] == "WED") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
     
 
@@ -1027,23 +1038,28 @@ if (week[now.getDay()] == "THU") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 한국사
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 성경
@@ -1072,10 +1088,12 @@ if (week[now.getDay()] == "THU") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 트리고
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	  
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
 
 
@@ -1100,7 +1118,8 @@ if (week[now.getDay()] == "FRI") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 영어QT
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
@@ -1113,7 +1132,8 @@ if (week[now.getDay()] == "FRI") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
 	 
@@ -1121,7 +1141,8 @@ if (week[now.getDay()] == "FRI") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-	  
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
 	  
@@ -1137,7 +1158,8 @@ if (week[now.getDay()] == "FRI") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 토플
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
 	 
@@ -1154,7 +1176,8 @@ if (week[now.getDay()] == "FRI") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 씨에이
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-	 
+      alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
     }
     
     
