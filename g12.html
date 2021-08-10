@@ -537,23 +537,27 @@ if (week[now.getDay()] == "TUE") { //화요일========화요일=======화요일=
     }
 
 
-    if(hours >= "15" & hours <= "15" & mins >= "54" & mins <= "59"){
+    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "59"){
     Notification.requestPermission();
     new Notification("지금 수업중이야 알림테스트", {body:'수업중임'});
+    btnElement.innerText = '바로가기 :: 1111ㅌ';
+
 
  
     }
 
-    if(hours >= "15" & hours <= "15" & mins >= "55" & mins <= "59"){
+    if(hours >= "16" & hours <= "16" & mins >= "01" & mins <= "59"){
     Notification.requestPermission();
-    new Notification("ㄴㅇㄴㅇㄴ업중이야 알림테스트", {body:'수업중임'});
+    new Notification("ㄴㅇㄴㅇㅈㄷ중이야 알림테스트", {body:'수업중임'});
+	btnElement.innerText = '바로가기 :: 2222';
 
  
     }
 
-    if(hours >= "15" & hours <= "15" & mins >= "56" & mins <= "59"){
+    if(hours >= "16" & hours <= "16" & mins >= "02" & mins <= "59"){
     Notification.requestPermission();
-    new Notification("지금ㅌㅁㅊㄴ알림테스트", {body:'수업중임'});
+    new Notification("지금12332ㅌㅁㅊㄴ알림테스트", {body:'수업중임'});
+	btnElement.innerText = '바로가기 :: 33333';
 
  
     }
