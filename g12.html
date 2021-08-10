@@ -370,6 +370,12 @@ var mins = now.getMinutes();
 const btnElement = document.getElementById('classnow');
  
 
+Notification.requestPermission();
+    new Notification("테스트", {body:'수업중ㅋㅋㅋ임'});
+
+
+
+
 
 if (week[now.getDay()] == "MON") { //월요일     월요일     월요일
    //alert('오늘 요일: ' + week[d.getDay()] + '요s일');
