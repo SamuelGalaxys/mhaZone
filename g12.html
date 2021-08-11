@@ -361,6 +361,12 @@
 <script>
 
 
+ 
+
+
+
+
+
 var now = new Date();
 var week = new Array('SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT');
 var hours = now.getHours();
@@ -379,6 +385,35 @@ const btnElement = document.getElementById('classnow');
 
 Notification.requestPermission();
     new Notification("테스트", {body:'수업중ㅋㅋㅋ임'});
+
+
+
+
+
+
+
+    btnElement.innerText = 1;
+
+
+
+
+    playAlert = setInterval(function() {
+
+ 
+
+
+let number = btnElement.innerText;
+
+number = parseInt(number) + 1;
+
+btnElement.innerText = number;
+
+new Notification("zxzxzzxzx", {body:'수업중임'});
+
+}, 4000);
+
+
+
 
 
 
@@ -575,6 +610,12 @@ if (week[now.getDay()] == "TUE") { //화요일========화요일=======화요일=
 
 
 }
+
+
+
+
+ 
+
 	
 
 
