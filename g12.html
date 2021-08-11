@@ -384,11 +384,11 @@ const btnElement = document.getElementById('classnow');
  
 
 Notification.requestPermission();
+
+
+
+
     new Notification("테스트", {body:'수업중ㅋㅋㅋ임'});
-
-
-
-
 
 
 
@@ -397,7 +397,13 @@ Notification.requestPermission();
 
 
 
-    playAlert = setInterval(function() {
+
+
+
+
+
+
+playAlert = setInterval(function() {
 
  
 
@@ -408,7 +414,14 @@ number = parseInt(number) + 1;
 
 btnElement.innerText = number;
 
-new Notification("zxzxzzxzx", {body:'수업중임'});
+//new Notification("zxzxzzxzx", {body:'수업중임'});
+
+
+new Notification('알림이 왔습니다.', {
+      'body': '안녕하세요. \n알림을 성공적으로 수신했습니다.',
+      'icon': 'https://tistory3.daumcdn.net/tistory/2979840/attach/6e5d2d16ab6a49628dfe1f4c164e38a0',
+      'tag': '메시지'
+    })
 
 }, 4000);
 
