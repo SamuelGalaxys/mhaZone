@@ -670,6 +670,12 @@ if (week[now.getDay()] == "WED") {  //========================수요일=========
    //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
 	btnElement.innerText = 'EP중';
+
+new Notification('ㅌㄴ알림이 왔습니다.', {
+      'body': '안녕하세요. \n알림을 성공적으로 수신했습니다.',
+      'icon': 'https://previews.123rf.com/images/pandavector/pandavector1701/pandavector170110351/70510057-mars-icon-in-cartoon-style-isolated-on-white-background-planets-symbol-stock-vector-illustration-.jpg',
+      'tag': '메시지'
+    })
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
 	btnElement.innerText = 'EP중';
