@@ -399,19 +399,16 @@ Notification.requestPermission();
 
 playAlert = setInterval(function() {
 
-     btnElement.innerText = 1;
+ 
 
 
-
-let number = btnElement.innerText;
-
+ 
 
  
  
  
 
-}, 3000);
-
+ 
 
 
 
@@ -672,9 +669,10 @@ new Notification('ㅌㄴ알림이 왔습니다.', {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	btnElement.innerText = '바로가기 이용가능 :: EP(클래스룸)';
-
+	btnElement.innerText = '바로가기 이용가능 :: ㅁㄴㄴㅁ';
+    new Notification("✅실시간 수업이 있습니다.", {body:'12학년::ㄴㅇㄴㅇㅇㅇㄴ'});
     }
+    
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
 	btnElement.innerText = '바로가기 이용가능 :: EP';
 
@@ -683,6 +681,7 @@ new Notification('ㅌㄴ알림이 왔습니다.', {
    //   시간시작  -  시간끝           분시작  -  분끝             :: 토플
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
 	btnElement.innerText = '바로가기 이용가능 :: TOEFL';
+    
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
 	btnElement.innerText = '바로가기 이용가능 :: TOEFL';
@@ -869,6 +868,7 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
 
 }
 
+}, 3000);
 
 
 
