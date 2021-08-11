@@ -387,7 +387,6 @@ Notification.requestPermission();
 
 
 
-    btnElement.innerText = 1;
 
 
 
@@ -400,7 +399,8 @@ Notification.requestPermission();
 
 playAlert = setInterval(function() {
 
- 
+     btnElement.innerText = 1;
+
 
 
 let number = btnElement.innerText;
@@ -418,7 +418,11 @@ new Notification('알림이 왔습니다.', {
       'tag': '메시지'
     })
 
-}, 4000);
+
+    alert(this.tag)
+
+
+}, 3000);
 
 
 
