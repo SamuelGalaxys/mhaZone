@@ -671,8 +671,15 @@ new Notification('ㅌㄴ알림이 왔습니다.', {
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
 	btnElement.innerText = '바로가기 이용가능 :: ㅁㄴㄴㅁ';
     new Notification("✅실시간 수업이 있습니다.", {body:'12학년::ㄴㅇㄴㅇㅇㅇㄴ'});
+    setTimeout(function(){
+        notification.close();
+    }, 10000);
+
+
+ 
+
     }
-    
+
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
 	btnElement.innerText = '바로가기 이용가능 :: EP';
 
