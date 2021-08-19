@@ -17,6 +17,54 @@
  
 
 
+              
+              if(snapshot.val().grd == "12"){
+
+                document.getElementById("doact").textContent = snapshot.val().grd + "학년 바로가기"; //Span은 innerhtml로 a 는 textContent로
+                document.getElementById("doact").href = "g12.html";
+                window.location.href = "g12.html"
+
+              }
+
+              if(snapshot.val().grd == "11"){
+
+                document.getElementById("doact").textContent = snapshot.val().grd + "학년 바로가기"; //Span은 innerhtml로 a 는 textContent로
+                document.getElementById("doact").href = "g11.html";
+                window.location.href = "g11.html"
+              }
+
+              if(snapshot.val().grd == "10"){
+
+                document.getElementById("doact").textContent = snapshot.val().grd + "학년 바로가기"; //Span은 innerhtml로 a 는 textContent로
+                document.getElementById("doact").href = "g12.html";
+                window.location.href = "g10.html"
+
+              }
+
+              if(snapshot.val().grd == "9"){
+
+                document.getElementById("doact").textContent = snapshot.val().grd + "학년 바로가기"; //Span은 innerhtml로 a 는 textContent로
+                document.getElementById("doact").href = "g9.html";
+                window.location.href = "g9.html"
+                alert("준비중입니다.")
+
+
+
+              }
+
+              if(snapshot.val().grd == "8"){
+
+                document.getElementById("doact").textContent = snapshot.val().grd + "학년 바로가기"; //Span은 innerhtml로 a 는 textContent로
+                document.getElementById("doact").href = "g8.html";
+                window.location.href = "g8.html"
+                alert("준비중입니다.")
+
+
+              }
+
+
+
+
   
               name = snapshot.val().name;   //유저 닉네임은 계속 쓸거기 때문에 전역변수로 할당
               loginUserKey = snapshot.key;  //로그인한 유저의 key도 계속 쓸 것이기 때문에 전역변수로 할당
