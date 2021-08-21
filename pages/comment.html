@@ -354,6 +354,8 @@
 
                 </br></br>
                   <a style="color: white;">진짜 ㄹㅇㅋㅋ</a>
+                  <div class="boardList"></div>
+
 
                 </div>
 
@@ -632,19 +634,20 @@
 
 
     //제이쿼리를 사용한다.
-    $(document).ready(function () {
-
+ 
         //가입버튼 눌렀을 때
  
             //제이쿼리 선택자와 val() 함수를 이용해서 이메일,비밀번호 값을 가져온다.
-            var userkeyz = $('#userkey').val();
-            var timez = $('#createtime').val();
-            alert("로그인 중...:" + userkeyz + ":" + timez);
+             var key = request.getParameter('key');
 
-           
 
-     });
- 
+            var comment = Data.comment;
+            var createtime = Data.createtime;
+            var name = Data.Name;
+            var subject = Data.subject;
+             alert("로그인 중...:" + subject);
+
+         
 
 
 </script>
@@ -812,7 +815,7 @@
 	//게시판 리스트 thanks 테이블의 thanks 키 들을 연속적으로 가져옴...ㅋㅋㅋㅋㅋ
 	function on_thanks_list(data) {
 		console.log("on_thanks_list() 함수안으로 들어왔습니다 리스트를 가져오겠습니다")
-		var key = data.key;
+    var key = request.getParameter('key');
 
 		var Data = data.val();
 		var comment = Data.comment;
@@ -823,7 +826,7 @@
 
 		//무슨값이 넘어오는지 찍어보세요
 		//alert(comment +"/"+ createtime + "/"+name +"/"+userkey);
-
+  
 
 
 
@@ -834,20 +837,22 @@
  
 
     
-                "<div class=\"card\" id='" + userkey + "' onclick=\"show_user_page(this.id)\">" +
-                "<div class=\"card-header bg-transparent\">" + "<div class=\"row align-items-center\">" + "<div class=\"col\">" +
-                
-                "<h6 class=\"text-uppercase text-muted ls-1 mb-1\">" + "익명이" + " :: " + createtime + "</h6>" +
-            
-                "<a>" + comment + "</a>" +
-                "</div></div></div></div>";
+"<div class=\"card\" id='" + userkey + "' onclick=\"show_board_page(this.id)\">" +
+"<div class=\"card-header bg-transparent\">" + "<div class=\"row align-items-center\">" + "<div class=\"col\">" +
+"<h5 style=\"font-size: 20px\" class=\"h3 mb-0\">" + "<a onclick=\"gotoComments(this.id)\">" + subject +"</a></h5>" +
+"<h6 class=\"text-uppercase text-muted ls-1 mb-1\">" + "익명이" + " :: " + createtime + "</h6>" +
+"</br>" +
+"<a>" + comment + "</a>" +
+"</div></div></div></div>";
 
-         //   $(".thanksList").append(html);   //아래로 붙이기
-            $(".boardList").prepend(html);   //위로 붙이기
+//   $(".thanksList").append(html);   //아래로 붙이기
+$(".boardList").prepend(html);   //위로 붙이기
 
- 
 
-	}
+
+
+
+}
 
 
 

@@ -666,26 +666,8 @@
 	}
 
 
-  function gotocomment(){
+ 
 
-    var key = data.key;
-
-var Data = data.val();
-var comment = Data.comment;
-var createtime = Data.createtime;
-var name = Data.name;
-var subject = Data.subject;
-var userkey = Data.userkey;
-var boardno = Data.boardno;
-
-     location.href="comment.html?" + boardno + "/" + createtime;
-
-     alert("로그인 중ssss...:" + boardno + ":" + createtime);
-
-
-
-
-   }
 
 	//글 목록가져와서 뿌려주기
 	function boardList() {
@@ -718,6 +700,7 @@ var boardno = Data.boardno;
 
 		console.log("on_thanks_list() 함수안으로 들어왔습니다 리스트를 가져오겠습니다")
 		var key = data.key;
+    
 
 		var Data = data.val();
 		var comment = Data.comment;
@@ -725,6 +708,8 @@ var boardno = Data.boardno;
 		var name = Data.name;
 		var subject = Data.subject;
 		var userkey = Data.userkey;
+    
+    var boardno = Data.key; //이 보드의 키값
 
 		//무슨값이 넘어오는지 찍어보세요
 		//alert(comment +"/"+ createtime + "/"+name +"/"+userkey);
@@ -739,9 +724,9 @@ var boardno = Data.boardno;
  
 
     
-                "<div class=\"card\" id='" + userkey + "' onclick=\"show_user_page(this.id)\">" +
+                "<div class=\"card\" id='" + userkey + "' onclick=\"show_board_page(this.id)\">" +
                 "<div class=\"card-header bg-transparent\">" + "<div class=\"row align-items-center\">" + "<div class=\"col\">" +
-                "<h5 style=\"font-size: 20px\" class=\"h3 mb-0\">" + "<a onclick=\"gotocomment()\">" + subject +"</a></h5>" +
+                "<h5 style=\"font-size: 20px\" class=\"h3 mb-0\">" + "<a onclick=\"gotoComments(this.id)\">" + subject +"</a></h5>" +
                 "<h6 class=\"text-uppercase text-muted ls-1 mb-1\">" + "익명이" + " :: " + createtime + "</h6>" +
                 "</br>" +
                 "<a>" + comment + "</a>" +
@@ -755,6 +740,14 @@ var boardno = Data.boardno;
  
 
 	}
+
+
+
+
+  function show_board_page(key) {
+        location.href="comment.html?key="+ key;
+           
+}
 
 
 
