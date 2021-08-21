@@ -680,6 +680,8 @@
 			var thanksRef = firebaseDatabase.ref('anounymous');
 			//on 함수로 글 목록가져오기
 			thanksRef.on('child_added', on_thanks_list)
+
+      
 			var thanksRef = firebaseDatabase.ref('notice');
 			thanksRef.on('child_added', on_notice_list)
 
