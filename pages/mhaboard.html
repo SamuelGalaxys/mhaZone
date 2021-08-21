@@ -663,6 +663,7 @@
 		var thank = thankRef.push(); // 해당 객체의 key 값이 자동으로 생성된다.
 
 
+    var boardno = thank.key; //이 보드의 키값
 
 
 		//로그인한 유저의 pk값,이름,내용,시간 데이터
@@ -671,6 +672,7 @@
 			userkey: loginUserKey,
 			comment: comment,
 			subject: subject,
+      boardno: boardno,  //이 보드의 키값
 			createtime: currentTime
 		};
 		//위에서 thankRef.push()로 만들어진 key아래 위치에 저장해준다.

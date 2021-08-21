@@ -591,6 +591,66 @@
 <script src="../assets/js/sessionCheck.js"></script>
 <!--스크립트 부분. 자신의 스크립트 코드로 변경하세요! -->
 <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
+
+
+
+
+<!-- Core -->
+<script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/vendor/js-cookie/js.cookie.js"></script>
+<script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+<script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+<!-- Argon JS -->
+<script src="../assets/js/argon.js?v=1.2.0"></script>
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+    var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
+    var firebaseDatabase; //파이어베이스 db 모듈 전역변수
+    var userInfo; //가입한 유저의 정보. object 타입
+    //파이어 베이스 초기화 코드
+    var config = {
+        apiKey: "AIzaSyDQLUtjdMgOLDIZlPusi5YPKBiuQduD9Go",
+    databaseURL: "https://mhazone-mha-default-rtdb.firebaseio.com/",
+        authDomain: "mhazone-mha.firebaseapp.com",
+        projectId: "mhazone-mha",
+        storageBucket: "mhazone-mha.appspot.com",
+        messagingSenderId: "967342331429",
+        appId: "1:967342331429:web:8a5689ea4c254f037951cc",
+        measurementId: "G-Z33QJ15H02"
+    };
+    firebase.initializeApp(config);
+
+    firebaseEmailAuth = firebase.auth(); //파이어베이스 인증 객체
+    firebaseDatabase = firebase.database(); //파이어베이스 데이터베이스 객체
+
+
+
+    //제이쿼리를 사용한다.
+    $(document).ready(function () {
+
+        //가입버튼 눌렀을 때
+ 
+            //제이쿼리 선택자와 val() 함수를 이용해서 이메일,비밀번호 값을 가져온다.
+            var userkeyz = $('#userkey').val();
+            var timez = $('#createtime').val();
+            alert("로그인 중...:" + userkeyz + ":" + timez);
+
+           
+
+     });
+ 
+
+
+</script>
+
+
+
 <script>
 	
 	
