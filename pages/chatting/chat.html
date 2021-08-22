@@ -78,6 +78,7 @@ var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
     firebase.database().ref("messages").push().set({
       "message": message,
       "sender": myName,
+      "nick": ncName,
       "name": name,
       "msgtime": currentTime
       
