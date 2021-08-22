@@ -145,6 +145,12 @@
             </li>
 
 
+            <div class="btnz"></div>
+
+
+
+
+
             <li class="nav-item">
               <a class="nav-link" href="mhaboard.html">
                 <i class="ni ni-pin-3 text-blue"></i>
@@ -366,7 +372,7 @@
                 </tr>
                   <tr>
                   <th style = "background : #d9c6a7  ;">0교시 <br>(8:15-8:45) </br></th>
-                  <td style = "background : White"><a href="zzzzz" style="font-family: 'Jua', sans-serif;">한국어QT</a></td>
+                  <td style = "background : White"><a onclick="datas()" style="font-family: 'Jua', sans-serif;">한국어QT</a></td>
                   <td style = "background : White ;">개인QT</td>
                   <td style = "background : #36e364;" rowspan="3"><a href="zzzzz">수요 예배</a></td>
                   <td style = "background : White ;">개인QT</td>
@@ -522,6 +528,12 @@
 <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 <script>
 	
+ 
+
+
+
+
+
 	
     //2초후 실행
     setTimeout(function() {
@@ -642,7 +654,7 @@
 			userkey: loginUserKey,
 			comment: comment,
 			subject: subject,
-			createtime: currentTime
+ 			createtime: currentTime
 		};
 		//위에서 thankRef.push()로 만들어진 key아래 위치에 저장해준다.
 		thank.set(obj);
@@ -652,6 +664,13 @@
 
 		$('#comment').val("");
 		$('#subject').val("");
+
+
+
+
+
+    
+ 
 
 	}
 
@@ -666,10 +685,14 @@
 			//alert(loginUserKey)
 			//글이 저장된 레퍼런스 값 가져오기
 			var thanksRef = firebaseDatabase.ref('boards');
+      thanksRef.on('value', buttonadd)
+
 			//on 함수로 글 목록가져오기
 			thanksRef.on('child_added', on_thanks_list)
 			var thanksRef = firebaseDatabase.ref('notice');
 			thanksRef.on('child_added', on_notice_list)
+ 
+ 
 
 		} else {
 			//로그인 아니어도 글 보이게
@@ -705,10 +728,6 @@
     
 		//리스트 동적으로 붙이기
 		var html =
-
- 
-
-    
                 "<div class=\"card\" id='" + userkey + "' onclick=\"show_user_page(this.id)\">" +
                 "<div class=\"card-header bg-transparent\">" + "<div class=\"row align-items-center\">" + "<div class=\"col\">" +
                 "<h5 style=\"font-size: 20px\" class=\"h3 mb-0\">" + "<a href=\"http://google.com\">" + subject +"</a></h5>" +
@@ -719,10 +738,40 @@
 
          //   $(".thanksList").append(html);   //아래로 붙이기
             $(".boardList").prepend(html);   //위로 붙이기
-
  
 
 	}
+
+
+ 
+
+  function buttonadd(data){
+ 		var key = data.key;
+		var Data = data.val();
+		var comment = Data.comment;
+		var createtime = Data.createtime;
+		var name = Data.name;
+		var subject = Data.subject;
+		var userkey = Data.userkey;
+      //리스트 동적으로 붙이기
+      var btnside =
+
+"<li class=\"nav-item\">" +"<a class=\"nav-link\" id='" + loginUserKey + "' onclick=\"chat(this.id)\">" +
+"<i class=\"ni ni-send text-blue\">"+"</i>" +
+"<span class=\"nav-link-text\">"+ "전체채팅" +"</span></a>"+ "</li>";
+
+//   $(".thanksList").append(html);   //아래로 붙이기
+$(".btnz").prepend(btnside);   //위로 붙이기
+  }
+ 
+  //채팅으로UID전달하는함수
+  function chat(key){ 
+ location.href="chatting/chat.html?" + key;
+ alert(key);
+ }
+
+
+
 
 
 

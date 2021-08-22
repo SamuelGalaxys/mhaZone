@@ -152,6 +152,9 @@
               </a>
             </li>
 
+            <div class="btnz"></div>
+
+
 
             <li class="nav-item">
               <a class="nav-link" href="notice.html">
@@ -658,6 +661,8 @@
 			var thanksRef = firebaseDatabase.ref('boards');
 			//on 함수로 글 목록가져오기
 			thanksRef.on('child_added', on_thanks_list)
+      thanksRef.on('value', buttonadd)
+
 			var thanksRef = firebaseDatabase.ref('notice');
 			thanksRef.on('child_added', on_notice_list)
 
@@ -745,6 +750,34 @@
  
 
 	}
+
+  
+  function buttonadd(data){
+ 		var key = data.key;
+		var Data = data.val();
+		var comment = Data.comment;
+		var createtime = Data.createtime;
+		var name = Data.name;
+		var subject = Data.subject;
+		var userkey = Data.userkey;
+      //리스트 동적으로 붙이기
+      var btnside =
+
+"<li class=\"nav-item\">" +"<a class=\"nav-link\" id='" + loginUserKey + "' onclick=\"chat(this.id)\">" +
+"<i class=\"ni ni-send text-blue\">"+"</i>" +
+"<span class=\"nav-link-text\">"+ "전체채팅" +"</span></a>"+ "</li>";
+
+//   $(".thanksList").append(html);   //아래로 붙이기
+$(".btnz").prepend(btnside);   //위로 붙이기
+  }
+ 
+  //채팅으로UID전달하는함수
+  function chat(key){ 
+ location.href="chatting/chat.html?" + key;
+ alert(key);
+ }
+
+
 
 </script>
 
