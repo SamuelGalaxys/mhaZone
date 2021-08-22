@@ -24,8 +24,16 @@ uids = data[0];
  
 
 
+
+var foodItems = ["나무늘보", "사과", "나뭇잎", "그냥 익명이", "바나나", "막대기", "SKT T1 FAKER", "고양이", "삼색이", "이얏호응", "무", "연필", "띠이모", "강아지", "빨간 모자", "그냥 학생", "내 꿈은 세계정복"];
+var randomz = foodItems[Math.floor(Math.random() * foodItems.length)];
+
+
+ncNamec = prompt("익명으로 사용할 일회성 닉네임 입력");
+
 myName = uids
-ncName = prompt("익명으로 사용할 닉네임 입력");
+ncName = randomz + " " + ncNamec
+
 $messages.mCustomScrollbar();
 
 firebase.database().ref("messages").on("child_added", function (snapshot) {
