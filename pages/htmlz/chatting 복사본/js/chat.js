@@ -30,7 +30,7 @@ $messages.mCustomScrollbar();
 firebase.database().ref("messages").on("child_added", function (snapshot) {
 if (snapshot.val().sender == myName) {
   //나자신이보낸 메시지
-  $('<div class="message message-personal"> <div style="font-size :13px" id="message-' + snapshot.key + '">' + snapshot.val().message + '<button class="btn-delete" data-id="' + snapshot.key + '" onclick="deleteMessage(this);">X</button></div></div>').appendTo($('.mCSB_container')).addClass('new');
+  $('<div class="message message-personal"> <div id="message-' + snapshot.key + '">' + snapshot.val().message + '<button class="btn-delete" data-id="' + snapshot.key + '" onclick="deleteMessage(this);">X</button></div></div>').appendTo($('.mCSB_container')).addClass('new');
  // $('<div class="message message-personal"> <figure class="avatar"><img src="https://cdn.iconscout.com/icon/free/png-256/user-1648810-1401302.png" /></figure>  <div id="message-' + snapshot.key + '">' + snapshot.val().message + '<button class="btn-delete" data-id="' + snapshot.key + '" onclick="deleteMessage(this);">X</button></div></div>').appendTo($('.mCSB_container')).addClass('new');
 
   $('.message-input').val(null);
@@ -38,7 +38,7 @@ if (snapshot.val().sender == myName) {
 } else {
  // $('<div class="message new"><figure class="avatar"><img src="https://cdn1.iconfinder.com/data/icons/basic-22/512/1041_boy_c-512.png" /></figure><div id="message-' + snapshot.key + '">' + snapshot.val().sender + ': ' + snapshot.val().message + '</div></div>').appendTo($('.mCSB_container')).addClass('new');
 
-  $('<div class="message new"><figure class="avatar"><img src="https://cdn1.iconfinder.com/data/icons/basic-22/512/1041_boy_c-512.png" /></figure><div style="font-size :13px" id="message-' + snapshot.key + '">' + snapshot.val().message + '</div></div>').appendTo($('.mCSB_container')).addClass('new');
+  $('<div class="message new"><figure class="avatar"><img src="https://cdn1.iconfinder.com/data/icons/basic-22/512/1041_boy_c-512.png" /></figure><div id="message-' + snapshot.key + '">' + snapshot.val().message + '</div></div>').appendTo($('.mCSB_container')).addClass('new');
 }
 
 setDate();
