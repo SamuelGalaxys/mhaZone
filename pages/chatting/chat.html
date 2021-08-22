@@ -52,7 +52,7 @@ var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
 
 
   firebase.database().ref("messages").on("child_removed", function (snapshot) {
-    document.getElementById("message-" + snapshot.key).innerHTML = "This message has been deleted";
+    document.getElementById("message-" + snapshot.key).innerHTML = "[삭제된 메시지]";
   });
 
   function deleteMessage(self) {
@@ -73,7 +73,7 @@ var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
     var currentTime = year + "년" + month + "월" + day+ "일" + hours + ":" + min;
 
 
-
+ 
     var message = document.getElementById("message").value;
     firebase.database().ref("messages").push().set({
       "message": message,
@@ -83,8 +83,48 @@ var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
       "msgtime": currentTime
       
     });
+    firebase.database().ref("msglog").push().set({
+      "message": msg,
+      "sender": myName,
+      "nick": ncName,
+      "name": name,
+      "msgtime": currentTime
+      
+    });
+
+     return false;
+  }
+
+
+
+    function sendmsglog() {
+
+        //냘짜 함수
+        var d = new Date();
+    var year = d.getFullYear().toString();
+    var month = (d.getMonth() + 1).toString();
+    var day = d.getDate().toString();
+    var hours = d.getHours().toString();
+    var min = d.getMinutes().toString();
+    var sec = d.getSeconds().toString();
+    var currentTime = year + "년" + month + "월" + day+ "일" + hours + ":" + min;
+
+
+ 
+    var msg = document.getElementById("msglog").value;
+    firebase.database().ref("msglog").push().set({
+      "message": msg,
+      "sender": myName,
+      "nick": ncName,
+      "name": name,
+      "msgtime": currentTime
+      
+    });
     return false;
   }
+
+
+
 </script>
 
 <style>
@@ -92,8 +132,8 @@ var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
     bottom: 0px !important;
   }
   .btn-delete {
-    background: red;
-    color: white;
+    background: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
     border: none;
     margin-left: 10px;
     border-radius: 5px;

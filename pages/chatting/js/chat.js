@@ -39,8 +39,25 @@ if (snapshot.val().sender == myName) {
 } else {
  // $('<div class="message new"><figure class="avatar"><img src="https://cdn1.iconfinder.com/data/icons/basic-22/512/1041_boy_c-512.png" /></figure><div id="message-' + snapshot.key + '">' + snapshot.val().sender + ': ' + snapshot.val().message + '</div></div>').appendTo($('.mCSB_container')).addClass('new');
 
-  $('<div class="message new">'+ '<a style="font-size : 2px; color:#8e9091">' + snapshot.val().nick + '</a></br>'  + '<figure class="avatar"><img src="https://cdn1.iconfinder.com/data/icons/basic-22/512/1041_boy_c-512.png" /></figure>' +'<div style="font-size :14px" id="message-' + snapshot.key + '">' + snapshot.val().message + '</div></div>').appendTo($('.mCSB_container')).addClass('new');
+
+
+    if (snapshot.val().sender == "nQkxBp2jfIg4Rz3HntAT2ep6mB62") {
+    //관리자가 보내는 메시지
+    $('<div class="message new">'+ '<a style="font-size : 2px; color:#ff5e00">' + "기훈 김" + '</a></br>'  + '<figure class="avatar"><img src="https://www.seekpng.com/png/detail/20-200534_mars-transparent-icon-brainpop-mars.png" /></figure>' +'<div style="font-size :14px; color:#401414" id="message-' + snapshot.key + '">' + snapshot.val().message + '</div></div>').appendTo($('.mCSB_container')).addClass('new');
+
+    
+  } else{
+
+    //일반유저가 보내는 메시지
+      $('<div class="message new">'+ '<a style="font-size : 2px; color:#8e9091">' + snapshot.val().nick + '</a></br>'  + '<figure class="avatar"><img src="https://thumbs.dreamstime.com/b/solid-purple-gradient-user-icon-web-mobile-design-interface-ui-ux-developer-app-137467998.jpg" /></figure>' +'<div style="font-size :14px" id="message-' + snapshot.key + '">' + snapshot.val().message + '</div></div>').appendTo($('.mCSB_container')).addClass('new');
+
+  }
 }
+
+
+ 
+  
+
 
 setDate();
 updateScrollbar();
@@ -81,6 +98,7 @@ return false;
 }
 
 sendMessage();
+//sendmsglog();
 }
 
 $('.message-submit').click(function() {
