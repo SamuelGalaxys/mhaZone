@@ -15,11 +15,13 @@ $(window).load(function() {
 
 
 
+ 
 
 
 temp = location.href.split("?");
 data=temp[1].split("/");
 uids = data[0];
+namez = data[1];
 
 
 
@@ -54,10 +56,21 @@ timeout: 0
 }
 
 function setDate(){
-d = new Date()
-if (m != d.getMinutes()) {
+
+    //냘짜 함수
+    var d = new Date();
+    var year = d.getFullYear().toString();
+    var month = (d.getMonth() + 1).toString();
+    var day = d.getDate().toString();
+    var hours = d.getHours().toString();
+    var min = d.getMinutes().toString();
+    var sec = d.getSeconds().toString();
+    var currentTime = year + "." + month + "." + day+ "." + hours + ":" + min;
+
+
+ if (m != d.getMinutes()) {
 m = d.getMinutes();
-$('<div class="timestamp">' + d.getHours() + ':' + m + '</div>').appendTo($('.message:last'));
+$('<div class="timestamp">' + currentTime + '</div>').appendTo($('.message:last'));
 }
 }
 

@@ -60,13 +60,7 @@
               </a>
             </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="chatting/chat.html">
-                <i class="ni ni-send text-blue"></i>
-                <span class="nav-link-text">전체채팅</span>
-              </a>
-            </li>
-
+ 
             <div class="btnz"></div>
 
             
@@ -829,7 +823,7 @@ $(".btnz").prepend(btnside);   //위로 붙이기
  
   //채팅으로UID전달하는함수
   function chat(key){ 
- location.href="chatting/chat.html?" + key;
+ location.href="chatting/chat.html?" + key  + "/" + name ;
  alert(key);
  }
 
