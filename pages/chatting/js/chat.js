@@ -25,7 +25,7 @@ uids = data[0];
 
 
 
-var foodItems = ["나무늘보", "사과", "나뭇잎", "그냥 익명이", "바나나", "막대기", "SKT T1 FAKER", "고양이", "삼색이", "이얏호응", "무", "연필", "띠이모", "강아지", "빨간 모자", "그냥 학생", "내 꿈은 세계정복"];
+var foodItems = ["나무늘보", "사과", "나뭇잎", "그냥 익명이", "바나나", "막대기", "SKT T1 FAKER", "고양이", "삼색이", "이얏호응", "무", "연필", "띠이모", "강아지", "빨간 모자", "그냥 학생", "내 꿈은 세계정복", "나 누구게", "갈매기"];
 var randomz = foodItems[Math.floor(Math.random() * foodItems.length)];
 
 
@@ -40,7 +40,7 @@ firebase.database().ref("messages").on("child_added", function (snapshot) {
 if (snapshot.val().sender == myName) {
   //나자신이보낸 메시지
 
-  if (snapshot.val().sender == "nQkxBp2jfIg4Rz3HntAT2ep6mB62") {
+  if (snapshot.val().sender == "kMywHo4jNSM0ybV5cYctttif7Hu1") {
     $('<div class="message message-personal"> <div style="font-size :14px; color:yellow" id="message-' + snapshot.key + '">' + snapshot.val().message + '<button class="btn-delete" data-id="' + snapshot.key + '" onclick="deleteMessage(this);">X</button></div></div>').appendTo($('.mCSB_container')).addClass('new');   
      $('.message-input').val(null);
 
@@ -59,7 +59,7 @@ if (snapshot.val().sender == myName) {
 
 
 
-    if (snapshot.val().sender == "nQkxBp2jfIg4Rz3HntAT2ep6mB62") {
+    if (snapshot.val().sender == "kMywHo4jNSM0ybV5cYctttif7Hu1") {
     //관리자가 보내는 메시지
     $('<div class="message new">'+ '<a style="font-size : 2px; color:#ff5e00">' + "기훈 김" + '</a></br>'  + '<figure class="avatar"><img src="https://www.seekpng.com/png/detail/20-200534_mars-transparent-icon-brainpop-mars.png" /></figure>' +'<div style="font-size :14px; color:#401414" id="message-' + snapshot.key + '">' + snapshot.val().message + '</div></div>').appendTo($('.mCSB_container')).addClass('new');
 
