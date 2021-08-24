@@ -1,41 +1,120 @@
 <!--
 =========================================================
+* Argon Dashboard - v1.2.0
+=========================================================
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
 
+
+* Copyright  Creative Tim (http://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+
+
+=========================================================
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
 <!DOCTYPE html>
 <html>
 
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-  <meta name="author" content="Creative Tim">
-  <title>마한아존</title>
-  <!-- Favicon -->
-  <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-  <!-- Icons -->
-  <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-  <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
-  <link rel="stylesheet" href="https://samuelgalaxys.github.io/reusemapvendors/vendors/iconfonts/mdi/css/materialdesignicons.css">
 
 
-  <script src="../assets/js/includeHTML.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+    <meta name="author" content="Creative Tim">
+    <title>마한아존 - 마닐라한국아카데미 커뮤니티</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <!-- Icons -->
+    <link rel="stylesheet" href="assets/anim/tree.css" type="text/css">
+    <script src="assets/anim/tree.js"></script>
 
-  <!-- Page plugins -->
-  <!-- Argon CSS -->
-  <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-</head>
+    <style>
+      table, th, td {
+        border: 2px solid;
+        color : #262626;
+        border-collapse: collapse;
+        text-align: center;
+        width : 80px;
+        height: 10px;
+      }
+      th, td {
+        padding: 10px;
+      }
+      th {
+        text-align: center;
+      }
+      </style>
+       
+       <style>
+      @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+      </style>
 
-<body>
+
+
+    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
+    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="https://samuelgalaxys.github.io/reusemapvendors/vendors/iconfonts/mdi/css/materialdesignicons.css">
+  
+    <!-- Page plugins -->
+    <!-- Argon CSS -->
+    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+  </head>
+
+
+  <style>
+    .buttonb {
+      background-color: #1c87c9;
+      -webkit-border-radius: 12px;
+      border-radius: 12px;
+      border: none;
+      color: #eeeeee;
+      cursor: pointer;
+      display: inline-block;
+      font-style: Bold;
+      font-size: 15px;
+      padding: 10px 10px;
+      text-align: center;
+      text-decoration: none;
+    }
+    @keyframes glowing {
+      0% {
+        background-color: #ffffff;
+        box-shadow: 0 0 5px #ffffff;
+        
+      }
+      50% {
+        background-color: #00ff80;
+        box-shadow: 0 0 20px #0fe43d;
+        color: #313131;
+
+        
+      }
+      100% {
+        background-color: #fffb00;
+        box-shadow: 0 0 5px #5f00db;
+
+        
+      }
+    }
+    .buttonb {
+      animation: glowing 1000ms infinite;
+    }
+  </style>
+  
+  <body>
   
   
 
 
+
+    <!-- Sidenav -->
     
-  <!-- Sidenav -->
+    
   <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
       <!-- Brand -->
@@ -68,17 +147,16 @@
             <div class="btnz"></div>
 
 
-
             <li class="nav-item">
               <a class="nav-link" href="mhaboard.html">
-                <i class="ni ni-pin-3 text-blue"></i>
+                <i class="ni ni-pin-3 text-yellow"></i>
                 <span class="nav-link-text">일반게시판</span>
               </a>
             </li>
 
 
             <li class="nav-item">
-              <a class="nav-link active" href="notice.html">
+              <a class="nav-link" href="notice.html">
                 <i class="mdi mdi-information text-purple"></i>
                 <span class="nav-link-text">마한아 공지</span>
               </a>
@@ -86,14 +164,11 @@
 
 
             <li class="nav-item">
-              <a class="nav-link" href="tutorial.html">
+              <a class="nav-link active" href="tutorial.html">
                 <i class="mdi mdi-arrow-right-thick text-dark"></i>
                 <span class="nav-link-text">FaQ</span>
               </a>
             </li>
-
-
-
  
              
 
@@ -161,292 +236,195 @@
       </div>
     </div>
   </nav>
-
-
-
-
-
-
-
-<!-- Main content -->
-<div class="main-content" id="panel">
-  <!-- Topnav -->
-  <nav class="navbar navbar-top navbar-expand navbar-dark border-bottom" style="background-color: #c53636;">
-    <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Search form -->
-        <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-          <div class="form-group mb-0">
-
-
-
- 
-
-
-
-
-          </div>
-          <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </form>
-        <!-- Navbar links -->
-        <ul class="navbar-nav align-items-center  ml-md-auto ">
-         
-          <li class="nav-item d-sm-none">
-            <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
-              <i class="ni ni-zoom-split-in"></i>
-            </a>
-          </li>
   
-  
-           
-  
-  
-          
-  
-        </ul>
-        <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
-  
-  
-          <li class="nav-item d-xl-none">
-            <!-- Sidenav toggler -->
-            <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
-              <div class="sidenav-toggler-inner">
-                <i class="sidenav-toggler-line"></i>
-                <i class="sidenav-toggler-line"></i>
-                <i class="sidenav-toggler-line"></i>
-              </div>
+
+
+
+
+
+  <!-- Main content -->
+  <div class="main-content" id="panel">
+    <!-- Topnav -->
+    <nav class="navbar navbar-top navbar-expand navbar-dark border-bottom" style="background-color: #7C83FD;">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Search form -->
+          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+            <div class="form-group mb-0">
+
+
+
+              
+
+
             </div>
-          </li>
-  
-  
-          <li class="nav-item dropdown">
+            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </form>
+          <!-- Navbar links -->
+          <ul class="navbar-nav align-items-center  ml-md-auto ">
+         
+            <li class="nav-item d-sm-none">
+              <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
+                <i class="ni ni-zoom-split-in"></i>
+              </a>
+            </li>
+    
+    
+             
+    
+    
             
-            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <div class="media align-items-center">
-                <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder" src="../assets/img/theme/users.jpg">
-                </span>
-                <div class="media-body  ml-2  d-none d-lg-block">
-                  <span id="joinmenu" class="mb-0 text-sm  font-weight-bold">로그인</span>
+    
+          </ul>
+          <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
+    
+    
+            <li class="nav-item d-xl-none">
+              <!-- Sidenav toggler -->
+              <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
+                <div class="sidenav-toggler-inner">
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
+                  <i class="sidenav-toggler-line"></i>
                 </div>
               </div>
-            </a>
-  
-            <div class="dropdown-menu  dropdown-menu-right ">
-              <div class="dropdown-header noti-title">
-                <h6 class="text-overflow m-0">Welcome!</h6>
-              </div>
-               
-              <div class="dropdown-divider"></div>
-              <a href="loginform.html" class="dropdown-item">
-                <i class="ni ni-user-run"></i>
-                <span id="loginmenu">로그인/가입</span>
+            </li>
+    
+    
+            <li class="nav-item dropdown">
+              
+              <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="media align-items-center">
+                  <span class="avatar avatar-sm rounded-circle">
+                    <img alt="Image placeholder" src="../assets/img/theme/users.jpg">
+                  </span>
+                  <div class="media-body  ml-2  d-none d-lg-block">
+                    <span id="joinmenu" class="mb-0 text-sm  font-weight-bold">로그인</span>
+                  </div>
+                </div>
               </a>
-            </div>
+    
+              <div class="dropdown-menu  dropdown-menu-right ">
+                <div class="dropdown-header noti-title">
+                  <h6 class="text-overflow m-0">Welcome!</h6>
+                </div>
+                 
+                <div class="dropdown-divider"></div>
+                <a href="loginform.html" class="dropdown-item">
+                  <i class="ni ni-user-run"></i>
+                  <span id="loginmenu">로그인/가입</span>
+                </a>
+              </div>
+    
+    
+    
+    
+    
+    
+            </li>
+          </ul>
   
-  
-  
-  
-  
-  
-          </li>
-        </ul>
-
+        </div>
       </div>
-    </div>
-  </nav>
-  <!-- Header -->
-
-
+    </nav>
     <!-- Header -->
 
 
 
 
 
-
     <!-- Header -->
-    <div class="header pb-6" style="background-color: #c53636;">
+    <div class="header pb-6" style="background-color:#7C83FD;">
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
-            <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">⚠️마닐라한국아카데미 공지 </h6>
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-              
-              </nav>
-            </div>
-             
+            
+            
           </div>
-          <!-- Card stats -->
-           
-
-
-
         </div>
       </div>
     </div>
     <!-- Page content -->
     <div class="container-fluid mt--6">
-      
-      
-      
-      <h4 class="page-title">게시판 및 공지</h4>
+      <div class="row justify-content-center">
+        <div class=" col ">
+          <div class="card">
+            
+             
 
-						<div class="row">
-							<div class="col-md-6">
-
-
-								<div id="scrollz" class="card" style="overflow:scroll;width:auto; height:490px;">
-									<div class="card-header">
-										<div class="card-title" style="font-size: 20px; font-style: normal; ">업로드된 공지들</div>
-  									</div>
-									<div class="card-body">
-										 
-										<div class="noticelist"></div>
-
-										
-									</div>
-								</div>
-
-
-								 
- 
-								
-								 
-
-							</div>
-
-							<div class="col-md-6">
-								 
-
-
- 
-								<div class="card">
-									<div class="card-header">
-										<div class="card-title"><a style="color: rgb(255, 0, 0); font-size: 18px;">학생회 및 선생님 공지판</a></div>
-									</div>
-									<div class="form-group">			 
-   
- 									<div class="card-body">
-										<textarea class="form-control w-100" rows="1" name="subject" id="subject" cols="30" placeholder="공지 제목"></textarea></br>
-										<textarea class="form-control w-100" rows="5" name="comment" id="comment" cols="30" placeholder="공지할 내용을 입력해 주세요."></textarea></br>
-
-										<div class="card-sub">		
-											<textarea class="form-control w-100" rows="1" name="passcodemha" id="passcodemha" style="width:20px;" cols="10" placeholder="PASSCODE"></textarea></br>
-							
-											<button type="button" class="button button-contactForm btn_1 boxed-btn btn btn-danger write" id="write" name="write">공지 업로드</button> 
-											팝업 띄우기(개발중)
-                      <input type="checkbox" checked data-toggle="toggle" data-onstyle="primary">
-
-										</div>
- 
-									</div>
-
- 								    </div>
-
-						        </div>
-								
-								 
-
-
-
-
-							</div>
-						</div>
-
-
-      <div class="row">
+            <div class="card-body">
+              
+              
+              <table style="width:100%" margin="center">
+ 										   
+                
 
 
 
 
 
+                  
+                </table>
 
 
-        
-         
+
+
+            </div>
+            
+
+
+
+            
+            
+          </div>
+        </div>
       </div>
       <!-- Footer -->
+      
+      <footer class="footer pt-0">
+        <div class="row align-items-center justify-content-lg-between">
+          <div class="col-lg-6">
+            <div class="copyright text-center  text-lg-left  text-muted">
+              &copy; 2021 <a href="#" class="font-weight-bold ml-1" target="_blank">mhaZone COMON, All rights reserved.</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+      
+              
+              
+              <li class="nav-item">
+                <a href="_____" class="nav-link" target="_blank">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="_____" class="nav-link" target="_blank">개인정보처리방침</a>
+              </li>
+               
+              
+            </ul>
+          </div>
+        </div>
+      </footer>
 
-      <footer include-html="footer.html"></footer>
-      <a id="doact" style="font-size: 2px;" href="https://www.google.com" class="nav-link" target="_blank">About Us</a>
-
-
-       
     </div>
   </div>
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <!-- Optional JS -->
+  <script src="../assets/vendor/clipboard/dist/clipboard.min.js"></script>
+  <!-- Argon JS -->
+  <script src="../assets/js/argon.js?v=1.2.0"></script>
+  <script src="../assets/anim/tree.js"></script>
 
 
 
-
-
-<!-- Modal -->
-
-<div class="modal fade" id="modalUpdate" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-			<div class="modal-header" style="background-color: rgb(42, 221, 138);">
-				<h6 class="modal-title" style="color: #494848;"><i class="fas fa-arrow-up"></i><strong> 쓰기</strong></h6>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-
-			<div class="modal-body text-center">									
- 					 
- 						
-            <div class="card-header">
-              <div class="card-title"><a style="color: rgb(44, 43, 44); font-size: 24px;"><strong>일반게시판</strong></a></div>
-            </div>
-            <div class="form-group">			 
-
-             <div class="card-body">
-              <textarea style="font-size: 20px;" class="form-control w-100" rows="1" name="subject" id="subject" cols="30" placeholder="익명 게시물 제목"></textarea></br>
-              <textarea style="font-size: 15px;" class="form-control w-100" rows="7" name="comment" id="comment" cols="30" placeholder="익명 게시판의 이용에 따른 책임은 사용자에게 있으며, 특정 학생을 대상으로 한 저격,비방과 희롱 등 불쾌감을 유발하는 글은 봇에 의해 이유불문 삭제됩니다."></textarea></br>
-
-              <div class="card-sub">		
-         
-                                      
-                 <button type="button" class="button button-contactForm btn_1 boxed-btn btn btn-primary write" id="write" name="write" style="width: 100%; background-color: #505050;">게시물 쓰기</button> 
- 
-              </div>
-
-            </div>
-
-               </div>
-
-
-						
- 			</div>
-
-       <!----
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
-			</div>
-
-    -->
-
-
-
-		</div>
-	</div>
-</div>
-
-
- <!-- Core -->
- <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
- <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
- <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
- <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
- <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
- <!-- Optional JS -->
- <script src="../assets/vendor/chart.js/dist/Chart.min.js"></script>
- <script src="../assets/vendor/chart.js/dist/Chart.extension.js"></script>
- <!-- Argon JS -->
- <script src="../assets/js/argon.js?v=1.2.0"></script>
 
 <script src="../assets/js/time.js"></script>
 <!--login유무 session js 파일 -->
@@ -455,6 +433,7 @@
 <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 <script>
 	
+ 
 	
     //2초후 실행
     setTimeout(function() {
@@ -561,7 +540,7 @@
 	function saveThanks() {
 
 		//thanks 라는 테이블을 만들고 하위 데이터에 유저 아이디를 넣어준다. 그곳에 push로 가상의 키를 넣고, 객체를 넣어준다.!!!!
-		var thankRef = firebaseDatabase.ref("notice");
+		var thankRef = firebaseDatabase.ref("boards");
 
 		// 해당 객체의 key 값이 자동으로 생성된다.
 		var thank = thankRef.push(); // 해당 객체의 key 값이 자동으로 생성된다.
@@ -692,6 +671,7 @@
 	}
 
 
+
   
   function buttonadd(data){
  		var key = data.key;
@@ -721,10 +701,57 @@ $(".btnz").prepend(btnside);   //위로 붙이기
 
 
 </script>
+
+
+
+
 <script>
-  includeHTML();
-</script>
-   
+	
+	$(document).ready(function () {
+			//$("#modalUpdate").modal('show');
+			
+	
+		});
+	
+		//alert("-서버 점검 안내- \n \n 일시 : 오늘 오후 6시~9시 \n mhaZone으로 새롭게 찾아옵니다. \n \n git@github.com:SamuelGalaxys/GreenNewdeal.git \nAccessible Github users: SamuelGalaxys, Esther03-web \n Virsion 0.2");
+	 
+	
+	
+		
+	
+		
+		$('#displayNotif').on('click', function(){
+			var placementFrom = $('#notify_placement_from option:selected').val();
+			var placementAlign = $('#notify_placement_align option:selected').val();
+			var state = $('#notify_state option:selected').val();
+			var style = $('#notify_style option:selected').val();
+			var content = {};
+	
+			content.message = 'Turning standard Bootstrap alerts into "notify" like notifications';
+			content.title = 'Bootstrap notify';
+			if (style == "withicon") {
+				content.icon = 'la la-bell';
+			} else {
+				content.icon = 'none';
+			}
+			content.url = 'index.html';
+			content.target = '_blank';
+	
+			$.notify(content,{
+				type: state,
+				placement: {
+					from: placementFrom,
+					align: placementAlign
+				},
+				time: 1000,
+			});
+		});
+	</script>
+ 
+
+
+
+
 </body>
 
 </html>
