@@ -508,6 +508,41 @@
 
     </div>
   </div>
+
+
+  
+<!-- Modal -->
+
+<div class="modal fade" id="modalUpdateN" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color: #ffd900;">
+				<h6 class="modal-title"><i class="la la-info-circle"></i> 공지</h6>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body text-center">									
+				<div id="scrollmodal" class="card" style="overflow:scroll;width:auto; height:400px;">
+					 
+					<div class="card-body">
+						<div class="card-sub">
+							공지가 여기에 표시됩니다. 
+						</div>
+						<div class="noticelist"></div>
+
+						
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
   <!-- Argon Scripts -->
   <!-- Core -->
   <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
@@ -529,17 +564,14 @@
 <script src="../assets/js/sessionCheck.js"></script>
 <!--스크립트 부분. 자신의 스크립트 코드로 변경하세요! -->
 <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
+<script src="../modal.js"></script>
+
 <script>
 	
  
 	
-    //2초후 실행
-    setTimeout(function() {
-    //	var element = document.getElementById("scrollz");
-    //    element.scrollTop = element.scrollHeight;  //스크롤 내리기
-		$("#modalUpdateN").modal('show');
-
-    }, 1000);
+ 
 
      
 
