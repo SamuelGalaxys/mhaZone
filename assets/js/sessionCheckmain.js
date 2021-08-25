@@ -22,7 +22,7 @@
 
                 document.getElementById("doact").textContent = snapshot.val().grd + "학년 바로가기"; //Span은 innerhtml로 a 는 textContent로
                 document.getElementById("doact").href = "g12.html";
-                window.location.href = "g12.html"
+       //         window.location.href = "g12.html"
 
               }
 

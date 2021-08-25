@@ -64,6 +64,10 @@ function game() {
         if (destroyed == 3000){
             alert("게임 끝ㅌㅌ")
         }
+
+
+
+
     }
 
 

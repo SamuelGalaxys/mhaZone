@@ -3,6 +3,7 @@
 
 <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-database.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <link rel="stylesheet" href="css/normalize.css">
 
@@ -105,8 +106,20 @@ var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
     var currentTime = year + "년" + month + "월" + day+ "일" + hours + ":" + min;
 
 
+
+ 
+
+
  
     var message = document.getElementById("message").value;
+
+
+
+    if (message.indexOf('섹스')!= -1 | message.indexOf('병신')!= -1| message.indexOf('애미')!= -1| message.indexOf('sex')!= -1| message.indexOf('문재인')!= -1| message.indexOf('새끼')!= -1| message.indexOf('자위')!= -1| message.indexOf('딸딸')!= -1| message.indexOf('ddd')!= -1){
+      alert("민감하거나 부정적인 단어가 포함되어 있습니다.");
+    }else{
+
+
     firebase.database().ref("messages").push().set({
       "message": message,
       "sender": myName,
@@ -125,6 +138,11 @@ var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
     });
 
      return false;
+
+    }
+
+
+
   }
 
 
