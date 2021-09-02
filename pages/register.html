@@ -26,7 +26,7 @@
 
 
              <p class="smalltext" style="font-size : 12px;" align="center" id="ips">자동등록방지: <span id="client-ip"></span></p>
-             <input class="antiauto" type="text" align="center" placeholder="자동등록방지를 입력해주세요" id="greenip">
+             <input class="antiauto" type="text" align="center" placeholder="자동등록방지를 입력해주세요 (안뜨면 MHAZONE21을 입력해주세요)" id="greenip">
 
 
 
@@ -136,7 +136,7 @@
                      var json = JSON.parse(this.responseText);
 
 
-                     if (json.ip == ipip & grademha == "13","12","11","10","9","8" | json.ip == "MHAZONE21") {
+                     if (json.ip == ipip & grademha == "13","12","11","10","9","8" | ipip == "MHAZONE21") {
 
                          // alert("당신은 접속이 허용되었습니다.")
 
