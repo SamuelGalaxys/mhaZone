@@ -6,6 +6,6 @@
 
 
 
-            $("#modalUpdateN").modal('show');
+           // $("#modalUpdateN").modal('show');
     
         }, 1000);
