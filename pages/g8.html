@@ -607,6 +607,8 @@ $(document).ready(function () {
       changeTable();
     } else {
       alert("로그인이 필요한 서비스 입니다.")
+      window.location.href = "loginform.html"
+
     }
   });
 
@@ -1156,7 +1158,7 @@ Notification.requestPermission();
 
  
 
-var audio = new Audio('학교종소리.mp3'); //오디오 재생 추가하기
+// var audio = new Audio('학교종소리.mp3'); //오디오 재생 추가하기
 // audio.play();
 
 
