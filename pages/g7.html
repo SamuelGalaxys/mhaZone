@@ -33,7 +33,6 @@
     <link rel="stylesheet" href="assets/anim/tree.css" type="text/css">
     <script src="assets/anim/tree.js"></script>
 
-
     <style>
       table, th, td {
         border: 2px solid;
@@ -219,14 +218,14 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="g8.html">
+              <a class="nav-link" href="g8.html">
                 <i class="mdi mdi-book text-purple"></i>
                 <span class="nav-link-text">8학년</span>
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="g7.html">
+              <a class="nav-link active" href="g7.html">
                 <i class="mdi mdi-book text-pink"></i>
                 <span class="nav-link-text">7학년</span>
               </a>
@@ -367,7 +366,7 @@
               
               <button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right" style="background-color: rgb(78, 255, 166); color: black; float: left;">바로가기 :: 현재 수업이 없습니다.</button>
 
-              <button type="button" onclick="location.href = 'timeedit8.html' " class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="width: 15%; background-color: #f0f5ff; color: #262626; float: right;">✏️편집하기</button> 
+              <button type="button" onclick="location.href = 'timeedit7.html' " class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="width: 15%; background-color: #f0f5ff; color: #262626; float: right;">✏️편집하기</button> 
            <!-- 편집 기능 -->
             </br></br></br>
               <div class="TableList"></div>
@@ -630,14 +629,14 @@ $(document).ready(function () {
 
 
 });
- 
 
+ 
 
 //쓰기 버튼 눌렀을 때 호출 되는 함수
 function changeTable() {
 
   //thanks 라는 테이블을 만들고 하위 데이터에 유저 아이디를 넣어준다. 그곳에 push로 가상의 키를 넣고, 객체를 넣어준다.!!!!
-  var thankRef = firebaseDatabase.ref("timetables/timetables8");
+  var thankRef = firebaseDatabase.ref("timetables/timetables7");
 
   // 해당 객체의 key 값이 자동으로 생성된다.
   var thank = thankRef.push(); // 해당 객체의 key 값이 자동으로 생성된다.
@@ -729,7 +728,7 @@ function boardList() {
   if (loginUserKey) {
     //alert(loginUserKey)
     //글이 저장된 레퍼런스 값 가져오기
-    var thanksRef = firebaseDatabase.ref('timetables/timetables8');
+    var thanksRef = firebaseDatabase.ref('timetables/timetables7');
     //on 함수로 글 목록가져오기
     thanksRef.on('child_added', on_thanks_list)
     var thanksRef = firebaseDatabase.ref('notice');
@@ -739,7 +738,7 @@ function boardList() {
     //로그인 아니어도 글 보이게
     //alert(loginUserKey)
     //글이 저장된 레퍼런스 값 가져오기
-    var thanksRef = firebaseDatabase.ref('timetables/timetables8');
+    var thanksRef = firebaseDatabase.ref('timetables/timetables7');
     thanksRef.on('child_added', on_thanks_list)
 
     var thanksRef = firebaseDatabase.ref('notice');

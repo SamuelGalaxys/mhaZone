@@ -111,7 +111,7 @@
   
 
 
-    
+
     <!-- Sidenav -->
     
     
@@ -144,15 +144,15 @@
               </a>
             </li>
 
+            <div class="btnz"></div>
+
 
             <li class="nav-item">
               <a class="nav-link" href="mhaboard.html">
-                <i class="ni ni-pin-3 text-blue"></i>
+                <i class="ni ni-pin-3 text-yellow"></i>
                 <span class="nav-link-text">일반게시판</span>
               </a>
             </li>
-
-            <div class="btnz"></div>
 
 
             <li class="nav-item">
@@ -248,7 +248,7 @@
   <!-- Main content -->
   <div class="main-content" id="panel">
     <!-- Topnav -->
-    <nav class="navbar navbar-top navbar-expand navbar-dark border-bottom" style="background-color: #7C83FD;">
+    <nav class="navbar navbar-top navbar-expand navbar-dark border-bottom" style="background-color: #9E7777;">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->
@@ -257,7 +257,9 @@
 
 
 
-               <a class="btn btn-primary" margin="right" style="background-color: rgba(255, 208, 0, 0); color: rgb(255, 255, 255); ">수업 시간이 떄 자동 알림을 받으려면 이곳을 눌러주세요. </a>
+
+              
+              <a class="btn btn-primary" margin="right" style="background-color: #F5E8C7; color: rgb(49, 49, 49); ">수업 시간때 자동 알림을 받으려면 눌러주세요. </a>
 
 
 
@@ -342,7 +344,7 @@
 
 
     <!-- Header -->
-    <div class="header pb-6" style="background-color:#7C83FD;">
+    <div class="header pb-6" style="background-color:#9E7777;">
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
@@ -364,7 +366,7 @@
               
               <button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right" style="background-color: rgb(78, 255, 166); color: black; float: left;">바로가기 :: 현재 수업이 없습니다.</button>
 
-              <button type="button" onclick="location.href = 'timeedit.html' " class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="width: 15%; background-color: #f0f5ff; color: #262626; float: right;">✏️편집하기</button> 
+              <button type="button" onclick="location.href = 'timeedit9.html' " class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="width: 15%; background-color: #f0f5ff; color: #262626; float: right;">✏️편집하기</button> 
            <!-- 편집 기능 -->
             </br></br></br>
               <div class="TableList"></div>
@@ -404,7 +406,7 @@
               <li class="nav-item">
                 <a href="_____" class="nav-link" target="_blank">개인정보처리방침</a>
               </li>
-              
+               
               
             </ul>
           </div>
@@ -413,6 +415,7 @@
 
     </div>
   </div>
+
 
   
 <!-- Modal -->
@@ -470,6 +473,7 @@
 <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 
 <script src="../modal.js"></script>
+
 
 <script>
 	
@@ -626,13 +630,13 @@ $(document).ready(function () {
 
 });
 
-
+ 
 
 //쓰기 버튼 눌렀을 때 호출 되는 함수
 function changeTable() {
 
   //thanks 라는 테이블을 만들고 하위 데이터에 유저 아이디를 넣어준다. 그곳에 push로 가상의 키를 넣고, 객체를 넣어준다.!!!!
-  var thankRef = firebaseDatabase.ref("timetables");
+  var thankRef = firebaseDatabase.ref("timetables/timetables9");
 
   // 해당 객체의 key 값이 자동으로 생성된다.
   var thank = thankRef.push(); // 해당 객체의 key 값이 자동으로 생성된다.
@@ -724,7 +728,7 @@ function boardList() {
   if (loginUserKey) {
     //alert(loginUserKey)
     //글이 저장된 레퍼런스 값 가져오기
-    var thanksRef = firebaseDatabase.ref('timetables');
+    var thanksRef = firebaseDatabase.ref('timetables/timetables9');
     //on 함수로 글 목록가져오기
     thanksRef.on('child_added', on_thanks_list)
     var thanksRef = firebaseDatabase.ref('notice');
@@ -734,7 +738,7 @@ function boardList() {
     //로그인 아니어도 글 보이게
     //alert(loginUserKey)
     //글이 저장된 레퍼런스 값 가져오기
-    var thanksRef = firebaseDatabase.ref('timetables');
+    var thanksRef = firebaseDatabase.ref('timetables/timetables9');
     thanksRef.on('child_added', on_thanks_list)
 
     var thanksRef = firebaseDatabase.ref('notice');
@@ -940,7 +944,7 @@ function on_thanks_list(data) {
   
   //리스트 동적으로 붙이기
   var html =
-
+  "<a style = \"font-size : 12px  ;\">" + name +" 님이 "+ createtime+ "에 마지막으로 수정함."+"</a>"+
   "<table style=\"width:100%\" id='" + userkey + "'  margin=\"center\">" + 
                       
                       "<tr>" + 
@@ -1040,11 +1044,11 @@ function on_thanks_list(data) {
                         "<td style='"+ "background : "+ wed8color + "'><a href='" + wed8link + "' target=\"_blank\">"+wed8+"</a></td>" +
                         "<td style='"+ "background : "+ thr8color + "'><a href='" + thr8link + "' target=\"_blank\">"+thr8+"</a></td>" +
                         "<td style='"+ "background : "+ fri8color + "'><a href='" + fri8link + "' target=\"_blank\">"+fri8+"</a></td>" +
-                       "</tr>" +
+                       "</tr>" +  
       
        
                         
-                      "</table>";
+                      "</table>" + "</br>"+ "</br>"+ "</br>" ;
 
   
 
@@ -1140,21 +1144,44 @@ function on_notice_list(data) {
 		});
 	</script>
 
-
 <script>
+
+ 
+
+Notification.requestPermission();
+
+
+ const btnElement = document.getElementById('classnow');
+
+ 
+
+var audio = new Audio('학교종소리.mp3'); //오디오 재생 추가하기
+// audio.play();
+
+
+ 
+ 
+
+
+
+
+  
+
+
+playAlert = setInterval(function() {   //루프 계속반복 Loop Loop
 
 
 var now = new Date();
 var week = new Array('SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT');
 var hours = now.getHours();
 var mins = now.getMinutes();
+var secs = now.getSeconds();
+ 
+//     new Notification("✅실시간 수업이 있습니다.", {body:'ㅋㅋㅋㅋㅋㅋ'});
 
  
-const btnElement = document.getElementById('classnow');
- 
 
-
-if (week[now.getDay()] == "SUN") { //월요일     월요일     월요일
+if (week[now.getDay()] == "MON") { //월요일     월요일     월요일
    //alert('오늘 요일: ' + week[d.getDay()] + '요s일');
 
 
@@ -1164,6 +1191,7 @@ if (week[now.getDay()] == "SUN") { //월요일     월요일     월요일
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
 	   btnElement.innerText = '개인QT중';
      btnElement.className = 'buttonb';
+ 
 
      }
 
@@ -1171,127 +1199,40 @@ if (week[now.getDay()] == "SUN") { //월요일     월요일     월요일
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
    if(hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: 수학';
+    btnElement.className = 'buttonb';
+ 
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: 수학';
+    btnElement.className = 'buttonb';
+
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: 국어';
+    btnElement.className = 'buttonb';
+
+ 
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.innerText = '바로가기 :: 국어 ';
+    btnElement.className = 'buttonb';
+
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.innerText = '바로가기 :: 없음 ';     
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
     btnElement.innerText = '바로가기 :: 없음 ';
-    }
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
 
-
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
-   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	  btnElement.innerText = '바로가기 :: 없음';
-    }
-   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-   	btnElement.innerText = '바로가기 :: 없음';
-    }
-
-	
-
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
-   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
-    btnElement.style.cssFloat = "buttonb";
-    
-
-    }
-   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-    btnElement.innerText = '바로가기 :: 없음';
-    }
-
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
-   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
-
-    }
-   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = '바로가기 :: 없음';
-
-    }
-
-
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
-   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
- 
-
-    }
- 
-    
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
-   if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	btnElement.innerText = '바로가기 :: 없음';
-
-    }
-    
-
-}
-	
-
-
-
-
-
-
-
-
-if (week[now.getDay()] == "TUE") { //화요일========화요일=======화요일=================
-   //alert('오늘 요일: ' + week[d.getDay()] + '요s일');
-
- //alert('오늘 요일: ' + week[d.getDay()] + '요s일');
-
-
-
-   
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
-   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	   btnElement.innerText = '개인QT중';
-     btnElement.className = 'buttonb';
-
-     }
-
-
-
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
-   if(hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
-    }
-   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-    btnElement.innerText = '바로가기 :: 없음';
-    }
-
-
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
-   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
-    }
-   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-    btnElement.innerText = '바로가기 :: 없음 ';
-    }
-
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
-   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음 ';
-    }
-   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-    btnElement.innerText = '바로가기 :: 없음 ';
     }
 
 
@@ -1317,18 +1258,23 @@ if (week[now.getDay()] == "TUE") { //화요일========화요일=======화요일=
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: Skill Builder';
+    btnElement.className = 'buttonb';
 
+ 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = '바로가기 :: 없음';
+	btnElement.innerText = '바로가기 :: Skill Builder ';
+  btnElement.className = 'buttonb';
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: IS';
+    btnElement.className = 'buttonb';
+
  
 
     }
@@ -1337,10 +1283,230 @@ if (week[now.getDay()] == "TUE") { //화요일========화요일=======화요일=
    //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
 	btnElement.innerText = '바로가기 :: 없음';
+  btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+
 
     }
     
 
+
+     ///=====================알림가게하는부분임===============
+    ///=====================알림가게하는부분임===============
+     //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
+     if(hours >= "8" & hours <= "8" & mins == "55" & secs <= 05){
+      new Notification("✅실시간 수업이 있습니다.", {body:'12학년::수학'});
+      audio.play();
+    }
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
+ if(hours >= "9" & hours <= "9" & mins == "50" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::국어'});
+  audio.play();
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
+ if(hours >= "10" & hours <= "10" & mins == "45" & secs <= 05){
+
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
+ if(hours >= "11" & hours <= "11" & mins == "40" & secs <= 05){
+
+}
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
+ if(hours >= "13" & hours <= "13" & mins == "15" & secs <= 05){
+  
+  }
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
+ if(hours >= "14" & hours <= "14" & mins == "10" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::스킬빌더'});
+  audio.play();
+
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
+ if(hours >= "15" & hours <= "15" & mins == "05" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::아이에스'});
+  audio.play();
+
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
+ if(hours >= "16" & hours <= "16" & mins == "00" & secs <= 05){
+
+  }
+
+
+
+
+
+
+}
+	
+
+
+
+
+
+
+
+
+if (week[now.getDay()] == "TUE") { //화요일========화요일=======화요일=================
+   //alert('오늘 요일: ' + week[d.getDay()] + '요s일');
+
+ //alert('오늘 요일: ' + week[d.getDay()] + '요s일');
+
+
+
+   
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
+   if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
+	   btnElement.innerText = '개인QT중';
+     btnElement.className = 'buttonb';
+     }
+
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
+   if(hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: 한문';
+    btnElement.className = 'buttonb';
+    }
+   if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
+    btnElement.innerText = '바로가기 :: 한문';
+    btnElement.className = 'buttonb';
+
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+
+    }
+   if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+    btnElement.innerText = '바로가기 :: 없음 ';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
+   if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: 국어 ';
+    btnElement.className = 'buttonb';
+    }
+   if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+    btnElement.innerText = '바로가기 :: 국어 ';
+    btnElement.className = 'buttonb';
+
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+	  btnElement.innerText = '바로가기 :: 음악';
+    btnElement.className = 'buttonb';
+    }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
+   	btnElement.innerText = '바로가기 :: 음악';
+    }
+
+	   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
+     if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
+	  btnElement.innerText = '현재는 점심시간🥘';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+}
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
+   if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: 없음';
+     
+
+    }
+   if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+    btnElement.innerText = '바로가기 :: 없음';
+    }
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
+   if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: LIT';
+    btnElement.className = 'buttonb';
+
+      }
+   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+	btnElement.innerText = '바로가기 :: LIT';
+  btnElement.className = 'buttonb';
+
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
+   if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+ 
+
+     }
+ 
+    
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
+   if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
+	btnElement.innerText = '바로가기 :: EP';
+  btnElement.className = 'buttonb';
+    }
+    
+
+
+     ///=====================알림가게하는부분임===============
+    ///=====================알림가게하는부분임===============
+     //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
+     if(hours >= "8" & hours <= "8" & mins == "55" & secs <= 05){
+      new Notification("✅실시간 수업이 있습니다.", {body:'12학년::한문'});
+      audio.play();
+}
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
+ if(hours >= "9" & hours <= "9" & mins >= "50" & secs <= 05){
+
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
+ if(hours >= "10" & hours <= "10" & mins == "45" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::국어'});
+  audio.play();
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
+ if(hours >= "11" & hours <= "11" & mins == "40" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::음악'});
+  audio.play();
+
+}
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
+ if(hours >= "13" & hours <= "13" & mins == "15" & secs <= 05){
+  
+  }
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
+ if(hours >= "14" & hours <= "14" & mins == "10" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::리트'});
+  audio.play();
+
+  }
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
+ if(hours >= "15" & hours <= "15" & mins == "05" & secs <= 05){
+
+  }
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
+ if(hours >= "16" & hours <= "16" & mins == "00" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::이피'});
+  audio.play();
+
+  }
 
 
 
@@ -1370,6 +1536,8 @@ if (week[now.getDay()] == "WED") {  //========================수요일=========
    //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
    if(hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59"){
     btnElement.innerText = '바로가기 :: 없음';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
     btnElement.innerText = '바로가기 :: 없음';
@@ -1386,36 +1554,56 @@ if (week[now.getDay()] == "WED") {  //========================수요일=========
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.innerText = '바로가기 :: 수학 ';
+    btnElement.className = 'buttonb';
+
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.innerText = '바로가기 :: 수학 ';
+    btnElement.className = 'buttonb';
+
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	  btnElement.innerText = '바로가기 :: 없음';
+	  btnElement.innerText = '바로가기 :: 한문';
+    btnElement.className = 'buttonb';
+
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-   	btnElement.innerText = '바로가기 :: 없음';
+   	btnElement.innerText = '바로가기 :: 한문';
+     btnElement.className = 'buttonb';
+
     }
 
+   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
+   if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
+	  btnElement.innerText = '현재는 점심시간🥘';    
+     btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+}
 	
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: 국어';
+    btnElement.className = 'buttonb';
+
      
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: 국어';
+    btnElement.className = 'buttonb';
+    
+
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
     btnElement.innerText = '바로가기 :: 없음';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
@@ -1426,7 +1614,9 @@ if (week[now.getDay()] == "WED") {  //========================수요일=========
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: Physics';
+    btnElement.className = 'buttonb';
+
  
 
     }
@@ -1434,10 +1624,69 @@ if (week[now.getDay()] == "WED") {  //========================수요일=========
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	btnElement.innerText = '바로가기 :: 없음';
+	btnElement.innerText = '바로가기 :: IS';
+  btnElement.className = 'buttonb';
+
 
     }
     
+     ///=====================알림가게하는부분임===============
+    ///=====================알림가게하는부분임===============
+     //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
+     if(hours >= "8" & hours <= "8" & mins == "55" & secs <= 05){
+    new Notification("✅실시간 수업이 있습니다.", {body:'12학년::수요예배'});
+    audio.play();
+
+}
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
+ if(hours >= "9" & hours <= "9" & mins >= "50" & secs <= 05){
+
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
+ if(hours >= "10" & hours <= "10" & mins == "45" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::수학'});
+  audio.play();
+
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
+ if(hours >= "11" & hours <= "11" & mins == "40" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::한문'});
+  audio.play();
+
+}
+
+    
+
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
+ if(hours >= "13" & hours <= "13" & mins == "15" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::국어'});
+  audio.play();
+
+  }
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
+ if(hours >= "14" & hours <= "14" & mins == "10" & secs <= 05){
+
+  }
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
+ if(hours >= "15" & hours <= "15" & mins == "05" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::(피식)스'});
+  audio.play();
+
+  }
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
+ if(hours >= "16" & hours <= "16" & mins == "00" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::아이에스'});
+  audio.play();
+
+  }
+
 
 
 }
@@ -1462,10 +1711,10 @@ if (week[now.getDay()] == "THU") { //========================목요일==========
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
    if(hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: LIT';
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: LIT';
     }
 
 
@@ -1479,22 +1728,35 @@ if (week[now.getDay()] == "THU") { //========================목요일==========
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.innerText = '바로가기 :: 성경 ';
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.innerText = '바로가기 :: 성경 ';
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
-   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	  btnElement.innerText = '바로가기 :: 없음';
+   if(hours >= "11" & hours <= "11" & mins >= "45" & mins <= "59"){
+	  btnElement.innerText = '바로가기 :: 체육';
+    btnElement.className = 'buttonb';
+
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-   	btnElement.innerText = '바로가기 :: 없음';
-    }
+   	btnElement.innerText = '바로가기 :: 체육';
+     btnElement.className = 'buttonb';
 
-	
+
+  }
+
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
+    if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
+	  btnElement.innerText = '현재는 점심시간🥘';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+}
+
+
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
@@ -1508,18 +1770,25 @@ if (week[now.getDay()] == "THU") { //========================목요일==========
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: EP';
+    btnElement.className = 'buttonb';
+
 
     }
-   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = '바로가기 :: 없음';
+   if(hours >= "15" & hours <= "15" & mins >= "09" & mins <= "55"){
+	btnElement.innerText = '바로가기 :: EP';
+  btnElement.className = 'buttonb';
+
+ 
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: Grammar';
+    btnElement.className = 'buttonb';
+
  
 
     }
@@ -1528,10 +1797,59 @@ if (week[now.getDay()] == "THU") { //========================목요일==========
    //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
 	btnElement.innerText = '바로가기 :: 없음';
+  btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
 
     }
     
  
+     ///=====================알림가게하는부분임===============
+    ///=====================알림가게하는부분임===============
+     //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
+     if(hours >= "8" & hours <= "8" & mins == "55" & secs <= 05){
+      new Notification("✅실시간 수업이 있습니다.", {body:'12학년::리트'});
+      audio.play();
+}
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
+ if(hours >= "9" & hours <= "9" & mins >= "50" & secs <= 05){
+ 
+  
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
+ if(hours >= "10" & hours <= "10" & mins == "45" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::성경'});
+  audio.play();
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
+ if(hours >= "11" & hours <= "11" & mins == "40" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::체육'});
+  audio.play();
+}
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
+ if(hours >= "13" & hours <= "13" & mins == "15" & secs <= 05){
+  
+  }
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
+ if(hours >= "14" & hours <= "14" & mins == "10" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::이피'});
+  audio.play();
+  }
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
+ if(hours >= "15" & hours <= "15" & mins == "05" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::그래머'});
+  audio.play();
+  }
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
+ if(hours >= "16" & hours <= "16" & mins == "00" & secs <= 05){
+
+  }
+
  
 
  
@@ -1556,25 +1874,31 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
-   if(hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+   if(hours >= "8" & hours <= "8" & mins >= "53" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: 국어';
+    btnElement.className = 'buttonb';
+
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: 국어';
+    btnElement.className = 'buttonb';
+
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: Trigo';
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.innerText = '바로가기 :: Trigo ';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
     btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
     btnElement.innerText = '바로가기 :: 없음 ';
@@ -1589,6 +1913,12 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
    	btnElement.innerText = '바로가기 :: 없음';
     }
 
+
+   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
+    if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
+	  btnElement.innerText = '현재는 점심시간🥘';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+}
 	
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
@@ -1603,11 +1933,15 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: 피식(웃음)스';
+    btnElement.className = 'buttonb';
+
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = '바로가기 :: 없음';
+	btnElement.innerText = '바로가기 :: 피직스';
+  btnElement.className = 'buttonb';
+
 
     }
 
@@ -1615,7 +1949,8 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
     btnElement.innerText = '바로가기 :: 없음';
- 
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+
 
     }
  
@@ -1629,6 +1964,58 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
     
 
 
+     ///=====================알림가게하는부분임===============
+    ///=====================알림가게하는부분임===============
+     //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
+     if(hours >= "8" & hours <= "8" & mins == "55" & secs <= 05){
+      new Notification("✅실시간 수업이 있습니다.", {body:'12학년::국어'});
+      audio.play();
+
+}
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
+ if(hours >= "9" & hours <= "9" & mins == "50" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::트리고'});
+  audio.play();
+
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
+ if(hours >= "10" & hours <= "10" & mins == "45" & secs <= 05){
+
+}
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
+ if(hours >= "11" & hours <= "11" & mins == "40" & secs <= 05){
+  new Notification("✅수업이 있습니다.", {body:'12학년::그래머'});
+      audio.play();
+}
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
+ if(hours >= "13" & hours <= "13" & mins == "15" & secs <= 05){
+  new Notification("✅수업이 있습니다.", {body:'12학년::리트'});
+      audio.play();
+  }
+ 
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
+ if(hours >= "14" & hours <= "14" & mins == "10" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::피직스'});
+  audio.play();
+
+  }
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
+ if(hours >= "15" & hours <= "15" & mins == "05" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::씨에이 활동'});
+  audio.play();
+
+  }
+
+ //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
+ if(hours >= "16" & hours <= "16" & mins == "00" & secs <= 05){
+
+  }
+
 
 
 
@@ -1636,6 +2023,7 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
 
 }
 
+}, 4000);
 
 
 
@@ -1652,39 +2040,42 @@ if (week[now.getDay()] == "MON") {
 
 
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 한국어QT
+
+//	alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 000000000
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
 	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 1111111111
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+	window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 진로와 직업
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 체육
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-	window.open('https://us05web.zoom.us/j/2321692413?pwd=TDREaC9CN0FEYXdzejFoMTFEMVZxZz09#success', '_blank'); 
+
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-	window.open('https://us05web.zoom.us/j/2321692413?pwd=TDREaC9CN0FEYXdzejFoMTFEMVZxZz09#success', '_blank'); 
+
     }
 
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 44444444444
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
+
 
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
@@ -1693,32 +2084,34 @@ if (week[now.getDay()] == "MON") {
 
 	
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/81752030114?pwd=VE5wV3hmZGNuSm1TaWZGT3dxZkVLZz09#success', '_blank'); 
+
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-	window.open('https://us02web.zoom.us/j/81752030114?pwd=VE5wV3hmZGNuSm1TaWZGT3dxZkVLZz09#success', '_blank'); 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 6666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
-
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	  
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
+
     }
 
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 7777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/7955892462?pwd=QzQ3Smk5Z1lTODhJaWRoWTduL1QwZz09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
     
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
+ 
 
     }
     
@@ -1734,72 +2127,84 @@ if (week[now.getDay()] == "TUE") {
 	
 
 
+//	alert("현재 줌 수업이 없거나 링크가 없습니다.");
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 000000000
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
-
+	 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 트리고
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 1111111111
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/84130576448?pwd=VnRJYUVvV0pGbFNBdWN4K3V3MEgzdz09#success', '_blank'); 
+	window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-	window.open('https://us02web.zoom.us/j/84130576448?pwd=VnRJYUVvV0pGbFNBdWN4K3V3MEgzdz09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-	window.open('https://classroom.google.com/u/1/c/Mjc3NTgwOTY4MzE5', '_blank'); 
+
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-	window.open('https://classroom.google.com/u/1/c/Mjc3NTgwOTY4MzE5', '_blank'); 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 한국사
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-	window.open('https://classroom.google.com/u/1/c/Mjc3NTgwOTY4MzE5', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-	window.open('https://classroom.google.com/u/1/c/Mjc3NTgwOTY4MzE5', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 44444444444
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/84111539137?pwd=TTlZOGhZUlVxTUFYbEVSNXRFeEdMQT09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
+
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	window.open('https://us02web.zoom.us/j/84111539137?pwd=TTlZOGhZUlVxTUFYbEVSNXRFeEdMQT09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
+	
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-	  
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 6666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
+
     }
 
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 7777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-	window.open('https://classroom.google.com/u/1/c/Mjc2Mjc1NTEwOTM1', '_blank'); 
+
     }
     
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 자율
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
+
     }
     
 
@@ -1816,73 +2221,84 @@ if (week[now.getDay()] == "WED") {
 	
 
 
+//	alert("현재 줌 수업이 없거나 링크가 없습니다.");
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 수요예배
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 000000000
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	window.open('https://us02web.zoom.us/j/4913976575?pwd=c1Q3MEsyV1RiOVBNcTRHOTdZNVRRQT09', '_blank'); 
+	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 수요예배
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 1111111111
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/4913976575?pwd=c1Q3MEsyV1RiOVBNcTRHOTdZNVRRQT09', '_blank'); 
+	window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-	window.open('https://us02web.zoom.us/j/4913976575?pwd=c1Q3MEsyV1RiOVBNcTRHOTdZNVRRQT09', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 컴퓨터
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-	window.open('https://us04web.zoom.us/j/75101275557?pwd=OU9yWlZoLzNGOGZGSWx6SWZoeDVHdz09', '_blank'); 
+
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-	window.open('https://us04web.zoom.us/j/75101275557?pwd=OU9yWlZoLzNGOGZGSWx6SWZoeDVHdz09', '_blank'); 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 44444444444
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	window.open('https://classroom.google.com/u/1/c/Mjc3NTczOTkwNTcy', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
+
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	window.open('https://classroom.google.com/u/1/c/Mjc3NTczOTkwNTcy', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+	
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-	  
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 토플
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 6666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/84056392706?pwd=NXI0YXVNTHVEZVhpaU81dTlUYnVzZz09#success', '_blank'); 
+
+
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	window.open('https://us02web.zoom.us/j/84056392706?pwd=NXI0YXVNTHVEZVhpaU81dTlUYnVzZz09#success', '_blank'); 
+
+
     }
 
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 7777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
     
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
 
     }
     
@@ -1895,71 +2311,86 @@ if (week[now.getDay()] == "WED") {
 if (week[now.getDay()] == "THU") {
  
   
+//	alert("현재 줌 수업이 없거나 링크가 없습니다.");
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 000000000
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
-
+	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 한국사
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 1111111111
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-	 
+	window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-	 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-	alert("국어는 카톡방 확인");
 
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-	 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 성경
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/87276081538?pwd=REx6bFRJeCtRbitMNlF1VWRrS2pxUT09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-	window.open('https://us02web.zoom.us/j/87276081538?pwd=REx6bFRJeCtRbitMNlF1VWRrS2pxUT09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 44444444444
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
+
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 아이에스
+	
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	window.open('https://classroom.google.com/u/1/c/Mjc2Mjc1NTEwOTM1', '_blank'); 
+
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-	window.open('https://classroom.google.com/u/1/c/Mjc2Mjc1NTEwOTM1', '_blank'); 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 트리고
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 6666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	  
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
+
     }
 
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 7777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-	window.open('https://classroom.google.com/u/1/c/Mjc3NTgwOTY4MzE5', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
     
- 
- 
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 888888888888
+   if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
+
+
+    }
+    
 
  
 	  
@@ -1970,72 +2401,84 @@ if (week[now.getDay()] == "THU") {
 if (week[now.getDay()] == "FRI") {
 
 	
+//	alert("현재 줌 수업이 없거나 링크가 없습니다.");
 
-
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 영어QT
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 000000000
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-
-	
+	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 국어
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 1111111111
    if(hours >= "8" & hours <= "8" & mins >= "50" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/84111539137?pwd=TTlZOGhZUlVxTUFYbEVSNXRFeEdMQT09#success', '_blank'); 
+	window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-	window.open('https://us02web.zoom.us/j/84111539137?pwd=TTlZOGhZUlVxTUFYbEVSNXRFeEdMQT09#success', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 수학
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-	 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 리트
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-	  
+
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+
+    }
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 44444444444
+   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+
+
+    }
+   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
 	  
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 피식스
-   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	window.open('https://us02web.zoom.us/j/81752030114?pwd=VE5wV3hmZGNuSm1TaWZGT3dxZkVLZz09#success', '_blank'); 
-    }
-   if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	window.open('https://us02web.zoom.us/j/81752030114?pwd=VE5wV3hmZGNuSm1TaWZGT3dxZkVLZz09#success', '_blank'); 
-    }
+    
+	
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 토플
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-	 
+
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-	 
+
     }
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 이피
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 6666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-	window.open('https://classroom.google.com/u/1/c/Mjc3NTczOTkwNTcy', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
+
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	window.open('https://classroom.google.com/u/1/c/Mjc3NTczOTkwNTcy', '_blank'); 
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
+
     }
 
 
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 씨에이
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 7777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-	alert("현재 줌 수업이 없거나 링크가 없습니다.");
 
     }
     
-    
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 888888888888
+   if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
 
+
+    }
+    
 
 
 }

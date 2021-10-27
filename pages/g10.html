@@ -10,7 +10,6 @@
 
 
 
-
 =========================================================
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
@@ -112,9 +111,9 @@
   
 
 
-    
+
     <!-- Sidenav -->
-   
+    
     
   <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
@@ -249,7 +248,7 @@
   <!-- Main content -->
   <div class="main-content" id="panel">
     <!-- Topnav -->
-    <nav class="navbar navbar-top navbar-expand navbar-dark border-bottom" style="background-color: #7C83FD;">
+    <nav class="navbar navbar-top navbar-expand navbar-dark border-bottom" style="background-color: #9E7777;">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->
@@ -258,8 +257,9 @@
 
 
 
-              <button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right" style="background-color: rgb(78, 255, 166); color: black;">바로가기 :: 현재 수업이 없습니다.</button>
-              <a class="btn btn-primary" margin="right" style="background-color: rgba(255, 208, 0, 0); color: rgb(255, 255, 255); ">수업 시간이 떄 자동 알림을 받으려면 이곳을 눌러주세요. </a>
+
+              
+              <a class="btn btn-primary" margin="right" style="background-color: #F5E8C7; color: rgb(49, 49, 49); ">수업 시간때 자동 알림을 받으려면 눌러주세요. </a>
 
 
 
@@ -344,7 +344,7 @@
 
 
     <!-- Header -->
-    <div class="header pb-6" style="background-color:#7C83FD;">
+    <div class="header pb-6" style="background-color:#9E7777;">
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
@@ -364,107 +364,14 @@
 
             <div class="card-body">
               
-              
-              <table style="width:100%" margin="center">
- 										   
-                <tr>
-                  <th> 
-                </body></th>
-                  <th style = "background : #d9c6a7  ;">월요일</th>
-                  <th style = "background : #d9c6a7  ;">화요일</th>
-                  <th style = "background : #d9c6a7  ;">수요일</th>
-                  <th style = "background : #d9c6a7  ;">목요일</th>
-                  <th style = "background : #d9c6a7  ;">금요일</th>
-                </tr>
-                  <tr>
-                  <th style = "background : #d9c6a7  ;">0교시 <br>(8:15-8:45) </br></th>
-                  <td style = "background : #e2fa09;"><a href="zzzzz" style="font-family: 'Jua', sans-serif;">한국어QT</a></td>
-                  <td style = "background : White ;">개인QT</td>
-                 <td style = "background : #36e364;" rowspan="3"><a href="zzzzz">수요 예배</a></td>
-                  <td style = "background : White ;">개인QT</td>
-                  <td style = "background : #e2fa09;"><a href="https://WWW.GOOGLE.COM">영어QT</a></td>
-                 </tr>
+              <button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right" style="background-color: rgb(78, 255, 166); color: black; float: left;">바로가기 :: 현재 수업이 없습니다.</button>
+
+              <button type="button" onclick="location.href = 'timeedit10.html' " class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="width: 15%; background-color: #f0f5ff; color: #262626; float: right;">✏️편집하기</button> 
+           <!-- 편집 기능 -->
+            </br></br></br>
+              <div class="TableList"></div>
 
 
-
-
-                 
-                  <tr>
-                  <th style = "background : #d9c6a7  ;">1교시 <br>(9:00-9:45) </br></th>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/Mzc3NDc2Mjk3MDQ3" target="_blank">Integrated Math</a></td>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/Mzc3NTc4NDcyODMw" target="_blank">국어</a></td>
-                  <td style = "background : #e2fa09 ;"><a href=" https://classroom.google.com/c/MzE5MjUxMzUyMTY2" target="_blank">Literature</a></td>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/MzE5MjU1NDcwMDIx" target="_blank">수학</a></td>
-                 
-                  </tr>
-                  <tr>
-                  <th style = "background : #d9c6a7  ;">2교시 <br>(9:55-10:40) </br></th>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/MzE5MjU1NDcwMDIx" target="_blank">수학</a></td>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/MzE5MjU1NDcwMDIx" target="_blank">수학</a></td>
-                
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/Mzc3NTc4NDcyODMw" target="_blank">국어</a></td>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/Mzc3NTc4NDcyODMw" target="_blank">국어</a></td>
-                 </tr>
-                 <tr>
-                  <th style = "background : #d9c6a7  ;">3교시 <br>(10:50-11:35) </br></th>
-                  <td style = "background : #ffffff  ;"><a href=" https://classroom.google.com/c/MzE5MjUxMzUyMTY2" target="_blank">Literature</a></td>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/MzE5MjUxMzUyMTM4" target="_blank">Grammar</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/Mzc2NzUwOTg2ODk0" target="_blank">중국어</a></td>
-                  <td style = "background : #e2fa09  ;" rowspan="2"><a href="https://classroom.google.com/c/Mjg0MDA1NzA0MTY5" target="_blank">미술</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/Mzc2NzUwOTg2ODk0" target="_blank">중국어</a></td>
-                </tr>
-                 <tr>
-                  <th style = "background : #d9c6a7  ;">4교시 <br>(11:45-12:30)</br></th>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/Mzc3NTc4NDcyODMw" target="_blank">국어</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="zzzzz" target="_blank">성경</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/MjkzNjEyNTg4MDQ5" target="_blank">체육</a></td>
-
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/Mzc3NDc2Mjk3MDQ3" target="_blank">Integrated Math</a></td>
-                </tr>
-                 <tr>
-                  <th style = "background : #d9c6a7  ;">5교시 <br>(13:20-14:05) </br></th>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/MjgzNDgwOTc3NDE2" target="_blank">Biology</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/MzE5MjUxMzUyMTY2" target="_blank">Literature</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/MzE5MjU1NDcwMDIx" target="_blank">수학</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/Mzc3NTcxNzQ0Nzk0z" target="_blank">Psychology</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/MjgzNDgwOTc3NDE2" target="_blank">Biology</a></td>
-                </tr>
-                 <tr>
-                  <th style = "background : #d9c6a7  ;">6교시 <br>(14:15-15:00)</br></th>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/Mzc3NTcxNzQ0Nzk0" target="_blank">Psychology</a></td>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/Mzc3NTcxNzQ0Nzk0" target="_blank">Psychology</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/MjgzNDgwOTc3NDE2" target="_blank">Biology</a></td>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/MjgzNTIxMTI2Nzk1" target="_blank">E.P</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/Mzc3NTcxNzQ0Nzk0" target="_blank">Psychology</a></td>
-                </tr>
-                <tr>
-                  <th style = "background : #d9c6a7  ;">7교시 <br>(15:10-15:55) </br></th>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/MzE5MjUxMzUyMTM4" target="_blank">Grammar</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/MjgzNTIxMTI2Nzk1" target="_blank">E.P</a></td>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/MzE5MjUxMzUyMTY2" target="_blank">Literature</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/Mjg1NTczOTI1NDUy" target="_blank">Skill builder(toefl)</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="zzzzz">창의적 체험활동</a></td>
-                </tr>
-                
-                  <tr>
-                  <th style = "background : #d9c6a7  ;">8교시 <br>(16:05-16:50)</br></th>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/MjgzNTIxMTI2Nzk1" target="_blank">E.P</a></td>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/MjgzNDgwOTc3NDE2" target="_blank">Biology</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="https://classroom.google.com/c/MjgzNTIxMTI2Nzk1" target="_blank">E.P</a></td>
-                  <td style = "background : #e2fa09  ;"><a href="zzzzz">창의적 체험활동</a></td>
-                  <td style = "background : #ffffff  ;"><a href="zzzzz">-------</a></td>
-                </tr>
-
-                <tr>
-                  <th style = "background : #d9c6a7  ;">9교시 <br>(17:00-17:45)</br></th>
-                  <td style = "background : #ffffff  ;"><a href="zzzzz">----</a></td>
-                  <td style = "background : #ffffff  ;"><a href="zzzzz">----</a></td>
-                  <td style = "background : #ffffff  ;"><a href="https://classroom.google.com/c/Mjg1NTczOTI1NDUy" target="_blank">Skill Builder(toefl)</a></td>
-                  <td style = "background : #ffffff  ;"><a href="zzzzz">----</a></td>
-                  <td style = "background : #ffffff  ;"><a href="zzzzz">----</a></td>
-                </tr>
-                  
-                </table>
 
 
 
@@ -485,7 +392,7 @@
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
             <div class="copyright text-center  text-lg-left  text-muted">
-              &copy; 2021 <a href="#" class="font-weight-bold ml-1" target="_blank">mhaZone COMON, All rights reserved. 10학년 이재원</a> 
+              &copy; 2021 <a href="#" class="font-weight-bold ml-1" target="_blank">mhaZone COMON, All rights reserved.</a>
             </div>
           </div>
           <div class="col-lg-6">
@@ -499,7 +406,7 @@
               <li class="nav-item">
                 <a href="_____" class="nav-link" target="_blank">개인정보처리방침</a>
               </li>
-              
+               
               
             </ul>
           </div>
@@ -508,7 +415,6 @@
 
     </div>
   </div>
-
 
 
   
@@ -544,7 +450,6 @@
 </div>
 
 
-
   <!-- Argon Scripts -->
   <!-- Core -->
   <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
@@ -564,275 +469,638 @@
 <script src="../assets/js/time.js"></script>
 <!--login유무 session js 파일 -->
 <script src="../assets/js/sessionCheck.js"></script>
-
 <!--스크립트 부분. 자신의 스크립트 코드로 변경하세요! -->
 <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+
 <script src="../modal.js"></script>
+
 
 <script>
 	
+	
+  //2초후 실행
+  setTimeout(function() {
+  //	var element = document.getElementById("scrollz");
+  //    element.scrollTop = element.scrollHeight;  //스크롤 내리기
+  $("#modalUpdateN").modal('show');
+
+  }, 1000);
+
    
 
-    //스크롤 자동으로 내리기
-    //setInterval(updateScroll,1000);   
-
-	function updateScroll(){
-    var element = document.getElementById("scrollz");
-    element.scrollTop = element.scrollHeight;
-    }
- 
- 
-
-
-
-
-	var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
-	var firebaseDatabase; //파이어베이스 db 모듈 전역변수
-	var name; //유저 이름
-	var loginUserKey; //로그인한 유저의 부모 key
-	var userInfo; //로그인한 유저의 정보 object type
-
-
-
-
-
-
-	//파이어 베이스 초기화 코드
-	var config = {
-		apiKey: "AIzaSyDQLUtjdMgOLDIZlPusi5YPKBiuQduD9Go",
-		databaseURL: "https://mhazone-mha-default-rtdb.firebaseio.com/",
-        authDomain: "mhazone-mha.firebaseapp.com",
-        projectId: "mhazone-mha",
-        storageBucket: "mhazone-mha.appspot.com",
-        messagingSenderId: "967342331429",
-        appId: "1:967342331429:web:8a5689ea4c254f037951cc",
-        measurementId: "G-Z33QJ15H02"
-	 
-	};
-	//파이어베이스 초기화
-	firebase.initializeApp(config);
-	//인증모듈 객체 가져오기
-	firebaseEmailAuth = firebase.auth();
-	//데이터베이스 모듈객체 가져오기
-	firebaseDatabase = firebase.database();
-
-	//세션 체크 함수
-	userSessionCheck();
-
-
-
-	$(document).ready(function () {
-
-		//메인화면 쓰기버튼 눌렀을 때
-		$(document).on('click', '.write', function () {
-
-			//네비게이션 메뉴의 text값 가져오기 - 자바스크립트 dom 방식으로 가져왔다.
-			var seseionCheck = document.getElementById("loginmenu").textContent;
-
-			//텍스트 필드에 있는 내용 가져오기!!!!
-			comment = $('#comment').val();
-			subject = $('#subject').val();
-
-			if (seseionCheck == "로그아웃") {
-				//저장하기
-				saveThanks();
-			} else {
-				alert("로그인이 필요한 서비스 입니다.")
-			}
-		});
-
-
-		$(document).on('click', '.create', function () {
-
-			var seseionCheck = document.getElementById("loginmenu").textContent;
-
- 			if (seseionCheck == "로그아웃") {
-				window.location.href = "create.html"
-
-			} else {
-				alert("로그인이 필요한 서비스 입니다.")
-				window.location.href = "loginform.html"
-
-			}
-			
-
-
-		});
-
-
-	});
-
-
-
-	//쓰기 버튼 눌렀을 때 호출 되는 함수
-	function saveThanks() {
-
-		//thanks 라는 테이블을 만들고 하위 데이터에 유저 아이디를 넣어준다. 그곳에 push로 가상의 키를 넣고, 객체를 넣어준다.!!!!
-		var thankRef = firebaseDatabase.ref("boards");
-
-		// 해당 객체의 key 값이 자동으로 생성된다.
-		var thank = thankRef.push(); // 해당 객체의 key 값이 자동으로 생성된다.
-
-
-
-
-		//로그인한 유저의 pk값,이름,내용,시간 데이터
-		var obj = {
-			name: name,
-			userkey: loginUserKey,
-			comment: comment,
-			subject: subject,
-			createtime: currentTime
-		};
-		//위에서 thankRef.push()로 만들어진 key아래 위치에 저장해준다.
-		thank.set(obj);
-  
-		
-		alert("글이 업로드 되었습니다");
-
-		$('#comment').val("");
-		$('#subject').val("");
-
-	}
-
-
-
-	//글 목록가져와서 뿌려주기
-	function boardList() {
-		//alert("보드 로드 완료")
-
-		//로그인한 유저라면
-		if (loginUserKey) {
-			//alert(loginUserKey)
-			//글이 저장된 레퍼런스 값 가져오기
-			var thanksRef = firebaseDatabase.ref('boards');
-			//on 함수로 글 목록가져오기
-			thanksRef.on('child_added', on_thanks_list)
-      thanksRef.on('value', buttonadd)
-
-			var thanksRef = firebaseDatabase.ref('notice');
-			thanksRef.on('child_added', on_notice_list)
-
-		} else {
-			//로그인 아니어도 글 보이게
-			//alert(loginUserKey)
-			//글이 저장된 레퍼런스 값 가져오기
-			var thanksRef = firebaseDatabase.ref('boards');
-			thanksRef.on('child_added', on_thanks_list)
-
-			var thanksRef = firebaseDatabase.ref('notice');
-			thanksRef.on('child_added', on_notice_list)
-		}
-
-	}
-
-	//게시판 리스트 thanks 테이블의 thanks 키 들을 연속적으로 가져옴...ㅋㅋㅋㅋㅋ
-	function on_thanks_list(data) {
-		console.log("on_thanks_list() 함수안으로 들어왔습니다 리스트를 가져오겠습니다")
-		var key = data.key;
-
-		var Data = data.val();
-		var comment = Data.comment;
-		var createtime = Data.createtime;
-		var name = Data.name;
-		var subject = Data.subject;
-		var userkey = Data.userkey;
-
-		//무슨값이 넘어오는지 찍어보세요
-		//alert(comment +"/"+ createtime + "/"+name +"/"+userkey);
-
-
-
-
-    
-		//리스트 동적으로 붙이기
-		var html =
-
- 
-
-    
-                "<div class=\"card\" id='" + userkey + "' onclick=\"show_user_page(this.id)\">" +
-                "<div class=\"card-header bg-transparent\">" + "<div class=\"row align-items-center\">" + "<div class=\"col\">" +
-                "<h5 style=\"font-size: 20px\" class=\"h3 mb-0\">" + "<a href=\"http://google.com\">" + subject +"</a></h5>" +
-                "<h6 class=\"text-uppercase text-muted ls-1 mb-1\">" + name + " :: " + createtime + "</h6>" +
-                "</br>" +
-                "<a>" + comment + "</a>" +
-                "</div></div></div></div>";
-
-         //   $(".thanksList").append(html);   //아래로 붙이기
-            $(".boardList").prepend(html);   //위로 붙이기
-
- 
-
-	}
-
-
-
-
-	function on_notice_list(data) {
-		console.log("on_thanks_list() 함수안으로 들어왔습니다 리스트를 가져오겠습니다")
-		var key = data.key;
-
-		var Data = data.val();
-		var comment = Data.comment;
-		var createtime = Data.createtime;
-		var name = Data.name;
-		var subject = Data.subject;
-		var userkey = Data.userkey;
-
-		//무슨값이 넘어오는지 찍어보세요
-		//alert(comment +"/"+ createtime + "/"+name +"/"+userkey);
-
-
-		//리스트 동적으로 붙이기
-		var html =
-                "<div class=\"card\" id='" + userkey + "' onclick=\"show_user_page(this.id)\">" +
-                "<div class=\"card-header\">" +
-                "<h4 class=\"media-heading\"><strong STYLE=\"color: #424242; font-size: 16pt\">" + subject + "</strong>" +
-                " <span STYLE=\"color: black; font-size: 11pt\">" + "</br>" + comment + "</span></h4>" +
-                "<p STYLE=\"color: black; font-size: 8pt\">" + name + " :: " + createtime + "</p></div></div>";
-
-            $(".noticelist").prepend(html);
-
- 
-
-	}
-
-
-
-  
-  function buttonadd(data){
- 		var key = data.key;
-		var Data = data.val();
-		var comment = Data.comment;
-		var createtime = Data.createtime;
-		var name = Data.name;
-		var subject = Data.subject;
-		var userkey = Data.userkey;
-      //리스트 동적으로 붙이기
-      var btnside =
-
-"<li class=\"nav-item\">" +"<a class=\"nav-link\" id='" + loginUserKey + "' onclick=\"chat(this.id)\">" +
-"<i class=\"ni ni-send text-blue\">"+"</i>" +
-"<span class=\"nav-link-text\">"+ "전체채팅" +"</span></a>"+ "</li>";
-
-//   $(".thanksList").append(html);   //아래로 붙이기
-$(".btnz").prepend(btnside);   //위로 붙이기
+  //스크롤 자동으로 내리기
+  //setInterval(updateScroll,1000);   
+
+function updateScroll(){
+  var element = document.getElementById("scrollz");
+  element.scrollTop = element.scrollHeight;
   }
+
+
+
+
+
+
+var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
+var firebaseDatabase; //파이어베이스 db 모듈 전역변수
+var name; //유저 이름
+var loginUserKey; //로그인한 유저의 부모 key
+var userInfo; //로그인한 유저의 정보 object type
+
+
+
+
+
+
+//파이어 베이스 초기화 코드
+var config = {
+  apiKey: "AIzaSyDQLUtjdMgOLDIZlPusi5YPKBiuQduD9Go",
+  databaseURL: "https://mhazone-mha-default-rtdb.firebaseio.com/",
+      authDomain: "mhazone-mha.firebaseapp.com",
+      projectId: "mhazone-mha",
+      storageBucket: "mhazone-mha.appspot.com",
+      messagingSenderId: "967342331429",
+      appId: "1:967342331429:web:8a5689ea4c254f037951cc",
+      measurementId: "G-Z33QJ15H02"
  
-  //채팅으로UID전달하는함수
-  function chat(key){ 
- location.href="chatting/chat.html?" + key;
- alert(key);
- }
+};
+//파이어베이스 초기화
+firebase.initializeApp(config);
+//인증모듈 객체 가져오기
+firebaseEmailAuth = firebase.auth();
+//데이터베이스 모듈객체 가져오기
+firebaseDatabase = firebase.database();
+
+//세션 체크 함수
+userSessionCheck();
 
 
+
+$(document).ready(function () {
+
+  //메인화면 쓰기버튼 눌렀을 때
+  $(document).on('click', '.edittable', function () {
+
+    //네비게이션 메뉴의 text값 가져오기 - 자바스크립트 dom 방식으로 가져왔다.
+    var seseionCheck = document.getElementById("loginmenu").textContent;
+
+    //텍스트 필드에 있는 내용 가져오기!!!!
+    mon0 = $('#mon0').val();
+    mon1 = $('#mon1').val();
+    mon2 = $('#mon2').val();
+    mon3 = $('#mon3').val();
+    mon4 = $('#mon4').val();
+    mon5 = $('#mon5').val();
+    mon6 = $('#mon6').val();
+    mon7 = $('#mon7').val();
+    mon8 = $('#mon8').val();
+
+    tue0 = $('#tue0').val();
+    tue1 = $('#tue1').val();
+    tue2 = $('#tue2').val();
+    tue3 = $('#tue3').val();
+    tue4 = $('#tue4').val();
+    tue5 = $('#tue5').val();
+    tue6 = $('#tue6').val();
+    tue7 = $('#tue7').val();
+    tue8 = $('#tue8').val();
+
+
+    wed0 = $('#wed0').val();
+    wed1 = $('#wed1').val();
+    wed2 = $('#wed2').val();
+    wed3 = $('#wed3').val();
+    wed4 = $('#wed4').val();
+    wed5 = $('#wed5').val();
+    wed6 = $('#wed6').val();
+    wed7 = $('#wed7').val();
+    wed8 = $('#wed8').val();
+
+    thr0 = $('#thr0').val();
+    thr1 = $('#thr1').val();
+    thr2 = $('#thr2').val();
+    thr3 = $('#thr3').val();
+    thr4 = $('#thr4').val();
+    thr5 = $('#thr5').val();
+    thr6 = $('#thr6').val();
+    thr7 = $('#thr7').val();
+    thr8 = $('#thr8').val();
+
+    fri0 = $('#fri0').val();
+    fri1 = $('#fri1').val();
+    fri2 = $('#fri2').val();
+    fri3 = $('#fri3').val();
+    fri4 = $('#fri4').val();
+    fri5 = $('#fri5').val();
+    fri6 = $('#fri6').val();
+    fri7 = $('#fri7').val();
+    fri8 = $('#fri8').val();
+
+    
+
+
+
+
+    if (seseionCheck == "로그아웃") {
+      //저장하기
+      changeTable();
+    } else {
+      alert("로그인이 필요한 서비스 입니다.")
+    }
+  });
+
+
+  $(document).on('click', '.create', function () {
+
+    var seseionCheck = document.getElementById("loginmenu").textContent;
+
+     if (seseionCheck == "로그아웃") {
+      window.location.href = "create.html"
+
+    } else {
+      alert("로그인이 필요한 서비스 입니다.")
+      window.location.href = "loginform.html"
+
+    }
+    
+
+
+  });
+
+
+});
+
+ 
+
+//쓰기 버튼 눌렀을 때 호출 되는 함수
+function changeTable() {
+
+  //thanks 라는 테이블을 만들고 하위 데이터에 유저 아이디를 넣어준다. 그곳에 push로 가상의 키를 넣고, 객체를 넣어준다.!!!!
+  var thankRef = firebaseDatabase.ref("timetables/timetables10");
+
+  // 해당 객체의 key 값이 자동으로 생성된다.
+  var thank = thankRef.push(); // 해당 객체의 key 값이 자동으로 생성된다.
+
+
+
+
+  //로그인한 유저의 pk값,이름,내용,시간 데이터
+  var obj = {
+    name: name,
+    userkey: loginUserKey,
+
+    mon0: mon0,
+    mon1: mon1,
+    mon2: mon2,
+    mon3: mon3,
+    mon4: mon4,
+    mon5: mon5,
+    mon6: mon6,
+    mon7: mon7,
+    mon8: mon8,
+ //   mon9: mon9,
+
+    tue0: tue0,
+    tue1: tue1,
+    tue2: tue2,
+    tue3: tue3,
+    tue4: tue4,
+    tue5: tue5,
+    tue6: tue6,
+    tue7: tue7,
+    tue8: tue8,
+  //  tue9: tue9,
+
+  //  wed0: wed0,
+  //  wed1: wed1,
+    wed2: wed2,
+    wed3: wed3,
+    wed4: wed4,
+    wed5: wed5,
+    wed6: wed6,
+    wed7: wed7,
+    wed8: wed8,
+  //  wed9: wed9,
+
+    thr0: thr0,
+    thr1: thr1,
+    thr2: thr2,
+    thr3: thr3,
+    thr4: thr4,
+    thr5: thr5,
+    thr6: thr6,
+    thr7: thr7,
+    thr8: thr8,
+ //   thr9: thr9,
+
+    fir0: fri0,
+    fir1: fri1,
+    fir2: fri2,
+    fir3: fri3,
+    fir4: fri4,
+    fir5: fri5,
+    fir6: fri6,
+    fir7: fri7,
+    fir8: fri8,
+   // fir9: fri9,
+
+
+    createtime: currentTime
+  };
+  //위에서 thankRef.push()로 만들어진 key아래 위치에 저장해준다.
+  thank.set(obj);
+
+  
+  alert("시간표가 업로드 되었습니다");
+
+  $('#comment').val("");
+  $('#subject').val("");
+
+}
+
+
+
+//글 목록가져와서 뿌려주기
+function boardList() {
+  //alert("보드 로드 완료")
+
+  //로그인한 유저라면
+  if (loginUserKey) {
+    //alert(loginUserKey)
+    //글이 저장된 레퍼런스 값 가져오기
+    var thanksRef = firebaseDatabase.ref('timetables/timetables10');
+    //on 함수로 글 목록가져오기
+    thanksRef.on('child_added', on_thanks_list)
+    var thanksRef = firebaseDatabase.ref('notice');
+    thanksRef.on('child_added', on_notice_list)
+
+  } else {
+    //로그인 아니어도 글 보이게
+    //alert(loginUserKey)
+    //글이 저장된 레퍼런스 값 가져오기
+    var thanksRef = firebaseDatabase.ref('timetables/timetables10');
+    thanksRef.on('child_added', on_thanks_list)
+
+    var thanksRef = firebaseDatabase.ref('notice');
+    thanksRef.on('child_added', on_notice_list)
+  }
+
+}
+
+//게시판 리스트 thanks 테이블의 thanks 키 들을 연속적으로 가져옴...ㅋㅋㅋㅋㅋ
+function on_thanks_list(data) {
+  console.log("on_thanks_list() 함수안으로 들어왔습니다 리스트를 가져오겠습니다")
+  var key = data.key;
+
+  var Data = data.val();
+  var comment = Data.comment;
+  var createtime = Data.createtime;
+  var name = Data.name;
+
+
+  var mon0 = Data.mon0;
+  var mon1 = Data.mon1;
+  var mon2 = Data.mon2;
+  var mon3 = Data.mon3;
+  var mon4 = Data.mon4;
+  var mon5 = Data.mon5;
+  var mon6 = Data.mon6;
+  var mon7 = Data.mon7;
+  var mon8 = Data.mon8;
+
+
+  var tue0 = Data.tue0;
+  var tue1 = Data.tue1;
+  var tue2 = Data.tue2;
+  var tue3 = Data.tue3;
+  var tue4 = Data.tue4;
+  var tue5 = Data.tue5;
+  var tue6 = Data.tue6;
+  var tue7 = Data.tue7;
+  var tue8 = Data.tue8;
+
+
+  var wed0 = Data.wed0;
+  var wed1 = Data.wed1;
+  var wed2 = Data.wed2;
+  var wed3 = Data.wed3;
+  var wed4 = Data.wed4;
+  var wed5 = Data.wed5;
+  var wed6 = Data.wed6;
+  var wed7 = Data.wed7;
+  var wed8 = Data.wed8;
+
+
+  var thr0 = Data.thr0;
+  var thr1 = Data.thr1;
+  var thr2 = Data.thr2;
+  var thr3 = Data.thr3;
+  var thr4 = Data.thr4;
+  var thr5 = Data.thr5;
+  var thr6 = Data.thr6;
+  var thr7 = Data.thr7;
+  var thr8 = Data.thr8;
+
+
+  var fri0 = Data.fri0;
+  var fri1 = Data.fri1;
+  var fri2 = Data.fri2;
+  var fri3 = Data.fri3;
+  var fri4 = Data.fri4;
+  var fri5 = Data.fri5;
+  var fri6 = Data.fri6;
+  var fri7 = Data.fri7;
+  var fri8 = Data.fri8;
+
+
+
+
+
+
+  //LINKS
+  var mon0link = Data.mon0link;
+  var mon1link = Data.mon1link;
+  var mon2link = Data.mon2link;
+  var mon3link = Data.mon3link;
+  var mon4link = Data.mon4link;
+  var mon5link = Data.mon5link;
+  var mon6link = Data.mon6link;
+  var mon7link = Data.mon7link;
+  var mon8link = Data.mon8link;
+
+
+  var tue0link = Data.tue0link;
+  var tue1link = Data.tue1link;
+  var tue2link = Data.tue2link;
+  var tue3link = Data.tue3link;
+  var tue4link = Data.tue4link;
+  var tue5link = Data.tue5link;
+  var tue6link = Data.tue6link;
+  var tue7link = Data.tue7link;
+  var tue8link = Data.tue8link;
+
+
+  var wed0link = Data.wed0link;
+  var wed1link = Data.wed1link;
+  var wed2link = Data.wed2link;
+  var wed3link = Data.wed3link;
+  var wed4link = Data.wed4link;
+  var wed5link = Data.wed5link;
+  var wed6link = Data.wed6link;
+  var wed7link = Data.wed7link;
+  var wed8link = Data.wed8link;
+
+
+  var thr0link = Data.thr0link;
+  var thr1link = Data.thr1link;
+  var thr2link = Data.thr2link;
+  var thr3link = Data.thr3link;
+  var thr4link = Data.thr4link;
+  var thr5link = Data.thr5link;
+  var thr6link = Data.thr6link;
+  var thr7link = Data.thr7link;
+  var thr8link = Data.thr8link;
+
+
+  var fri0link = Data.fri0link;
+  var fri1link = Data.fri1link;
+  var fri2link = Data.fri2link;
+  var fri3link = Data.fri3link;
+  var fri4link = Data.fri4link;
+  var fri5link = Data.fri5link;
+  var fri6link = Data.fri6link;
+  var fri7link = Data.fri7link;
+  var fri8link = Data.fri8link;
+
+
+
+
+
+
+  var mon0color = Data.mon0color;
+  var mon1color = Data.mon1color;
+  var mon2color = Data.mon2color;
+  var mon3color = Data.mon3color;
+  var mon4color = Data.mon4color;
+  var mon5color = Data.mon5color;
+  var mon6color = Data.mon6color;
+  var mon7color = Data.mon7color;
+  var mon8color = Data.mon8color;
+
+
+  var tue0color = Data.tue0color;
+  var tue1color = Data.tue1color;
+  var tue2color = Data.tue2color;
+  var tue3color = Data.tue3color;
+  var tue4color = Data.tue4color;
+  var tue5color = Data.tue5color;
+  var tue6color = Data.tue6color;
+  var tue7color = Data.tue7color;
+  var tue8color = Data.tue8color;
+
+
+  var wed0color = Data.wed0color;
+  var wed1color = Data.wed1color;
+  var wed2color = Data.wed2color;
+  var wed3color = Data.wed3color;
+  var wed4color = Data.wed4color;
+  var wed5color = Data.wed5color;
+  var wed6color = Data.wed6color;
+  var wed7color = Data.wed7color;
+  var wed8color = Data.wed8color;
+
+
+  var thr0color = Data.thr0color;
+  var thr1color = Data.thr1color;
+  var thr2color = Data.thr2color;
+  var thr3color = Data.thr3color;
+  var thr4color = Data.thr4color;
+  var thr5color = Data.thr5color;
+  var thr6color = Data.thr6color;
+  var thr7color = Data.thr7color;
+  var thr8color = Data.thr8color;
+
+
+  var fri0color = Data.fri0color;
+  var fri1color = Data.fri1color;
+  var fri2color = Data.fri2color;
+  var fri3color = Data.fri3color;
+  var fri4color = Data.fri4color;
+  var fri5color = Data.fri5color;
+  var fri6color = Data.fri6color;
+  var fri7color = Data.fri7color;
+  var fri8color = Data.fri8color;
+
+
+
+  var userkey = Data.userkey;
+
+  //무슨값이 넘어오는지 찍어보세요
+  //alert(comment +"/"+ createtime + "/"+name +"/"+userkey);
+
+
+
+
+  
+  //리스트 동적으로 붙이기
+  var html =
+  "<a style = \"font-size : 12px  ;\">" + name +" 님이 "+ createtime+ "에 마지막으로 수정함."+"</a>"+
+  "<table style=\"width:100%\" id='" + userkey + "'  margin=\"center\">" + 
+                      
+                      "<tr>" + 
+                        "<th>" +  
+                      "</body></th>" +
+                        "<th style = \"background : #d9c6a7  ;\">월요일</th>" +
+                        "<th style = \"background : #d9c6a7  ;\">화요일</th>" +
+                        "<th style = \"background : #d9c6a7  ;\">수요일</th>" +
+                        "<th style = \"background : #d9c6a7  ;\">목요일</th>" +
+                        "<th style = \"background : #d9c6a7  ;\">금요일</th>" +
+                     " </tr>" + 
+
+
+                      "<tr>" + 
+                        "<th style =\"background : #d9c6a7  ;\">0교시 <br>(8:15-8:45) </br></th>" +
+                        "<td style='"+ "background : "+ mon0color + "'><a href='" + mon0link + "' target=\"_blank\">"+ mon0+ "</a></td>" +
+                        "<td style='"+ "background : "+ tue0color + "'><a href='" + tue0link + "' target=\"_blank\">"+ tue0+" </a></td>" +
+                        "<td style='"+ "background : "+ wed0color + "'><a href='" + wed0link + "' target=\"_blank\">"+wed0+"</a></td>" +
+                        "<td style='"+ "background : "+ thr0color + "'><a href='" + thr0link + "' target=\"_blank\">"+thr0+"</a></td>" +
+                        "<td style='"+ "background : "+ fri0color + "'><a href='" + fri0link + "' target=\"_blank\">"+fri0+"</a></td>" +
+                       "</tr>" +
+      
+      
+      
+      
+                       "<tr>" + 
+                        "<th style =\"background : #d9c6a7  ;\">1교시 <br>(9:00-9:45) </br></th>" +
+                        "<td style='"+ "background : "+ mon1color + "'><a href='" + mon1link + "' target=\"_blank\">"+ mon1+ "</a></td>" +
+                        "<td style='"+ "background : "+ tue1color + "'><a href='" + tue1link + "' target=\"_blank\">"+ tue1+" </a></td>" +
+                        "<td style='"+ "background : "+ wed1color + "'><a href='" + wed1link + "' target=\"_blank\">"+wed1+"</a></td>" +
+                        "<td style='"+ "background : "+ thr1color + "'><a href='" + thr1link + "' target=\"_blank\">"+thr1+"</a></td>" +
+                        "<td style='"+ "background : "+ fri1color + "'><a href='" + fri1link + "' target=\"_blank\">"+fri1+"</a></td>" +
+                       "</tr>" +
+
+                       "<tr>" + 
+                        "<th style =\"background : #d9c6a7  ;\">2교시 <br>(9:55-10:40) </br></th>" +
+                        "<td style='"+ "background : "+ mon2color + "'><a href='" + mon2link + "' target=\"_blank\">"+ mon2+ "</a></td>" +
+                        "<td style='"+ "background : "+ tue2color + "'><a href='" + tue2link + "' target=\"_blank\">"+ tue2+" </a></td>" +
+                        "<td style='"+ "background : "+ wed2color + "'><a href='" + wed2link + "' target=\"_blank\">"+wed2+"</a></td>" +
+                        "<td style='"+ "background : "+ thr2color + "'><a href='" + thr2link + "' target=\"_blank\">"+thr2+"</a></td>" +
+                        "<td style='"+ "background : "+ fri2color + "'><a href='" + fri2link + "' target=\"_blank\">"+fri2+"</a></td>" +
+                       "</tr>" +
+
+
+                       "<tr>" + 
+                        "<th style =\"background : #d9c6a7  ;\">3교시 <br>(10:50-11:35) </br></th>" +
+                        "<td style='"+ "background : "+ mon3color + "'><a href='" + mon3link + "' target=\"_blank\">"+ mon3+ "</a></td>" +
+                        "<td style='"+ "background : "+ tue3color + "'><a href='" + tue3link + "' target=\"_blank\">"+ tue3+" </a></td>" +
+                        "<td style='"+ "background : "+ wed3color + "'><a href='" + wed3link + "' target=\"_blank\">"+wed3+"</a></td>" +
+                        "<td style='"+ "background : "+ thr3color + "'><a href='" + thr3link + "' target=\"_blank\">"+thr3+"</a></td>" +
+                        "<td style='"+ "background : "+ fri3color + "'><a href='" + fri3link + "' target=\"_blank\">"+fri3+"</a></td>" +
+                       "</tr>" +
+
+
+                       "<tr>" + 
+                        "<th style =\"background : #d9c6a7  ;\">4교시 <br>(11:45-12:30) </br></th>" +
+                        "<td style='"+ "background : "+ mon4color + "'><a href='" + mon4link + "' target=\"_blank\">"+ mon4+ "</a></td>" +
+                        "<td style='"+ "background : "+ tue4color + "'><a href='" + tue4link + "' target=\"_blank\">"+ tue4+" </a></td>" +
+                        "<td style='"+ "background : "+ wed4color + "'><a href='" + wed4link + "' target=\"_blank\">"+wed4+"</a></td>" +
+                        "<td style='"+ "background : "+ thr4color + "'><a href='" + thr4link + "' target=\"_blank\">"+thr4+"</a></td>" +
+                        "<td style='"+ "background : "+ fri4color + "'><a href='" + fri4link + "' target=\"_blank\">"+fri4+"</a></td>" +
+                       "</tr>" +
+
+                       "<tr>" + 
+                        "<th style =\"background : #d9c6a7  ;\">5교시 <br>(13:20-14:05) </br></th>" +
+                        "<td style='"+ "background : "+ mon5color + "'><a href='" + mon5link + "' target=\"_blank\">"+ mon5+ "</a></td>" +
+                        "<td style='"+ "background : "+ tue5color + "'><a href='" + tue5link + "' target=\"_blank\">"+ tue5+" </a></td>" +
+                        "<td style='"+ "background : "+ wed5color + "'><a href='" + wed5link + "' target=\"_blank\">"+wed5+"</a></td>" +
+                        "<td style='"+ "background : "+ thr5color + "'><a href='" + thr5link + "' target=\"_blank\">"+thr5+"</a></td>" +
+                        "<td style='"+ "background : "+ fri5color + "'><a href='" + fri5link + "' target=\"_blank\">"+fri5+"</a></td>" +
+                       "</tr>" +
+
+
+                       "<tr>" + 
+                        "<th style =\"background : #d9c6a7  ;\">6교시 <br>(14:15-15:00) </br></th>" +
+                        "<td style='"+ "background : "+ mon6color + "'><a href='" + mon6link + "' target=\"_blank\">"+ mon6+ "</a></td>" +
+                        "<td style='"+ "background : "+ tue6color + "'><a href='" + tue6link + "' target=\"_blank\">"+ tue6+" </a></td>" +
+                        "<td style='"+ "background : "+ wed6color + "'><a href='" + wed6link + "' target=\"_blank\">"+wed6+"</a></td>" +
+                        "<td style='"+ "background : "+ thr6color + "'><a href='" + thr6link + "' target=\"_blank\">"+thr6+"</a></td>" +
+                        "<td style='"+ "background : "+ fri6color + "'><a href='" + fri6link + "' target=\"_blank\">"+fri6+"</a></td>" +
+                       "</tr>" +
+
+                       "<tr>" + 
+                        "<th style =\"background : #d9c6a7  ;\">7교시 <br>(15:10-15:55)  </br></th>" +
+                        "<td style='"+ "background : "+ mon7color + "'><a href='" + mon7link + "' target=\"_blank\">"+ mon7+ "</a></td>" +
+                        "<td style='"+ "background : "+ tue7color + "'><a href='" + tue7link + "' target=\"_blank\">"+ tue7+" </a></td>" +
+                        "<td style='"+ "background : "+ wed7color + "'><a href='" + wed7link + "' target=\"_blank\">"+wed7+"</a></td>" +
+                        "<td style='"+ "background : "+ thr7color + "'><a href='" + thr7link + "' target=\"_blank\">"+thr7+"</a></td>" +
+                        "<td style='"+ "background : "+ fri7color + "'><a href='" + fri7link + "' target=\"_blank\">"+fri7+"</a></td>" +
+                       "</tr>" +
+
+
+                       "<tr>" + 
+                        "<th style =\"background : #d9c6a7  ;\">8교시 <br>(16:05-16:50) </br></th>" +
+                        "<td style='"+ "background : "+ mon8color + "'><a href='" + mon8link + "' target=\"_blank\">"+ mon8+ "</a></td>" +
+                        "<td style='"+ "background : "+ tue8color + "'><a href='" + tue8link + "' target=\"_blank\">"+ tue8+" </a></td>" +
+                        "<td style='"+ "background : "+ wed8color + "'><a href='" + wed8link + "' target=\"_blank\">"+wed8+"</a></td>" +
+                        "<td style='"+ "background : "+ thr8color + "'><a href='" + thr8link + "' target=\"_blank\">"+thr8+"</a></td>" +
+                        "<td style='"+ "background : "+ fri8color + "'><a href='" + fri8link + "' target=\"_blank\">"+fri8+"</a></td>" +
+                       "</tr>" +  
+      
+       
+                        
+                      "</table>" + "</br>"+ "</br>"+ "</br>" ;
+
+  
+
+
+
+
+
+
+
+       //   $(".thanksList").append(html);   //아래로 붙이기
+          $(".TableList").prepend(html);   //위로 붙이기
+
+
+
+}
+
+
+
+
+function on_notice_list(data) {
+  console.log("on_thanks_list() 함수안으로 들어왔습니다 리스트를 가져오겠습니다")
+  var key = data.key;
+
+  var Data = data.val();
+  var comment = Data.comment;
+  var createtime = Data.createtime;
+  var name = Data.name;
+  var subject = Data.subject;
+  var userkey = Data.userkey;
+
+  //무슨값이 넘어오는지 찍어보세요
+  //alert(comment +"/"+ createtime + "/"+name +"/"+userkey);
+
+
+  //리스트 동적으로 붙이기
+  var html =
+              "<div class=\"card\" id='" + userkey + "' onclick=\"show_user_page(this.id)\">" +
+              "<div class=\"card-header\">" +
+              "<h4 class=\"media-heading\"><strong STYLE=\"color: #424242; font-size: 16pt\">" + subject + "</strong>" +
+              " <span STYLE=\"color: black; font-size: 11pt\">" + "</br>" + comment + "</span></h4>" +
+              "<p STYLE=\"color: black; font-size: 8pt\">" + name + " :: " + createtime + "</p></div></div>";
+
+          $(".noticelist").prepend(html);
+
+
+
+}
 
 </script>
 
 
 
-
 <script>
 	
 	$(document).ready(function () {
@@ -876,88 +1144,42 @@ $(".btnz").prepend(btnside);   //위로 붙이기
 		});
 	</script>
 
-
-
-
 <script>
-	
-	$(document).ready(function () {
-			//$("#modalUpdate").modal('show');
-			
-	
-		});
-	
-		//alert("-서버 점검 안내- \n \n 일시 : 오늘 오후 6시~9시 \n mhaZone으로 새롭게 찾아옵니다. \n \n git@github.com:SamuelGalaxys/GreenNewdeal.git \nAccessible Github users: SamuelGalaxys, Esther03-web \n Virsion 0.2");
-	 
-	
-	
-		
-	
-		
-		$('#displayNotif').on('click', function(){
-			var placementFrom = $('#notify_placement_from option:selected').val();
-			var placementAlign = $('#notify_placement_align option:selected').val();
-			var state = $('#notify_state option:selected').val();
-			var style = $('#notify_style option:selected').val();
-			var content = {};
-	
-			content.message = 'Turning standard Bootstrap alerts into "notify" like notifications';
-			content.title = 'Bootstrap notify';
-			if (style == "withicon") {
-				content.icon = 'la la-bell';
-			} else {
-				content.icon = 'none';
-			}
-			content.url = 'index.html';
-			content.target = '_blank';
-	
-			$.notify(content,{
-				type: state,
-				placement: {
-					from: placementFrom,
-					align: placementAlign
-				},
-				time: 1000,
-			});
-		});
-	</script>
-
-
-<script>
-
-
-const btnElement = document.getElementById('classnow');
 
  
-var audio = new Audio('학교종소리.mp3'); //오디오 재생 추가하기
-//  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::피직스'});
-//  audio.play();
+
 Notification.requestPermission();
 
 
+ const btnElement = document.getElementById('classnow');
+
  
-playAlert = setInterval(function() {  //계속반복 루핑하기 Loop Loop
+
+var audio = new Audio('학교종소리.mp3'); //오디오 재생 추가하기
+// audio.play();
+
+
+ 
+ 
+
+
+
+
+  
+
+
+playAlert = setInterval(function() {   //루프 계속반복 Loop Loop
+
 
 var now = new Date();
 var week = new Array('SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT');
 var hours = now.getHours();
 var mins = now.getMinutes();
 var secs = now.getSeconds();
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+//     new Notification("✅실시간 수업이 있습니다.", {body:'ㅋㅋㅋㅋㅋㅋ'});
 
  
-
 
 if (week[now.getDay()] == "MON") { //월요일     월요일     월요일
    //alert('오늘 요일: ' + week[d.getDay()] + '요s일');
@@ -965,12 +1187,11 @@ if (week[now.getDay()] == "MON") { //월요일     월요일     월요일
 
 
    
-   //   시간시작  -  시간끝           분시작  -  분끝             :: 한국어 QT
+   //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	   btnElement.innerText = '한국어 QT';
-     btnElement.className = 'buttonb';    //버튼 반짝반짝
-     btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
-
+	   btnElement.innerText = '개인QT중';
+     btnElement.className = 'buttonb';
+ 
 
      }
 
@@ -978,35 +1199,40 @@ if (week[now.getDay()] == "MON") { //월요일     월요일     월요일
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
    if(hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: Integrated Math'; 
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 수학';
+    btnElement.className = 'buttonb';
+ 
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-    btnElement.innerText = '바로가기 :: Integrated Math'; 
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 수학';
+    btnElement.className = 'buttonb';
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 수학';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 국어';
+    btnElement.className = 'buttonb';
 
+ 
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-    btnElement.innerText = '바로가기 :: 수학 ';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 국어 ';
+    btnElement.className = 'buttonb';
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.innerText = '바로가기 :: 없음 ';     
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
     btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+
     }
 
 
@@ -1018,17 +1244,12 @@ if (week[now.getDay()] == "MON") { //월요일     월요일     월요일
    	btnElement.innerText = '바로가기 :: 없음';
     }
 
-	   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
-     if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
-	  btnElement.innerText = '현재는 점심시간🥘';}
-
-
+	
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
     btnElement.innerText = '바로가기 :: 없음';
-    btnElement.style.cssFloat = "buttonb";
-    
+     
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
@@ -1037,20 +1258,24 @@ if (week[now.getDay()] == "MON") { //월요일     월요일     월요일
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: Skill Builder';
+    btnElement.className = 'buttonb';
 
+ 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = '바로가기 :: 없음';
+	btnElement.innerText = '바로가기 :: Skill Builder ';
+  btnElement.className = 'buttonb';
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: Grammar';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: IS';
+    btnElement.className = 'buttonb';
 
+ 
 
     }
  
@@ -1058,68 +1283,65 @@ if (week[now.getDay()] == "MON") { //월요일     월요일     월요일
    //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
 	btnElement.innerText = '바로가기 :: 없음';
+  btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+
 
     }
+    
 
 
-
-
-
-
-
-   ///=====================알림가게하는부분임===============
+     ///=====================알림가게하는부분임===============
     ///=====================알림가게하는부분임===============
      //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
      if(hours >= "8" & hours <= "8" & mins == "55" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년:: Integrated Math'});
-  audio.play();
-}
+      new Notification("✅실시간 수업이 있습니다.", {body:'12학년::수학'});
+      audio.play();
+    }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
- if(hours >= "9" & hours <= "9" & mins >= "50" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::수학'});
+ if(hours >= "9" & hours <= "9" & mins == "50" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::국어'});
   audio.play();
 }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
  if(hours >= "10" & hours <= "10" & mins == "45" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Literature'});
-  audio.play();
+
 }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
  if(hours >= "11" & hours <= "11" & mins == "40" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::국어'});
-  audio.play();
+
 }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
  if(hours >= "13" & hours <= "13" & mins == "15" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Biology'});
-  audio.play();
+  
   }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
  if(hours >= "14" & hours <= "14" & mins == "10" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Psychology'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::스킬빌더'});
   audio.play();
-  }
+
+}
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
  if(hours >= "15" & hours <= "15" & mins == "05" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Grammar'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::아이에스'});
   audio.play();
-  }
+
+}
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
  if(hours >= "16" & hours <= "16" & mins == "00" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::E.P'});
-  audio.play();
+
   }
 
 
 
-    
+
+
 
 }
 	
@@ -1143,23 +1365,27 @@ if (week[now.getDay()] == "TUE") { //화요일========화요일=======화요일=
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
 	   btnElement.innerText = '개인QT중';
      btnElement.className = 'buttonb';
-
      }
 
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
    if(hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: 한문';
+    btnElement.className = 'buttonb';
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: 한문';
+    btnElement.className = 'buttonb';
+
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
     btnElement.innerText = '바로가기 :: 없음';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
     btnElement.innerText = '바로가기 :: 없음 ';
@@ -1167,123 +1393,119 @@ if (week[now.getDay()] == "TUE") { //화요일========화요일=======화요일=
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.innerText = '바로가기 :: 국어 ';
+    btnElement.className = 'buttonb';
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.innerText = '바로가기 :: 국어 ';
+    btnElement.className = 'buttonb';
+
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	  btnElement.innerText = '바로가기 :: 성경';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+	  btnElement.innerText = '바로가기 :: 음악';
+    btnElement.className = 'buttonb';
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-   	btnElement.innerText = '바로가기 :: 성경';
-     btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+   	btnElement.innerText = '바로가기 :: 음악';
     }
 
 	   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
      if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
-	  btnElement.innerText = '현재는 점심시간🥘';}
-
-    
-
-	
+	  btnElement.innerText = '현재는 점심시간🥘';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+}
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: Literature';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 없음';
      
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-    btnElement.innerText = '바로가기 :: Literature';
-    }     btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 없음';
+    }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: LIT';
+    btnElement.className = 'buttonb';
 
-    }
+      }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = '바로가기 :: 없음';
+	btnElement.innerText = '바로가기 :: LIT';
+  btnElement.className = 'buttonb';
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: E.P';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
  
 
-    }
+     }
  
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	btnElement.innerText = '바로가기 :: E.P';
-
+	btnElement.innerText = '바로가기 :: EP';
+  btnElement.className = 'buttonb';
     }
     
 
-    
+
      ///=====================알림가게하는부분임===============
     ///=====================알림가게하는부분임===============
      //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
      if(hours >= "8" & hours <= "8" & mins == "55" & secs <= 05){
-      new Notification("✅실시간 수업이 있습니다.", {body:'10학년::국어'});
-  audio.play();
+      new Notification("✅실시간 수업이 있습니다.", {body:'12학년::한문'});
+      audio.play();
 }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
  if(hours >= "9" & hours <= "9" & mins >= "50" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::수학'});
-  audio.play();
+
 }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
  if(hours >= "10" & hours <= "10" & mins == "45" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Grammar'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::국어'});
   audio.play();
 }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
  if(hours >= "11" & hours <= "11" & mins == "40" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::성경'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::음악'});
   audio.play();
+
 }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
  if(hours >= "13" & hours <= "13" & mins == "15" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Literature'});
-  audio.play();
+  
   }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
  if(hours >= "14" & hours <= "14" & mins == "10" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Psychology'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::리트'});
   audio.play();
+
   }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
  if(hours >= "15" & hours <= "15" & mins == "05" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::E.P'});
-  audio.play();
+
   }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
  if(hours >= "16" & hours <= "16" & mins == "00" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Biology'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::이피'});
   audio.play();
+
   }
 
 
@@ -1304,7 +1526,7 @@ if (week[now.getDay()] == "WED") {  //========================수요일=========
    
    //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	   btnElement.innerText = '수요 예배';
+	   btnElement.innerText = '개인QT중';
      btnElement.className = 'buttonb';
 
      }
@@ -1313,94 +1535,88 @@ if (week[now.getDay()] == "WED") {  //========================수요일=========
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
    if(hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 수요 예배';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
 
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-    btnElement.innerText = '바로가기 :: 수요 예배';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 없음';
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 수요 예배';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 없음';
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-    btnElement.innerText = '바로가기 :: 수요 예배 ';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 없음 ';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 중국어 ';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 수학 ';
+    btnElement.className = 'buttonb';
 
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-    btnElement.innerText = '바로가기 :: 중국어 ';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 수학 ';
+    btnElement.className = 'buttonb';
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	  btnElement.innerText = '바로가기 :: 체육';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+	  btnElement.innerText = '바로가기 :: 한문';
+    btnElement.className = 'buttonb';
 
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-   	btnElement.innerText = '바로가기 :: 체육';
-     btnElement.className = 'buttonb';    //버튼 반짝반짝
+   	btnElement.innerText = '바로가기 :: 한문';
+     btnElement.className = 'buttonb';
 
     }
 
+   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
+   if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
+	  btnElement.innerText = '현재는 점심시간🥘';    
+     btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+}
 	
-	   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
-     if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
-	  btnElement.innerText = '현재는 점심시간🥘';}
-
-    
-
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 수학';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 국어';
+    btnElement.className = 'buttonb';
 
      
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-    btnElement.innerText = '바로가기 :: 수학';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 국어';
+    btnElement.className = 'buttonb';
+    
 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: Biology';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
 
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = '바로가기 :: Biology';
-  btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+	btnElement.innerText = '바로가기 :: 없음';
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: Physics';
+    btnElement.className = 'buttonb';
+
  
 
     }
@@ -1408,20 +1624,18 @@ if (week[now.getDay()] == "WED") {  //========================수요일=========
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	btnElement.innerText = '바로가기 :: E.P';
-  btnElement.className = 'buttonb';    //버튼 반짝반짝
+	btnElement.innerText = '바로가기 :: IS';
+  btnElement.className = 'buttonb';
 
 
     }
-    
-
     
      ///=====================알림가게하는부분임===============
     ///=====================알림가게하는부분임===============
      //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
      if(hours >= "8" & hours <= "8" & mins == "55" & secs <= 05){
-      btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    new Notification("✅실시간 수업이 있습니다.", {body:'12학년::수요예배'});
+    audio.play();
 
 }
  
@@ -1432,40 +1646,48 @@ if (week[now.getDay()] == "WED") {  //========================수요일=========
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
  if(hours >= "10" & hours <= "10" & mins == "45" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::중국어'});
-  audio.play();  
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::수학'});
+  audio.play();
 
 }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
  if(hours >= "11" & hours <= "11" & mins == "40" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::체육'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::한문'});
   audio.play();
+
 }
+
+    
+
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
  if(hours >= "13" & hours <= "13" & mins == "15" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::수학'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::국어'});
   audio.play();
+
   }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
  if(hours >= "14" & hours <= "14" & mins == "10" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Biology'});
-  audio.play();
+
   }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
  if(hours >= "15" & hours <= "15" & mins == "05" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Literature'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::(피식)스'});
   audio.play();
+
   }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
  if(hours >= "16" & hours <= "16" & mins == "00" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::E.P'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::아이에스'});
   audio.play();
+
   }
+
+
 
 }
 	
@@ -1482,94 +1704,90 @@ if (week[now.getDay()] == "THU") { //========================목요일==========
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
 	   btnElement.innerText = '개인QT중';
      btnElement.className = 'buttonb';
-    
+
      }
 
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
    if(hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: Literature';
+    btnElement.innerText = '바로가기 :: LIT';
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-    btnElement.innerText = '바로가기 :: Literature';
+    btnElement.innerText = '바로가기 :: LIT';
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
     btnElement.innerText = '바로가기 :: 없음';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
     btnElement.innerText = '바로가기 :: 없음 ';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 미술 ';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 성경 ';
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-    btnElement.innerText = '바로가기 :: 미술 ';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 성경 ';
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
-   if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
-	  btnElement.innerText = '바로가기 :: 미술';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+   if(hours >= "11" & hours <= "11" & mins >= "45" & mins <= "59"){
+	  btnElement.innerText = '바로가기 :: 체육';
+    btnElement.className = 'buttonb';
 
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-   	btnElement.innerText = '바로가기 :: 미술';
-     btnElement.className = 'buttonb';    //버튼 반짝반짝
+   	btnElement.innerText = '바로가기 :: 체육';
+     btnElement.className = 'buttonb';
 
-    }
 
-	
-	   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
-     if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
-	  btnElement.innerText = '현재는 점심시간🥘';}
+  }
 
-    
+
+
+   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
+    if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
+	  btnElement.innerText = '현재는 점심시간🥘';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+}
+
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: Psychology';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 없음';
      
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-    btnElement.innerText = '바로가기 :: Psychology';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 없음';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: EP';
+    btnElement.className = 'buttonb';
+
 
     }
-   if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = '바로가기 :: 없음';
+   if(hours >= "15" & hours <= "15" & mins >= "09" & mins <= "55"){
+	btnElement.innerText = '바로가기 :: EP';
+  btnElement.className = 'buttonb';
+
+ 
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: Skill builder(toefl)';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: Grammar';
+    btnElement.className = 'buttonb';
 
  
 
@@ -1578,56 +1796,52 @@ if (week[now.getDay()] == "THU") { //========================목요일==========
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-	btnElement.innerText = '바로가기 :: 창의적 체험활동';
-  btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+	btnElement.innerText = '바로가기 :: 없음';
+  btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
 
     }
     
  
- 
-     
-    ///=====================알림가게하는부분임===============
+     ///=====================알림가게하는부분임===============
     ///=====================알림가게하는부분임===============
      //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
      if(hours >= "8" & hours <= "8" & mins == "55" & secs <= 05){
-      new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Literature'});
-  audio.play();
+      new Notification("✅실시간 수업이 있습니다.", {body:'12학년::리트'});
+      audio.play();
 }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
  if(hours >= "9" & hours <= "9" & mins >= "50" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::국어'});
-  audio.play();
+ 
+  
 }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
  if(hours >= "10" & hours <= "10" & mins == "45" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::미술'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::성경'});
   audio.play();
 }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
  if(hours >= "11" & hours <= "11" & mins == "40" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::미술'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::체육'});
   audio.play();
 }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
  if(hours >= "13" & hours <= "13" & mins == "15" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Psychology'});
-  audio.play();
+  
   }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
  if(hours >= "14" & hours <= "14" & mins == "10" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::E.P'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::이피'});
   audio.play();
   }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
  if(hours >= "15" & hours <= "15" & mins == "05" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::EXC'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::그래머'});
   audio.play();
   }
 
@@ -1635,6 +1849,8 @@ if (week[now.getDay()] == "THU") { //========================목요일==========
  if(hours >= "16" & hours <= "16" & mins == "00" & secs <= 05){
 
   }
+
+ 
 
  
 	  
@@ -1650,7 +1866,7 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
    
    //   시간시작  -  시간끝           분시작  -  분끝             :: 개인QT
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	   btnElement.innerText = '영어 QT';
+	   btnElement.innerText = '개인QT중';
      btnElement.className = 'buttonb';
 
      }
@@ -1658,33 +1874,34 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
-   if(hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
-    
+   if(hours >= "8" & hours <= "8" & mins >= "53" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: 국어';
+    btnElement.className = 'buttonb';
+
     }
    if(hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45"){
-    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.innerText = '바로가기 :: 국어';
+    btnElement.className = 'buttonb';
+
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
-   if(hours >= "9" & hours <= "9" & mins == "50" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 없음';
+   if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+    btnElement.innerText = '바로가기 :: Trigo';
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.innerText = '바로가기 :: Trigo ';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 중국어 ';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 없음 ';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
 
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
-    btnElement.innerText = '바로가기 :: 중국어 ';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 없음 ';
     }
 
 
@@ -1696,38 +1913,34 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
    	btnElement.innerText = '바로가기 :: 없음';
     }
 
+
+   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
+    if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
+	  btnElement.innerText = '현재는 점심시간🥘';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
+}
 	
-	   //   시간시작  -  시간끝           분시작  -  분끝   점심점심점심점심점심점심점심점심점심점심점심점심
-     if(hours >= "12" & hours <= "12" & mins >= "30" & mins <= "59"){
-	  btnElement.innerText = '현재는 점심시간🥘';}
-
-    
-
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: BIOLOGY';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 없음';
      
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
-    btnElement.innerText = '바로가기 :: BIOLOGY';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
-
+    btnElement.innerText = '바로가기 :: 없음';
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: Psychology';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 피식(웃음)스';
+    btnElement.className = 'buttonb';
 
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
-	btnElement.innerText = '바로가기 :: Psychology';
-  btnElement.className = 'buttonb';    //버튼 반짝반짝
+	btnElement.innerText = '바로가기 :: 피직스';
+  btnElement.className = 'buttonb';
 
 
     }
@@ -1735,10 +1948,9 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
-    btnElement.innerText = '바로가기 :: 창의적 체험활동';
-    btnElement.className = 'buttonb';    //버튼 반짝반짝
+    btnElement.innerText = '바로가기 :: 없음';
+    btnElement.className = 'btn btn-primary';    //버튼 다시 원래대로
 
- 
 
     }
  
@@ -1752,47 +1964,50 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
     
 
 
-
-    ///=====================알림가게하는부분임===============
+     ///=====================알림가게하는부분임===============
     ///=====================알림가게하는부분임===============
      //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
      if(hours >= "8" & hours <= "8" & mins == "55" & secs <= 05){
-      new Notification("✅실시간 수업이 있습니다.", {body:'10학년::수학'});
-  audio.play();
+      new Notification("✅실시간 수업이 있습니다.", {body:'12학년::국어'});
+      audio.play();
+
 }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 2교시 2교시 2222222222222222
- if(hours >= "9" & hours <= "9" & mins >= "50" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::국어'});
+ if(hours >= "9" & hours <= "9" & mins == "50" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::트리고'});
   audio.play();
+
 }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 3교시 3교시 3333333333333333
  if(hours >= "10" & hours <= "10" & mins == "45" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::중국어'});
-  audio.play();
+
 }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
  if(hours >= "11" & hours <= "11" & mins == "40" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Integ.Math'});
-  audio.play();
+  new Notification("✅수업이 있습니다.", {body:'12학년::그래머'});
+      audio.play();
 }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
  if(hours >= "13" & hours <= "13" & mins == "15" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Biology'});
-  audio.play();
+  new Notification("✅수업이 있습니다.", {body:'12학년::리트'});
+      audio.play();
   }
  
  //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
  if(hours >= "14" & hours <= "14" & mins == "10" & secs <= 05){
-  new Notification("✅실시간 수업이 있습니다.", {body:'10학년::Psychology'});
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::피직스'});
   audio.play();
+
   }
 
  //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
  if(hours >= "15" & hours <= "15" & mins == "05" & secs <= 05){
+  new Notification("✅실시간 수업이 있습니다.", {body:'12학년::씨에이 활동'});
+  audio.play();
 
   }
 
@@ -1803,12 +2018,12 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
 
 
 
+
+
+
 }
 
-
-
-
-}, 2000);
+}, 4000);
 
 
 
@@ -1819,7 +2034,7 @@ if (week[now.getDay()] == "FRI") { //========================금요일==========
 function classnow_click() {
 
  
-	  
+	 
 if (week[now.getDay()] == "MON") {
   // alert('오늘 요일: ' + week[d.getDay()] + '요s일');
 
@@ -1843,10 +2058,10 @@ if (week[now.getDay()] == "MON") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
-
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
-
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 333333333333
@@ -1879,10 +2094,10 @@ if (week[now.getDay()] == "MON") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
-
-
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
@@ -1890,12 +2105,13 @@ if (week[now.getDay()] == "MON") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
-
+ 
 
     }
     
@@ -1915,7 +2131,7 @@ if (week[now.getDay()] == "TUE") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 000000000
    if(hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45"){
-	window.open('https://us02web.zoom.us/j/6555235437?pwd=TkoxRVNsOWpxdmIrN2JtbytTVU1oZz09#success', '_blank'); 
+	 
     }
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 1111111111
@@ -1936,20 +2152,24 @@ if (week[now.getDay()] == "TUE") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 44444444444
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	  
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
 
 	
@@ -1964,10 +2184,12 @@ if (week[now.getDay()] == "TUE") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
@@ -1980,6 +2202,7 @@ if (week[now.getDay()] == "TUE") {
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
@@ -2023,29 +2246,35 @@ if (week[now.getDay()] == "WED") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 44444444444
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	  
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
 
 	
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 5555555555555
    if(hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
    if(hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
 
@@ -2062,11 +2291,13 @@ if (week[now.getDay()] == "WED") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
     
    //   시간시작  -  시간끝           분시작  -  분끝             :: 888888888888
    if(hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
@@ -2105,20 +2336,24 @@ if (week[now.getDay()] == "THU") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 333333333333
    if(hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
    if(hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
 
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 44444444444
    if(hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
    if(hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30"){
-	  
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
+
     }
 
 	
@@ -2133,10 +2368,12 @@ if (week[now.getDay()] == "THU") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
@@ -2144,6 +2381,7 @@ if (week[now.getDay()] == "THU") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 7777777777777
    if(hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
     
@@ -2180,9 +2418,11 @@ if (week[now.getDay()] == "FRI") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 222222222222
    if(hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
    if(hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
     }
 
@@ -2204,6 +2444,7 @@ if (week[now.getDay()] == "FRI") {
 	  
     }
 
+    
 	
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 5555555555555
@@ -2216,10 +2457,12 @@ if (week[now.getDay()] == "FRI") {
 
    //   시간시작  -  시간끝           분시작  -  분끝             :: 6666666666
    if(hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
    if(hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01"){
+    window.open('zzzzzzzzzzzzzzzzzzzzzzzzzzzz', '_blank'); 
 
 
     }
@@ -2239,6 +2482,7 @@ if (week[now.getDay()] == "FRI") {
 
 
 }
+
 
 
 
