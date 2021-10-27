@@ -259,7 +259,7 @@
 
 
               
-              <a class="btn btn-primary" margin="right" style="background-color: #F5E8C7; color: rgb(49, 49, 49); ">                <i class="mdi mdi-bell text-black"></i>                수업 시간때 자동 알림을 받으려면 눌러주세요. </a>
+              <a class="btn btn-primary" id="bellbutton" margin="right" style="background-color: #F5E8C7; color: rgb(49, 49, 49); "><i class="mdi mdi-bell text-black"></i>수업 시간때 자동 알림을 받으려면 눌러주세요.</a>
 
 
 
@@ -478,6 +478,19 @@
 <script>
 	
 	
+   
+  const bellbtn = document.getElementById("bellbutton");
+
+
+  bellbtn.addEventListener("click", () => {
+
+    if (bellbtn.innerText === "수업 시간때 자동 알림을 받으려면 눌러주세요.") {
+      bellbtn.innerText = "🛎 알림 설정 완료!";
+    } else {
+      bellbtn.innerText = "수업 시간때 자동 알림을 받으려면 눌러주세요.";
+    }
+
+  });
 
    
 
