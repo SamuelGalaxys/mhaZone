@@ -723,7 +723,7 @@ function boardList() {
     //글이 저장된 레퍼런스 값 가져오기
     var thanksRef = firebaseDatabase.ref('timetables/timetables10');
     //on 함수로 글 목록가져오기
-    thanksRef.on('child_added', on_thanks_list)
+    thanksRef.on('value', on_thanks_list)
     var thanksRef = firebaseDatabase.ref('notice');
     thanksRef.on('child_added', on_notice_list)
 
@@ -732,7 +732,7 @@ function boardList() {
     //alert(loginUserKey)
     //글이 저장된 레퍼런스 값 가져오기
     var thanksRef = firebaseDatabase.ref('timetables/timetables10');
-    thanksRef.on('child_added', on_thanks_list)
+    thanksRef.on('value', on_thanks_list)
 
     var thanksRef = firebaseDatabase.ref('notice');
     thanksRef.on('child_added', on_notice_list)
