@@ -719,8 +719,11 @@ function boardList() {
     //alert(loginUserKey)
     //글이 저장된 레퍼런스 값 가져오기
     var thanksRef = firebaseDatabase.ref('timetables/timetables12');
-    //on 함수로 글 목록가져오기
     thanksRef.on('value', on_thanks_list)
+
+    var POPUPIF = firebaseDatabase.ref('set/popup');
+    POPUPIF.on('value', on_popup_list)
+
     var thanksRef = firebaseDatabase.ref('notice');
     thanksRef.on('child_added', on_notice_list)
 
@@ -731,11 +734,42 @@ function boardList() {
     var thanksRef = firebaseDatabase.ref('timetables/timetables12');
     thanksRef.on('value', on_thanks_list)
 
+    var POPUPIF = firebaseDatabase.ref('set/popup');
+    POPUPIF.on('value', on_popup_list)
+
     var thanksRef = firebaseDatabase.ref('notice');
     thanksRef.on('child_added', on_notice_list)
   }
 
 }
+
+
+function on_popup_list(data) {
+
+  var key = data.key;
+
+  var Data = data.val();
+  var comment = Data.comment;
+  var createtime = Data.createtime;
+  var name = Data.name;
+
+
+  var popup = Data.popup;
+
+  if (popup == "true"){
+    $("#modalUpdateN").modal('show');
+
+  }
+
+
+
+
+
+}
+
+
+
+
 
 //게시판 리스트 thanks 테이블의 thanks 키 들을 연속적으로 가져옴...ㅋㅋㅋㅋㅋ
 function on_thanks_list(data) {

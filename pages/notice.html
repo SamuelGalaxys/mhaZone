@@ -341,8 +341,8 @@
 											<textarea class="form-control w-100" rows="1" name="passcodemha" id="passcodemha" style="width:20px;" cols="10" placeholder="PASSCODE"></textarea></br>
 							
 											<button type="button" class="button button-contactForm btn_1 boxed-btn btn btn-danger write" id="write" name="write">공지 업로드</button> 
-											팝업 띄우기(개발중)
-                      <input type="checkbox" checked data-toggle="toggle" data-onstyle="primary">
+                      <input id="checkedpopup" style="width: 20px; height: 20px;" type="checkbox" checked data-toggle="toggle" data-onstyle="primary"> 모두에게 팝업 띄우기
+
 
 										</div>
  
@@ -566,11 +566,23 @@
 		//thanks 라는 테이블을 만들고 하위 데이터에 유저 아이디를 넣어준다. 그곳에 push로 가상의 키를 넣고, 객체를 넣어준다.!!!!
 		var thankRef = firebaseDatabase.ref("notice");
 
+
+    if (document.getElementById('checkedpopup').checked) {
+		var SETT = firebaseDatabase.ref("set/popup");
+    var setif = {
+			popup: "true"
+		};
+		SETT.set(setif);
+
+    } else {
+
+  
+    }
+
+
+
 		// 해당 객체의 key 값이 자동으로 생성된다.
 		var thank = thankRef.push(); // 해당 객체의 key 값이 자동으로 생성된다.
-
-
-
 
 		//로그인한 유저의 pk값,이름,내용,시간 데이터
 		var obj = {
@@ -580,9 +592,10 @@
 			subject: subject,
 			createtime: currentTime
 		};
-		//위에서 thankRef.push()로 만들어진 key아래 위치에 저장해준다.
 		thank.set(obj);
   
+
+
 		
 		alert("글이 업로드 되었습니다");
 
