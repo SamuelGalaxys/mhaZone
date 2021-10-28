@@ -366,7 +366,7 @@
               
               <button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right" style="background-color: rgb(78, 255, 166); color: black; float: left;">바로가기 :: 현재 수업이 없습니다.</button>
 
-              <button type="button" onclick="location.href = 'timeedit12.html' " class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="width: 15%; background-color: #f0f5ff; color: #262626; float: right;">✏️편집하기</button> 
+              <button type="button" onclick="location.href = 'timeedit12.html' " class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="width: 15%; background-color: #f0f5ff; color: #262626; float: right;">✏️ 편집하기</button> 
            <!-- 편집 기능 -->
             </br></br></br>
               <div class="TableList"></div>
@@ -2231,106 +2231,6 @@ function on_thanks_list(data) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-function on_notice_list(data) {
-  console.log("공지를 가져왔습니다.")
-  var key = data.key;
-
-  var Data = data.val();
-  var comment = Data.comment;
-  var createtime = Data.createtime;
-  var name = Data.name;
-  var subject = Data.subject;
-  var userkey = Data.userkey;
-
-  //무슨값이 넘어오는지 찍어보세요
-  //alert(comment +"/"+ createtime + "/"+name +"/"+userkey);
-
-
-  //리스트 동적으로 붙이기
-  var html =
-              "<div class=\"card\" id='" + userkey + "' onclick=\"show_user_page(this.id)\">" +
-              "<div class=\"card-header\">" +
-              "<h4 class=\"media-heading\"><strong STYLE=\"color: #424242; font-size: 16pt\">" + subject + "</strong>" +
-              " <span STYLE=\"color: black; font-size: 11pt\">" + "</br>" + comment + "</span></h4>" +
-              "<p STYLE=\"color: black; font-size: 8pt\">" + name + " :: " + createtime + "</p></div></div>";
-
-          $(".noticelist").prepend(html);
-
-
-
-}
-
-</script>
-
-
-
-<script>
-	
-	$(document).ready(function () {
-			//$("#modalUpdate").modal('show');
-			
-	
-		});
-	
-		//alert("-서버 점검 안내- \n \n 일시 : 오늘 오후 6시~9시 \n mhaZone으로 새롭게 찾아옵니다. \n \n git@github.com:SamuelGalaxys/GreenNewdeal.git \nAccessible Github users: SamuelGalaxys, Esther03-web \n Virsion 0.2");
-	 
-	
-	
-		
-	
-		
-		$('#displayNotif').on('click', function(){
-			var placementFrom = $('#notify_placement_from option:selected').val();
-			var placementAlign = $('#notify_placement_align option:selected').val();
-			var state = $('#notify_state option:selected').val();
-			var style = $('#notify_style option:selected').val();
-			var content = {};
-	
-			content.message = 'Turning standard Bootstrap alerts into "notify" like notifications';
-			content.title = 'Bootstrap notify';
-			if (style == "withicon") {
-				content.icon = 'la la-bell';
-			} else {
-				content.icon = 'none';
-			}
-			content.url = 'index.html';
-			content.target = '_blank';
-	
-			$.notify(content,{
-				type: state,
-				placement: {
-					from: placementFrom,
-					align: placementAlign
-				},
-				time: 1000,
-			});
-		});
-	</script>
-
-<script>
-
-  
-
-
- 
 function classnow_click() {
 
  
@@ -2755,6 +2655,106 @@ if (week[now.getDay()] == "FRI") {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+function on_notice_list(data) {
+  console.log("공지를 가져왔습니다.")
+  var key = data.key;
+
+  var Data = data.val();
+  var comment = Data.comment;
+  var createtime = Data.createtime;
+  var name = Data.name;
+  var subject = Data.subject;
+  var userkey = Data.userkey;
+
+  //무슨값이 넘어오는지 찍어보세요
+  //alert(comment +"/"+ createtime + "/"+name +"/"+userkey);
+
+
+  //리스트 동적으로 붙이기
+  var html =
+              "<div class=\"card\" id='" + userkey + "' onclick=\"show_user_page(this.id)\">" +
+              "<div class=\"card-header\">" +
+              "<h4 class=\"media-heading\"><strong STYLE=\"color: #424242; font-size: 16pt\">" + subject + "</strong>" +
+              " <span STYLE=\"color: black; font-size: 11pt\">" + "</br>" + comment + "</span></h4>" +
+              "<p STYLE=\"color: black; font-size: 8pt\">" + name + " :: " + createtime + "</p></div></div>";
+
+          $(".noticelist").prepend(html);
+
+
+
+}
+
+</script>
+
+
+
+<script>
+	
+	$(document).ready(function () {
+			//$("#modalUpdate").modal('show');
+			
+	
+		});
+	
+		//alert("-서버 점검 안내- \n \n 일시 : 오늘 오후 6시~9시 \n mhaZone으로 새롭게 찾아옵니다. \n \n git@github.com:SamuelGalaxys/GreenNewdeal.git \nAccessible Github users: SamuelGalaxys, Esther03-web \n Virsion 0.2");
+	 
+	
+	
+		
+	
+		
+		$('#displayNotif').on('click', function(){
+			var placementFrom = $('#notify_placement_from option:selected').val();
+			var placementAlign = $('#notify_placement_align option:selected').val();
+			var state = $('#notify_state option:selected').val();
+			var style = $('#notify_style option:selected').val();
+			var content = {};
+	
+			content.message = 'Turning standard Bootstrap alerts into "notify" like notifications';
+			content.title = 'Bootstrap notify';
+			if (style == "withicon") {
+				content.icon = 'la la-bell';
+			} else {
+				content.icon = 'none';
+			}
+			content.url = 'index.html';
+			content.target = '_blank';
+	
+			$.notify(content,{
+				type: state,
+				placement: {
+					from: placementFrom,
+					align: placementAlign
+				},
+				time: 1000,
+			});
+		});
+	</script>
+
+<script>
+
+  
+
+
+  
 
 
 $(document).ready(function () {
