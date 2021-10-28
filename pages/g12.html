@@ -371,8 +371,9 @@
             <div class="card-body">
               
               <button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right" style="background-color: rgb(78, 255, 166); color: black; float: left;">바로가기 :: 현재 수업이 없습니다.</button>
+              <!-- <button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right" style="background-color: rgb(78, 255, 166); color: black; float: left;">✏️ 편집하기</button> -->
 
-              <button type="button" onclick="location.href = 'timeedit12.html' " class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="width: 15%; background-color: #f0f5ff; color: #262626; float: right;">✏️ 편집하기</button> 
+              <button type="button" onclick="location.href = 'timeedit12.html' " margin="right" class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="background-color: #f0f5ff; color: #262626; float: right;">✏️ 편집하기</button> 
            <!-- 편집 기능 -->
             </br></br></br>
               <div class="TableList"></div>
@@ -981,6 +982,9 @@ function on_thanks_list(data) {
   //리스트 동적으로 붙이기
   var html =
   "<a style = \"font-size : 12px  ;\">" + name +" 님이 "+ createtime+ "에 마지막으로 수정함."+"</a>"+
+
+
+  "<div style=\"width:100%; height:90%; overflow:auto\">" +
   "<table style=\"width:100%\" id='" + userkey + "'  margin=\"center\">" + 
                       
                       "<tr>" + 
@@ -1084,7 +1088,7 @@ function on_thanks_list(data) {
       
        
                         
-                      "</table>" + "</br>"+ "</br>"+ "</br>"+ "</br>"+ "</br>" ;
+                      "</table></div>" + "</br>"+ "</br>"+ "</br>"+ "</br>"+ "</br>" ;
 
        //   $(".thanksList").append(html);   //아래로 붙이기
           $(".TableList").prepend(html);   //위로 붙이기
