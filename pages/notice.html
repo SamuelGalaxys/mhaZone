@@ -576,6 +576,11 @@
 
     } else {
 
+    var SETT = firebaseDatabase.ref("set/popup");
+    var setif = {
+		popup: "false"
+		};
+		SETT.set(setif);
   
     }
 
