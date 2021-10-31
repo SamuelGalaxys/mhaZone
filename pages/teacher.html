@@ -123,7 +123,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="javascript:void(0)">
-          <img onclick="location.href='index.html'" src="../assets/img/brand/logo.png" class="navbar-brand-img" alt="...">
+          <img src="../assets/img/brand/logo.png" class="navbar-brand-img" alt="...">
         </a>
       </div>
       <div class="navbar-inner">
@@ -157,19 +157,6 @@
               </a>
             </li>
 
-    
-
-          </ul>
-          <!-- Divider -->
-          <hr class="my-3">
-          <!-- Heading -->
-
-
-          
-          <h6 class="navbar-heading p-0 text-muted">
-            <span class="docs-normal">For Teacher's</span>
-          </h6>
-          <ul class="navbar-nav mb-md-3">
 
             <li class="nav-item">
               <a class="nav-link" href="notice.html">
@@ -179,24 +166,25 @@
             </li>
 
 
-
-            
             <li class="nav-item">
-              <a class="nav-link" href="teacher.html">
-                <i class="ni ni-badge text-black"></i>
-                <span class="nav-link-text">Class Plan</span>
+              <a class="nav-link" href="tutorial.html">
+                <i class="mdi mdi-arrow-right-thick text-dark"></i>
+                <span class="nav-link-text">FaQ</span>
               </a>
             </li>
 
 
 
+ 
+             
+
+
 
 
           </ul>
-          
-
+          <!-- Divider -->
           <hr class="my-3">
-
+          <!-- Heading -->
           <h6 class="navbar-heading p-0 text-muted">
             <span class="docs-normal">Time Tables</span>
           </h6>
@@ -266,7 +254,7 @@
   <!-- Main content -->
   <div class="main-content" id="panel">
     <!-- Topnav -->
-    <nav class="navbar navbar-top navbar-expand navbar-dark border-bottom" style="background-color: #9E7777;">
+    <nav class="navbar navbar-top navbar-expand navbar-dark border-bottom" style="background-color: #4324f1;">
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->
@@ -277,7 +265,7 @@
 
 
               
-              <a class="btn btn-primary" id="bellbutton" margin="right" style="background-color: #F5E8C7; color: rgb(49, 49, 49); "><i class="mdi mdi-bell text-black"></i>수업 시간때 자동 알림을 받으려면 눌러주세요.</a>
+              <a class="btn btn-primary" id="bellbutton" margin="right" style="background-color: #F5E8C7; color: rgb(49, 49, 49); "><i class="mdi mdi-bell text-black"></i>Click to set bell time for LIVE class.</a>
 
 
 
@@ -362,7 +350,7 @@
 
 
     <!-- Header -->
-    <div class="header pb-6" style="background-color:#9E7777;">
+    <div class="header pb-6" style="background-color:#4324f1;">
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
@@ -382,15 +370,21 @@
 
             <div class="card-body">
               
-              <button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right" style="background-color: rgb(78, 255, 166); color: black; float: left;">바로가기 :: 현재 수업이 없습니다.</button>
+              <button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right" style="background-color: rgb(78, 255, 166); color: black; float: left;">Status :: There's no LIVE class at this time.</button>
               <!-- <button id="classnow" onclick="classnow_click();" class="btn btn-primary" margin="right" style="background-color: rgb(78, 255, 166); color: black; float: left;">✏️ 편집하기</button> -->
 
-              <button type="button" onclick="location.href = 'timeedit12.html' " margin="right" class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="background-color: #f0f5ff; color: #262626; float: right;">✏️ 편집하기</button> 
+              <button type="button" onclick="location.href = 'teacheredit.html' " margin="right" class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="background-color: #f0f5ff; color: #262626; float: right;">✏️ Edit table</button> 
            <!-- 편집 기능 -->
             </br></br></br>
               <div class="TableList"></div>
 
 
+          </br>
+          <strong style="font-size: 25px;">일정표가 안 보이나요? Edit 버튼을 눌러 선생님만의 일정표를 시작해보세요! 
+          
+          </br> Didn't see it? You can click "Edit Table" to start your own Timetable.
+          
+          </strong>
 
 
 
@@ -411,7 +405,7 @@
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
             <div class="copyright text-center  text-lg-left  text-muted">
-              &copy; 2021 <a href="#" class="font-weight-bold ml-1" target="_blank">mhaZone COMON, All rights reserved.</a>
+              &copy; 2021 <a href="#" class="font-weight-bold ml-1" target="_blank">mhaZone by Reusemap HB, Some rights reserved.</a>
             </div>
           </div>
           <div class="col-lg-6">
@@ -420,10 +414,10 @@
               
               
               <li class="nav-item">
-                <a href="http://mha.or.kr" class="nav-link" target="_blank">마닐라한국아카데미</a>
+                <a href="_____" class="nav-link" target="_blank">About Us</a>
               </li>
               <li class="nav-item">
-                <a href="personaldata.html" class="nav-link" target="_blank">개인정보처리방침</a>
+                <a href="_____" class="nav-link" target="_blank">개인정보처리방침</a>
               </li>
                
               
@@ -491,8 +485,8 @@
 
   bellbtn.addEventListener("click", () => {
 
-    if (bellbtn.innerText === "수업 시간때 자동 알림을 받으려면 눌러주세요.") {
-      bellbtn.innerText = "🛎 알림 설정 완료!";
+    if (bellbtn.innerText === "Click to set bell time for LIVE class.") {
+      bellbtn.innerText = "🛎 Done!";
     } else {
       bellbtn.innerText = "🛎 이제 수업 시간 때 알림이 울립니다.";
     }
@@ -618,7 +612,7 @@ $(document).ready(function () {
       //저장하기
       changeTable();
     } else {
-      alert("로그인이 필요한 서비스 입니다.")
+      alert("You need to Login to use.")
       window.location.href = "loginform.html"
 
     }
@@ -633,7 +627,7 @@ $(document).ready(function () {
       window.location.href = "create.html"
 
     } else {
-      alert("로그인이 필요한 서비스 입니다.")
+      alert("You need to Login to use.")
       window.location.href = "loginform.html"
 
     }
@@ -651,7 +645,7 @@ $(document).ready(function () {
 function changeTable() {
 
   //thanks 라는 테이블을 만들고 하위 데이터에 유저 아이디를 넣어준다. 그곳에 push로 가상의 키를 넣고, 객체를 넣어준다.!!!!
-  var thankRef = firebaseDatabase.ref("timetables/timetables12");
+  var thankRef = firebaseDatabase.ref("timetables/teacher");
 
   // 해당 객체의 key 값이 자동으로 생성된다.
   var thank = thankRef.push(); // 해당 객체의 key 값이 자동으로 생성된다.
@@ -743,7 +737,7 @@ function boardList() {
   if (loginUserKey) {
     //alert(loginUserKey)
     //글이 저장된 레퍼런스 값 가져오기
-    var thanksRef = firebaseDatabase.ref('timetables/timetables12');
+    var thanksRef = firebaseDatabase.ref('timetables/teacher');
     thanksRef.on('value', on_thanks_list)
 
     var POPUPIF = firebaseDatabase.ref('set/popup');
@@ -756,7 +750,7 @@ function boardList() {
     //로그인 아니어도 글 보이게
     //alert(loginUserKey)
     //글이 저장된 레퍼런스 값 가져오기
-    var thanksRef = firebaseDatabase.ref('timetables/timetables12');
+    var thanksRef = firebaseDatabase.ref('timetables/teacher');
     thanksRef.on('value', on_thanks_list)
 
     var POPUPIF = firebaseDatabase.ref('set/popup');
@@ -797,7 +791,12 @@ function on_popup_list(data) {
 
 
 //게시판 리스트 thanks 테이블의 thanks 키 들을 연속적으로 가져옴...ㅋㅋㅋㅋㅋ
+ 
 function on_thanks_list(data) {
+
+  if (loginUserKey == data.val().userkey) {
+
+
   console.log("on_thanks_list() 함수안으로 들어왔습니다 리스트를 가져오겠습니다")
   var key = data.key;
 
@@ -1002,16 +1001,16 @@ function on_thanks_list(data) {
                       "<tr>" + 
                         "<th>" +  
                       "</body></th>" +
-                        "<th style = \"background : #d9c6a7  ;\">월요일</th>" +
-                        "<th style = \"background : #d9c6a7  ;\">화요일</th>" +
-                        "<th style = \"background : #d9c6a7  ;\">수요일</th>" +
-                        "<th style = \"background : #d9c6a7  ;\">목요일</th>" +
-                        "<th style = \"background : #d9c6a7  ;\">금요일</th>" +
+                        "<th style = \"background : #b8c1ff  ;\">월요일</th>" +
+                        "<th style = \"background : #b8c1ff  ;\">화요일</th>" +
+                        "<th style = \"background : #b8c1ff  ;\">수요일</th>" +
+                        "<th style = \"background : #b8c1ff  ;\">목요일</th>" +
+                        "<th style = \"background : #b8c1ff  ;\">금요일</th>" +
                      " </tr>" + 
 
 
                       "<tr>" + 
-                        "<th style =\"background : #d9c6a7  ;\">0교시 <br>(8:15-8:45) </br></th>" +
+                        "<th style =\"background : #b8c1ff  ;\">0교시 <br>(8:15-8:45) </br></th>" +
                         "<td style='"+ "background : "+ mon0color + "'><a href='" + mon0link + "' target=\"_blank\">"+ mon0+ "</a></td>" +
                         "<td style='"+ "background : "+ tue0color + "'><a href='" + tue0link + "' target=\"_blank\">"+ tue0+" </a></td>" +
                         "<td style='"+ "background : "+ wed0color + "'><a href='" + wed0link + "' target=\"_blank\">"+wed0+"</a></td>" +
@@ -1023,7 +1022,7 @@ function on_thanks_list(data) {
       
       
                        "<tr>" + 
-                        "<th style =\"background : #d9c6a7  ;\">1교시 <br>(9:00-9:45) </br></th>" +
+                        "<th style =\"background : #b8c1ff  ;\">1교시 <br>(9:00-9:45) </br></th>" +
                         "<td style='"+ "background : "+ mon1color + "'><a href='" + mon1link + "' target=\"_blank\">"+ mon1+ "</a></td>" +
                         "<td style='"+ "background : "+ tue1color + "'><a href='" + tue1link + "' target=\"_blank\">"+ tue1+" </a></td>" +
                         "<td style='"+ "background : "+ wed1color + "'><a href='" + wed1link + "' target=\"_blank\">"+wed1+"</a></td>" +
@@ -1032,7 +1031,7 @@ function on_thanks_list(data) {
                        "</tr>" +
 
                        "<tr>" + 
-                        "<th style =\"background : #d9c6a7  ;\">2교시 <br>(9:55-10:40) </br></th>" +
+                        "<th style =\"background : #b8c1ff  ;\">2교시 <br>(9:55-10:40) </br></th>" +
                         "<td style='"+ "background : "+ mon2color + "'><a href='" + mon2link + "' target=\"_blank\">"+ mon2+ "</a></td>" +
                         "<td style='"+ "background : "+ tue2color + "'><a href='" + tue2link + "' target=\"_blank\">"+ tue2+" </a></td>" +
                         "<td style='"+ "background : "+ wed2color + "'><a href='" + wed2link + "' target=\"_blank\">"+wed2+"</a></td>" +
@@ -1042,7 +1041,7 @@ function on_thanks_list(data) {
 
 
                        "<tr>" + 
-                        "<th style =\"background : #d9c6a7  ;\">3교시 <br>(10:50-11:35) </br></th>" +
+                        "<th style =\"background : #b8c1ff  ;\">3교시 <br>(10:50-11:35) </br></th>" +
                         "<td style='"+ "background : "+ mon3color + "'><a href='" + mon3link + "' target=\"_blank\">"+ mon3+ "</a></td>" +
                         "<td style='"+ "background : "+ tue3color + "'><a href='" + tue3link + "' target=\"_blank\">"+ tue3+" </a></td>" +
                         "<td style='"+ "background : "+ wed3color + "'><a href='" + wed3link + "' target=\"_blank\">"+wed3+"</a></td>" +
@@ -1052,7 +1051,7 @@ function on_thanks_list(data) {
 
 
                        "<tr>" + 
-                        "<th style =\"background : #d9c6a7  ;\">4교시 <br>(11:45-12:30) </br></th>" +
+                        "<th style =\"background : #b8c1ff  ;\">4교시 <br>(11:45-12:30) </br></th>" +
                         "<td style='"+ "background : "+ mon4color + "'><a href='" + mon4link + "' target=\"_blank\">"+ mon4+ "</a></td>" +
                         "<td style='"+ "background : "+ tue4color + "'><a href='" + tue4link + "' target=\"_blank\">"+ tue4+" </a></td>" +
                         "<td style='"+ "background : "+ wed4color + "'><a href='" + wed4link + "' target=\"_blank\">"+wed4+"</a></td>" +
@@ -1061,7 +1060,7 @@ function on_thanks_list(data) {
                        "</tr>" +
 
                        "<tr>" + 
-                        "<th style =\"background : #d9c6a7  ;\">5교시 <br>(13:20-14:05) </br></th>" +
+                        "<th style =\"background : #b8c1ff  ;\">5교시 <br>(13:20-14:05) </br></th>" +
                         "<td style='"+ "background : "+ mon5color + "'><a href='" + mon5link + "' target=\"_blank\">"+ mon5+ "</a></td>" +
                         "<td style='"+ "background : "+ tue5color + "'><a href='" + tue5link + "' target=\"_blank\">"+ tue5+" </a></td>" +
                         "<td style='"+ "background : "+ wed5color + "'><a href='" + wed5link + "' target=\"_blank\">"+wed5+"</a></td>" +
@@ -1071,7 +1070,7 @@ function on_thanks_list(data) {
 
 
                        "<tr>" + 
-                        "<th style =\"background : #d9c6a7  ;\">6교시 <br>(14:15-15:00) </br></th>" +
+                        "<th style =\"background : #b8c1ff  ;\">6교시 <br>(14:15-15:00) </br></th>" +
                         "<td style='"+ "background : "+ mon6color + "'><a href='" + mon6link + "' target=\"_blank\">"+ mon6+ "</a></td>" +
                         "<td style='"+ "background : "+ tue6color + "'><a href='" + tue6link + "' target=\"_blank\">"+ tue6+" </a></td>" +
                         "<td style='"+ "background : "+ wed6color + "'><a href='" + wed6link + "' target=\"_blank\">"+wed6+"</a></td>" +
@@ -1080,7 +1079,7 @@ function on_thanks_list(data) {
                        "</tr>" +
 
                        "<tr>" + 
-                        "<th style =\"background : #d9c6a7  ;\">7교시 <br>(15:10-15:55)  </br></th>" +
+                        "<th style =\"background : #b8c1ff  ;\">7교시 <br>(15:10-15:55)  </br></th>" +
                         "<td style='"+ "background : "+ mon7color + "'><a href='" + mon7link + "' target=\"_blank\">"+ mon7+ "</a></td>" +
                         "<td style='"+ "background : "+ tue7color + "'><a href='" + tue7link + "' target=\"_blank\">"+ tue7+" </a></td>" +
                         "<td style='"+ "background : "+ wed7color + "'><a href='" + wed7link + "' target=\"_blank\">"+wed7+"</a></td>" +
@@ -1090,7 +1089,7 @@ function on_thanks_list(data) {
 
 
                        "<tr>" + 
-                        "<th style =\"background : #d9c6a7  ;\">8교시 <br>(16:05-16:50) </br></th>" +
+                        "<th style =\"background : #b8c1ff  ;\">8교시 <br>(16:05-16:50) </br></th>" +
                         "<td style='"+ "background : "+ mon8color + "'><a href='" + mon8link + "' target=\"_blank\">"+ mon8+ "</a></td>" +
                         "<td style='"+ "background : "+ tue8color + "'><a href='" + tue8link + "' target=\"_blank\">"+ tue8+" </a></td>" +
                         "<td style='"+ "background : "+ wed8color + "'><a href='" + wed8link + "' target=\"_blank\">"+wed8+"</a></td>" +
@@ -1137,38 +1136,7 @@ function on_thanks_list(data) {
 
     //     new Notification("✅실시간 수업이 있습니다.", {body:'ㅋㅋㅋㅋㅋㅋ'});
 
-
-
-
-    ///=====================알림가게하는부분임===============
-    if (week[now.getDay()] == "THU") {
-
-
-
-        if (mon0color == "yellow") {
-            //   시간시작  -  시간끝           분시작  -  분끝             :: 1교시 1교시 11111111111111111
-
-
-
-
-            // if(hours >= "8" & hours <= "8" & mins == "55" & secs <= 05){
-            new Notification("✅실시간 수업이 있습니다.", {
-                body: '12학년::수학' + mon0});
-            audio.play();
-            alert(mon0link);
-            //  }
-
-
-
-
-        }
-
-
-
-
-    }
-
-
+ 
 
 
     if (week[now.getDay()] == "MON") { //월요일     월요일     월요일
@@ -1180,7 +1148,7 @@ function on_thanks_list(data) {
       if (mon0color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon0;
+            btnElement.innerText = 'You have LIVE class now :: '+ mon0;
             btnElement.className = 'buttonb';
         }
 
@@ -1191,11 +1159,11 @@ function on_thanks_list(data) {
       if (mon1color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon1;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon1;
             btnElement.className = 'buttonb';
         }
         if (hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon1;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon1;
             btnElement.className = 'buttonb';
         }
       }
@@ -1204,11 +1172,11 @@ function on_thanks_list(data) {
       if (mon2color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon2;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon2;
             btnElement.className = 'buttonb';
         }
         if (hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon2;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon2;
             btnElement.className = 'buttonb';
         }
       }
@@ -1217,11 +1185,11 @@ function on_thanks_list(data) {
       if (mon3color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon3;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon3;
             btnElement.className = 'buttonb';
         }
         if (hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon3;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon3;
             btnElement.className = 'buttonb';
         }
       }
@@ -1230,10 +1198,10 @@ function on_thanks_list(data) {
       if (mon4color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
         if (hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon4;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon4;
         }
         if (hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon4;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon4;
         }
       }
 
@@ -1248,10 +1216,10 @@ function on_thanks_list(data) {
       if (mon5color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
         if (hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon5;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon5;
         }
         if (hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon5;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon5;
         }
       }
 
@@ -1259,11 +1227,11 @@ function on_thanks_list(data) {
       if (mon6color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
         if (hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon6;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon6;
             btnElement.className = 'buttonb';
         }
         if (hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon6;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon6;
             btnElement.className = 'buttonb';
         }
       }
@@ -1272,7 +1240,7 @@ function on_thanks_list(data) {
       if (mon7color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
         if (hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon7;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon7;
             btnElement.className = 'buttonb';
         }
       }
@@ -1281,7 +1249,7 @@ function on_thanks_list(data) {
       if (mon8color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
         if (hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ mon8;
+            btnElement.innerText = '😀You have LIVE class now :: '+ mon8;
             btnElement.className = 'buttonb';
         }
       }
@@ -1401,7 +1369,7 @@ function on_thanks_list(data) {
       if (tue0color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue0;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue0;
             btnElement.className = 'buttonb';
         }
 
@@ -1412,11 +1380,11 @@ function on_thanks_list(data) {
       if (tue1color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue1;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue1;
             btnElement.className = 'buttonb';
         }
         if (hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue1;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue1;
             btnElement.className = 'buttonb';
         }
       }
@@ -1425,11 +1393,11 @@ function on_thanks_list(data) {
       if (tue2color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue2;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue2;
             btnElement.className = 'buttonb';
         }
         if (hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue2;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue2;
             btnElement.className = 'buttonb';
         }
       }
@@ -1438,11 +1406,11 @@ function on_thanks_list(data) {
       if (tue3color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue3;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue3;
             btnElement.className = 'buttonb';
         }
         if (hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue3;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue3;
             btnElement.className = 'buttonb';
         }
       }
@@ -1451,10 +1419,10 @@ function on_thanks_list(data) {
       if (tue4color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
         if (hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue4;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue4;
         }
         if (hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue4;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue4;
         }
       }
 
@@ -1469,10 +1437,10 @@ function on_thanks_list(data) {
       if (tue5color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
         if (hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue5;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue5;
         }
         if (hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue5;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue5;
         }
       }
 
@@ -1480,11 +1448,11 @@ function on_thanks_list(data) {
       if (tue6color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
         if (hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue6;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue6;
             btnElement.className = 'buttonb';
         }
         if (hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue6;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue6;
             btnElement.className = 'buttonb';
         }
       }
@@ -1493,7 +1461,7 @@ function on_thanks_list(data) {
       if (tue7color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
         if (hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue7;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue7;
             btnElement.className = 'buttonb';
         }
       }
@@ -1502,7 +1470,7 @@ function on_thanks_list(data) {
       if (tue8color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
         if (hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ tue8;
+            btnElement.innerText = '😀You have LIVE class now :: '+ tue8;
             btnElement.className = 'buttonb';
         }
       }
@@ -1618,7 +1586,7 @@ function on_thanks_list(data) {
         if (wed0color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed0;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed0;
             btnElement.className = 'buttonb';
         }
 
@@ -1629,11 +1597,11 @@ function on_thanks_list(data) {
       if (wed1color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed1;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed1;
             btnElement.className = 'buttonb';
         }
         if (hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed1;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed1;
             btnElement.className = 'buttonb';
         }
       }
@@ -1642,11 +1610,11 @@ function on_thanks_list(data) {
       if (wed2color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed2;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed2;
             btnElement.className = 'buttonb';
         }
         if (hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed2;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed2;
             btnElement.className = 'buttonb';
         }
       }
@@ -1655,11 +1623,11 @@ function on_thanks_list(data) {
       if (wed3color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed3;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed3;
             btnElement.className = 'buttonb';
         }
         if (hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed3;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed3;
             btnElement.className = 'buttonb';
         }
       }
@@ -1668,10 +1636,10 @@ function on_thanks_list(data) {
       if (wed4color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
         if (hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed4;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed4;
         }
         if (hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed4;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed4;
         }
       }
 
@@ -1686,10 +1654,10 @@ function on_thanks_list(data) {
       if (wed5color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
         if (hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed5;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed5;
         }
         if (hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed5;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed5;
         }
       }
 
@@ -1697,11 +1665,11 @@ function on_thanks_list(data) {
       if (wed6color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
         if (hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed6;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed6;
             btnElement.className = 'buttonb';
         }
         if (hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed6;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed6;
             btnElement.className = 'buttonb';
         }
       }
@@ -1710,7 +1678,7 @@ function on_thanks_list(data) {
       if (wed7color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
         if (hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed7;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed7;
             btnElement.className = 'buttonb';
         }
       }
@@ -1719,7 +1687,7 @@ function on_thanks_list(data) {
       if (wed8color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
         if (hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ wed8;
+            btnElement.innerText = '😀You have LIVE class now :: '+ wed8;
             btnElement.className = 'buttonb';
         }
       }
@@ -1834,7 +1802,7 @@ function on_thanks_list(data) {
         if (thr0color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr0;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr0;
             btnElement.className = 'buttonb';
         }
 
@@ -1845,11 +1813,11 @@ function on_thanks_list(data) {
       if (thr1color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr1;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr1;
             btnElement.className = 'buttonb';
         }
         if (hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr1;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr1;
             btnElement.className = 'buttonb';
         }
       }
@@ -1858,11 +1826,11 @@ function on_thanks_list(data) {
       if (thr2color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr2;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr2;
             btnElement.className = 'buttonb';
         }
         if (hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr2;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr2;
             btnElement.className = 'buttonb';
         }
       }
@@ -1871,11 +1839,11 @@ function on_thanks_list(data) {
       if (thr3color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr3;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr3;
             btnElement.className = 'buttonb';
         }
         if (hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr3;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr3;
             btnElement.className = 'buttonb';
         }
       }
@@ -1884,10 +1852,10 @@ function on_thanks_list(data) {
       if (thr4color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
         if (hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr4;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr4;
         }
         if (hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr4;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr4;
         }
       }
 
@@ -1902,10 +1870,10 @@ function on_thanks_list(data) {
       if (thr5color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
         if (hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr5;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr5;
         }
         if (hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr5;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr5;
         }
       }
 
@@ -1913,11 +1881,11 @@ function on_thanks_list(data) {
       if (thr6color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
         if (hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr6;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr6;
             btnElement.className = 'buttonb';
         }
         if (hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr6;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr6;
             btnElement.className = 'buttonb';
         }
       }
@@ -1926,7 +1894,7 @@ function on_thanks_list(data) {
       if (thr7color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
         if (hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr7;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr7;
             btnElement.className = 'buttonb';
         }
       }
@@ -1935,7 +1903,7 @@ function on_thanks_list(data) {
       if (thr8color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
         if (hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ thr8;
+            btnElement.innerText = '😀You have LIVE class now :: '+ thr8;
             btnElement.className = 'buttonb';
         }
       }
@@ -2050,7 +2018,7 @@ function on_thanks_list(data) {
         if (fri0color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "8" & hours <= "8" & mins >= "10" & mins <= "45") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri0;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri0;
             btnElement.className = 'buttonb';
         }
 
@@ -2061,11 +2029,11 @@ function on_thanks_list(data) {
       if (fri1color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "8" & hours <= "8" & mins >= "45" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri1;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri1;
             btnElement.className = 'buttonb';
         }
         if (hours >= "9" & hours <= "9" & mins >= "00" & mins <= "45") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri1;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri1;
             btnElement.className = 'buttonb';
         }
       }
@@ -2074,11 +2042,11 @@ function on_thanks_list(data) {
       if (fri2color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "9" & hours <= "9" & mins >= "50" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri2;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri2;
             btnElement.className = 'buttonb';
         }
         if (hours >= "10" & hours <= "10" & mins >= "55" & mins <= "40") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri2;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri2;
             btnElement.className = 'buttonb';
         }
       }
@@ -2087,11 +2055,11 @@ function on_thanks_list(data) {
       if (fri3color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 
         if (hours >= "10" & hours <= "10" & mins >= "45" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri3;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri3;
             btnElement.className = 'buttonb';
         }
         if (hours >= "11" & hours <= "11" & mins >= "00" & mins <= "35") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri3;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri3;
             btnElement.className = 'buttonb';
         }
       }
@@ -2100,10 +2068,10 @@ function on_thanks_list(data) {
       if (fri4color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 4교시 4교시 4444444444444
         if (hours >= "11" & hours <= "11" & mins >= "40" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri4;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri4;
         }
         if (hours >= "12" & hours <= "12" & mins >= "00" & mins <= "30") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri4;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri4;
         }
       }
 
@@ -2118,10 +2086,10 @@ function on_thanks_list(data) {
       if (fri5color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 5교시 5교시 5555555555555
         if (hours >= "13" & hours <= "13" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri5;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri5;
         }
         if (hours >= "14" & hours <= "14" & mins >= "00" & mins <= "05") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri5;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri5;
         }
       }
 
@@ -2129,11 +2097,11 @@ function on_thanks_list(data) {
       if (fri6color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 6교시 6교시 66666666666666
         if (hours >= "14" & hours <= "14" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri6;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri6;
             btnElement.className = 'buttonb';
         }
         if (hours >= "15" & hours <= "15" & mins >= "00" & mins <= "01") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri6;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri6;
             btnElement.className = 'buttonb';
         }
       }
@@ -2142,7 +2110,7 @@ function on_thanks_list(data) {
       if (fri7color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 7교시 7교시 777777777777
         if (hours >= "15" & hours <= "15" & mins >= "10" & mins <= "59") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri7;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri7;
             btnElement.className = 'buttonb';
         }
       }
@@ -2151,7 +2119,7 @@ function on_thanks_list(data) {
       if (fri8color == "yellow"){
         //   시간시작  -  시간끝           분시작  -  분끝             :: 8교시 8교시 8888888888888
         if (hours >= "16" & hours <= "16" & mins >= "00" & mins <= "50") {
-            btnElement.innerText = '실시간 수업 바로가기 :: '+ fri8;
+            btnElement.innerText = '😀You have LIVE class now :: '+ fri8;
             btnElement.className = 'buttonb';
         }
       }
@@ -2696,7 +2664,7 @@ if (week[now.getDay()] == "FRI") {
 
 
 
-
+  }
 
 
 
