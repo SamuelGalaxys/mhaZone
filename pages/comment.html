@@ -384,6 +384,7 @@
 
 
           <div class="board"></div>
+          <div class="comments"></div>
 
 
 
@@ -563,6 +564,13 @@
 
 
 
+    userSessionCheck();
+
+
+
+    //페이지로부터 넘긴 값 받기
+
+
     function Request(){
 
 var requestParam ="";
@@ -600,52 +608,66 @@ var requestParam ="";
 
     //제이쿼리를 사용한다.
 
+
+    temp = location.href.split("?");
+        data=temp[1].split("/");
+        boardids = data[0];
  
-    var thanksRef = firebaseDatabase.ref('anounymous');
+
+    var boardid = "anounymous/" + boardids;
+
+
+    var thanksRef = firebaseDatabase.ref(boardid);
+
+    alert(boardid);
 			//on 함수로 글 목록가져오기
-			thanksRef.on('child_added', dotgeul)
+			thanksRef.on('value', dotgeul)
 
 
     function dotgeul(data){
 
-        //가입버튼 눌렀을 때
  
 
-        if (loginUserKey == data.val().userkey) {
+      //  if (loginUserKey == data.val().userkey) {
+
+
+        var Data = data.val();
+		var comment = Data.comment;
+		var createtime = Data.createtime;
+		var name = Data.name;
+		var subject = Data.subject;
+		var userkey = Data.userkey;
+    var brdnm = Data.boardno;
+
+    
+    var boardno = Data.key; //이 보드의 키값
+
+		//무슨값이 넘어오는지 찍어보세요
+		//alert(comment +"/"+ createtime + "/"+name +"/"+userkey);
 
 
 
-            //제이쿼리 선택자와 val() 함수를 이용해서 이메일,비밀번호 값을 가져온다.
-            var request = new Request();
+
+    
+		//리스트 동적으로 붙이기
+		var html =
+
  
-            var key = data.key;
 
-           //  var key = request.getParameter('key');
-             var Data = data.val(); // 데이터 가져오기
-
-
-            var comment = Data.comment;
-            var createtime = Data.createtime;
-            var name = Data.Name;
-            var subject = Data.subject;
-          //   alert("로그인 중...:" + subject);
-
-    console.log(comment,createtime,name,subject);
-
-     //감사리스트 동적으로 붙이기
-     var id =
-     "<div class=\"card\">" +
+    //게시물 아이디도 id=게시물아이디 + 아이디 (this.id) 해서 추가하기
+                "<div class=\"card\" id='" + brdnm + "' onclick=\"show_board_page(this.id)\">" +
                 "<div class=\"card-header bg-transparent\">" + "<div class=\"row align-items-center\">" + "<div class=\"col\">" +
-                "<h5 style=\"font-size: 20px\" class=\"h3 mb-0\">" + "<a onclick=\"gotoComments(this.id)\">" + subject +"</a></h5>" +
-                "<h6 class=\"text-uppercase text-muted ls-1 mb-1\">" + "익명이" + " :: " + createtime + "</h6>" +
-                "</br>" +
-                "<a>" + comment + "</a>" +
+                "<h5 style=\"font-size: 16px\" class=\"h3 mb-0\">" + "<a onclick=\"gotoComments(this.id)\">" + subject +"</a></h5>" +
+                "<h6 style=\"font-size: 5px\" class=\"text-uppercase text-muted ls-1 mb-1\">" + "익명이" + " : " + createtime + "</h6>" +
+
+                "<a style=\"font-size: 13px\">" + comment + "</a>" +
                 "</div></div></div></div>";
- $(".board").append(id);
+
+         //   $(".thanksList").append(html);   //아래로 붙이기
+            $(".comment").prepend(html);   //위로 붙이기
 
 
-
-        }
+   //     }
 
  
 
@@ -717,8 +739,7 @@ var requestParam ="";
 	firebaseDatabase = firebase.database();
 
 	//세션 체크 함수
-	userSessionCheck();
-
+ 
 
 
 	$(document).ready(function () {
@@ -739,6 +760,7 @@ var requestParam ="";
 			} else {
 				alert("비 로그인 이용자는 마한아 익명 게시판을 이용할 수 없습니다.")
 			}
+
 		});
 
 
@@ -767,8 +789,18 @@ var requestParam ="";
 	//쓰기 버튼 눌렀을 때 호출 되는 함수
 	function saveThanks() {
 
+    temp = location.href.split("?");
+        data=temp[1].split("/");
+        boardids = data[0];
+ 
+
+    var boardid = "anounymous/" + boardids;
+
+
+    alert("boardid");
+
 		//thanks 라는 테이블을 만들고 하위 데이터에 유저 아이디를 넣어준다. 그곳에 push로 가상의 키를 넣고, 객체를 넣어준다.!!!!
-		var thankRef = firebaseDatabase.ref("anounymous");
+		var thankRef = firebaseDatabase.ref(boardid);
 
 		// 해당 객체의 key 값이 자동으로 생성된다.
 		var thank = thankRef.push(); // 해당 객체의 key 값이 자동으로 생성된다.
