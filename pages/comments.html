@@ -275,9 +275,8 @@
             <div class="col-lg-6 col-7">
               <h6 class="h2 text-white d-inline-block mb-0">마한아존 익명게시판 📜 </h6>
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
-                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                  <li class="breadcrumb-item"><a data-toggle="modal" data-target="#modalUpdate" href="#"><i class="fas fa-arrow-down"></i> 게시물 쓰기</a></li>
-                </ol>
+          
+                
               </nav>
             </div>
              
@@ -440,6 +439,13 @@
               </li>
               <li class="nav-item">
                 <a href="https://www.google.com" class="nav-link" target="_blank">개인정보처리방침</a>
+
+
+
+                <input id="cmtcountin" style="color: gray; font-size: 1px; float: right;"></input>
+
+
+
               </li>
               
               
@@ -523,6 +529,14 @@
 
 <script src="../modal.js"></script>
 <script>
+
+
+
+$('#cmtcountin').hide(); //댓글갯수컨트롤 숨기기
+
+
+
+
   var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
 var firebaseDatabase; //파이어베이스 db 모듈 전역변수
 var userInfo; //가입한 유저의 정보. object 타입
@@ -599,9 +613,9 @@ var boardid = "anounymous/" + boardids;
 
 
 var thanksRef = firebaseDatabase.ref(boardid);
-
- //on 함수로 글 목록가져오기
 thanksRef.on('value', dotgeul)
+
+
 
 
 function dotgeul(data) {
@@ -624,9 +638,17 @@ function dotgeul(data) {
     var comment = Data.comment;
     var cmtcountz = Data.cmtcount;
     var createtime = Data.createtime;
+    var cmtcountz = Data.cmtcount;
     var name = Data.Name;
     var subject = Data.subject;
     //   alert("로그인 중...:" + subject);
+
+
+
+    document.getElementById('cmtcountin').value = cmtcountz;
+
+
+
 
     console.log(comment, createtime, name, subject);
 
@@ -668,6 +690,9 @@ $(document).ready(function() {
         if (seseionCheck == "로그아웃") {
             //저장하기
             saveThanks();
+            
+           
+
         } else {
             alert("비 로그인 이용자는 마한아 익명 게시판을 이용할 수 없습니다.")
             window.location.href = "loginform.html"
@@ -701,7 +726,12 @@ $(document).ready(function() {
 //쓰기 버튼 눌렀을 때 호출 되는 함수
 function saveThanks() {
 
+    
+ 
+ 
 
+
+ 
 
 
     temp = location.href.split("?");
@@ -709,12 +739,21 @@ function saveThanks() {
     boardids = data[0];
 
 
+
+ 
+
+    cmtcounts = $('#cmtcountin').val();
+
+    
+
+
+
     
     //============댓글 개수 저장하는 영역============
     var boardinfo = "anounymous/" + boardids;
     var cmcount = firebaseDatabase.ref(boardinfo);
     var objc = {
-       cmtcount: cmtcounts + '1',
+       cmtcount:  parseInt(cmtcounts) +  parseInt(1),
     };
     cmcount.update(objc);
 
@@ -746,9 +785,13 @@ function saveThanks() {
 
 
     window.location.reload();
-    
+
     $('#comment').val("");
     $('#subject').val("");
+
+ 
+
+ 
 
 }
 
@@ -809,9 +852,13 @@ function dotgeul_list(data) {
     var comment = Data.comment;
     var createtime = Data.createtime;
     var name = Data.Name;
+    var cmtcountz = Data.cmtcount;
     var subject = Data.subject;
     //   alert("로그인 중...:" + subject);
 
+
+
+ 
     console.log(comment, createtime, name, subject);
 
     //감사리스트 동적으로 붙이기
