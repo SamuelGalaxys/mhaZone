@@ -10,7 +10,6 @@
 
 
 
-
 =========================================================
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 -->
@@ -84,8 +83,9 @@
           <!-- Collapse -->
           <div class="collapse navbar-collapse" id="sidenav-collapse-main">
             <!-- Nav items -->
+         
             <ul class="navbar-nav">
-  
+
               <li class="nav-item">
                 <a class="nav-link" href="index.html">
                   <i class="mdi mdi-nature text-green"></i>
@@ -101,44 +101,46 @@
                 </a>
               </li>
   
-  
-              <li class="nav-item">
-                <a class="nav-link" href="mhaboard.html">
-                  <i class="ni ni-pin-3 text-blue"></i>
-                  <span class="nav-link-text">일반게시판</span>
-                </a>
-              </li>
-  
               <div class="btnz"></div>
   
-  
-              <li class="nav-item">
-                <a class="nav-link" href="notice.html">
-                  <i class="mdi mdi-information text-purple"></i>
-                  <span class="nav-link-text">마한아 공지</span>
-                </a>
-              </li>
-  
-  
-              <li class="nav-item">
-                <a class="nav-link" href="tutorial.html">
-                  <i class="mdi mdi-arrow-right-thick text-dark"></i>
-                  <span class="nav-link-text">FaQ</span>
-                </a>
-              </li>
-  
-  
-  
    
-               
-  
-  
-  
+      
   
             </ul>
             <!-- Divider -->
             <hr class="my-3">
             <!-- Heading -->
+  
+  
+            
+            <h6 class="navbar-heading p-0 text-muted">
+              <span class="docs-normal">For Teacher's</span>
+            </h6>
+            <ul class="navbar-nav mb-md-3">
+  
+              <li class="nav-item">
+                <a class="nav-link" href="notice.html">
+                  <i class="mdi mdi-information text-yellow"></i>
+                  <span class="nav-link-text">마한아 공지</span>
+                </a>
+              </li>
+  
+  
+              
+              <li class="nav-item">
+                <a class="nav-link" href="teacher.html">
+                  <i class="ni ni-badge text-blue"></i>
+                  <span class="nav-link-text">Class Plan</span>
+                </a>
+              </li>
+  
+  
+  
+            </ul>
+            
+  
+            <hr class="my-3">
+  
             <h6 class="navbar-heading p-0 text-muted">
               <span class="docs-normal">Time Tables</span>
             </h6>
@@ -161,7 +163,7 @@
               </li>
   
               <li class="nav-item">
-                <a class="nav-link" href="g10.html">
+                <a class="nav-link active" href="g10.html">
                   <i class="mdi mdi-book text-orange"></i>
                   <span class="nav-link-text">10학년</span>
                 </a>
@@ -188,6 +190,7 @@
                 </a>
               </li>
   
+             
                
               
               
@@ -311,11 +314,14 @@
           <div class="card">
             
             <div class="card-header">
-              <div class="card-title" style="color: rgb(20, 0, 73); font-size: 25px;" >시간표 편집하기</div>
+              <div class="card-title" style="color: rgb(20, 0, 73); font-size: 25px; float: left;" >시간표 편집하기  </div>
      
               
               <!-- <button type="button" class="btn btn-primary" id="edittable" name="edittable" margin="right">저장&적용하기</button> -->
-              <button type="button" class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="width: 18%; background-color: #0051ff; float: right;">편집 저장하기</button> 
+              <!-- <button type="button" class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="width: 18%; background-color: #0051ff; float: right;">편집 저장하기</button>  -->
+              <button onclick="modalshow()" type="button" margin="right" class="button button-contactForm btn_1 boxed-btn btn btn-primary" style="background-color: #f0f5ff; color: #262626; float: left;">❓</button> 
+
+              <button id="edittable" name="edittable" type="button" margin="right" class="button button-contactForm btn_1 boxed-btn btn btn-primary edittable" id="edittable" name="edittable" style="background-color: #f0f5ff; color: #262626; float: right;">✅ 편집 저장하기</button> 
 
 
  
@@ -324,8 +330,12 @@
 
             <div class="card-body">
               
-              
-              <table style="width:100%" margin="center">
+              <div style="width:100%; height:auto; overflow:auto">
+
+               <table style="width:800px" margin="center">
+
+
+
                   
                  <tr>
                    <th> 
@@ -338,7 +348,7 @@
                  </tr>
                    <tr>
                    <th style = "background : #d9c6a7  ;">0교시 <br>(8:15-8:45) </br></th>
-                   <td style = "background : White ;"><input id="mon0" style="color: rgb(49, 9, 160); font-size: 20px;" class="form-control" placeholder="-" type="text"><input style="height: 10%; color: rgb(49, 9, 160);" id="mon0link" class="form-control" placeholder="수업 링크 입력" type="text"><input style="height: 10%; color: rgb(49, 9, 160);" id="mon0color" class="form-control" placeholder="Color CODE" type="text"></td>
+                   <td style = "background : White ;"><input id="mon0" style="color: rgb(49, 9, 160); font-size: 20px;" class="form-control" placeholder="-" type="text"><input style="height: 10%; color: rgb(49, 9, 160);" id="mon0link" class="form-control" placeholder="수업 링크 입력" type="text"><input style="height: 10%; color: rgb(49, 9, 160);" id="mon0color" class="form-control" placeholder="Color CODE" type="text"></td>                   
                    <td style = "background : White ;"><input id="tue0" style="color: rgb(49, 9, 160); font-size: 20px;" class="form-control" placeholder="-" type="text"><input style="height: 10%; color: rgb(49, 9, 160);" id="tue0link" class="form-control" placeholder="수업 링크 입력" type="text"><input style="height: 10%; color: rgb(49, 9, 160);" id="tue0color" class="form-control" placeholder="Color CODE" type="text"></td>
                    <td style = "background : White ;"><input id="wed0" style="color: rgb(49, 9, 160); font-size: 20px;" class="form-control" placeholder="-" type="text"><input style="height: 10%; color: rgb(49, 9, 160);" id="wed0link" class="form-control" placeholder="수업 링크 입력" type="text"><input style="height: 10%; color: rgb(49, 9, 160);" id="wed0color" class="form-control" placeholder="Color CODE" type="text"></td>
                    <td style = "background : White ;"><input id="thr0" style="color: rgb(49, 9, 160); font-size: 20px;" class="form-control" placeholder="-" type="text"><input style="height: 10%; color: rgb(49, 9, 160);" id="thr0link" class="form-control" placeholder="수업 링크 입력" type="text"><input style="height: 10%; color: rgb(49, 9, 160);" id="thr0color" class="form-control" placeholder="Color CODE" type="text"></td>
@@ -414,6 +424,7 @@
                  </table>
 
 
+                </div>
 
 
             </div>
@@ -456,6 +467,55 @@
 
     </div>
   </div>
+
+
+
+
+
+
+  <div class="modal fade" id="modalUpdate" tabindex="-1" role="dialog" aria-labelledby="modalUpdatePro" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+      
+
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #ffd900;">
+          <h6 class="modal-title"><i class="la la-info-circle"></i> 공지</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+      
+        <div id="scrollmodal" class="card" style="overflow:scroll;width:auto; height:480px;">
+          <div class="card-body">
+            <div class="card-sub">
+              <a style="font-size: 20px;"> 시간표 편집 튜토리얼</a>
+            </div>
+      
+            <img style="width: 100%; height: auto;" src="../assets/img/edittutorial.png"></br>
+
+
+            
+            
+          </div>
+        </div>
+      
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+
+
+
   <!-- Argon Scripts -->
   <!-- Core -->
   <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
@@ -482,17 +542,15 @@
 	
 
 
+  function modalshow(){
+
+		$("#modalUpdate").modal('show');
+
+
+
+  }
  
-
-    //2초후 실행
-    setTimeout(function() {
-    //	var element = document.getElementById("scrollz");
-    //    element.scrollTop = element.scrollHeight;  //스크롤 내리기
-		$("#modalUpdateN").modal('show');
-
-    }, 1000);
-
-     
+ 
 
     //스크롤 자동으로 내리기
     //setInterval(updateScroll,1000);   
@@ -754,10 +812,16 @@
 	function changeTable() {
 
 		//thanks 라는 테이블을 만들고 하위 데이터에 유저 아이디를 넣어준다. 그곳에 push로 가상의 키를 넣고, 객체를 넣어준다.!!!!
-		var thankRef = firebaseDatabase.ref("timetables/timetables10");
+		var TMclasstable = firebaseDatabase.ref("timetables/timetables10");
+
+    var TMclasstableLOG = firebaseDatabase.ref("logs/timetables/timetables10");
+    var TMLOG = TMclasstableLOG.push(); // 해당 객체의 key 값이 자동으로 생성된다.
+
+
+
 
 		// 해당 객체의 key 값이 자동으로 생성된다.
-		var thank = thankRef.push(); // 해당 객체의 key 값이 자동으로 생성된다.
+		//var thank = thankRef.push(); // 해당 객체의 key 값이 자동으로 생성된다.
 
 
 
@@ -950,8 +1014,11 @@
       
 		};
 		//위에서 thankRef.push()로 만들어진 key아래 위치에 저장해준다.
-		thank.set(obj);
-  
+		TMclasstable.set(obj);
+		TMLOG.set(obj);
+
+    
+ 
 		
 		alert("시간표가 업로드 되었습니다");
 
@@ -974,7 +1041,7 @@
 			//글이 저장된 레퍼런스 값 가져오기
 			var thanksRef = firebaseDatabase.ref('timetables/timetables10');
 			//on 함수로 글 목록가져오기
-			thanksRef.on('child_added', on_thanks_list)
+			thanksRef.on('value', on_thanks_list)
 			var thanksRef = firebaseDatabase.ref('notice');
 			thanksRef.on('child_added', on_notice_list)
 
@@ -983,7 +1050,7 @@
 			//alert(loginUserKey)
 			//글이 저장된 레퍼런스 값 가져오기
 			var thanksRef = firebaseDatabase.ref('timetables/timetables10');
-			thanksRef.on('child_added', on_thanks_list)
+			thanksRef.on('value', on_thanks_list)
 
 			var thanksRef = firebaseDatabase.ref('notice');
 			thanksRef.on('child_added', on_notice_list)
