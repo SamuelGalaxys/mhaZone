@@ -16,379 +16,285 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
-  <meta name="author" content="Creative Tim">
-  <title>Argon Dashboard - Free Dashboard for Bootstrap 4</title>
-  <!-- Favicon -->
-  <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
-  <!-- Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
-  <!-- Icons -->
-  <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
-  <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
-  <!-- Argon CSS -->
-  <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
-</head>
+
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
+    <meta name="author" content="Kihoon Kim">
+    <title>naamuib - 재활용에 가치를</title>
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <!-- Icons -->
+    <link rel="stylesheet" href="../assets/anim/tree.css" type="text/css">
+    <script src="../assets/anim/tree.js"></script>
+
+
+
+    <link rel="stylesheet" href="../assets/vendor/nucleo/css/nucleo.css" type="text/css">
+    <link rel="stylesheet" href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="https://samuelgalaxys.github.io/reusemapvendors/vendors/iconfonts/mdi/css/materialdesignicons.css">
+  
+    <!-- Page plugins -->
+    <!-- Argon CSS -->
+    <link rel="stylesheet" href="../assets/css/argon.css?v=1.2.0" type="text/css">
+  </head>
 
 <body>
   <!-- Sidenav -->
-  <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
-    <div class="scrollbar-inner">
-      <!-- Brand -->
-      <div class="sidenav-header  align-items-center">
-        <a class="navbar-brand" href="javascript:void(0)">
-          <img src="../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
-        </a>
-      </div>
-      <div class="navbar-inner">
-        <!-- Collapse -->
-        <div class="collapse navbar-collapse" id="sidenav-collapse-main">
-          <!-- Nav items -->
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">
-                <i class="ni ni-tv-2 text-primary"></i>
-                <span class="nav-link-text">Dashboard</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="icons.html">
-                <i class="ni ni-planet text-orange"></i>
-                <span class="nav-link-text">Icons</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="map.html">
-                <i class="ni ni-pin-3 text-primary"></i>
-                <span class="nav-link-text">Google</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="profile.html">
-                <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">Profile</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="tables.html">
-                <i class="ni ni-bullet-list-67 text-default"></i>
-                <span class="nav-link-text">Tables</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">
-                <i class="ni ni-key-25 text-info"></i>
-                <span class="nav-link-text">Login</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="register.html">
-                <i class="ni ni-circle-08 text-pink"></i>
-                <span class="nav-link-text">Register</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="upgrade.html">
-                <i class="ni ni-send text-dark"></i>
-                <span class="nav-link-text">Upgrade</span>
-              </a>
-            </li>
-          </ul>
-          <!-- Divider -->
-          <hr class="my-3">
-          <!-- Heading -->
-          <h6 class="navbar-heading p-0 text-muted">
-            <span class="docs-normal">Documentation</span>
-          </h6>
-          <!-- Navigation -->
-          <ul class="navbar-nav mb-md-3">
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/getting-started/overview.html" target="_blank">
-                <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Getting started</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/foundation/colors.html" target="_blank">
-                <i class="ni ni-palette"></i>
-                <span class="nav-link-text">Foundation</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/components/alerts.html" target="_blank">
-                <i class="ni ni-ui-04"></i>
-                <span class="nav-link-text">Components</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://demos.creative-tim.com/argon-dashboard/docs/plugins/charts.html" target="_blank">
-                <i class="ni ni-chart-pie-35"></i>
-                <span class="nav-link-text">Plugins</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active active-pro" href="upgrade.html">
-                <i class="ni ni-send text-dark"></i>
-                <span class="nav-link-text">Upgrade to PRO</span>
-              </a>
-            </li>
-          </ul>
+  
+  
+    <!-- Sidenav -->
+    <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+      <div class="scrollbar-inner">
+        <!-- Brand -->
+        <div class="sidenav-header  align-items-center">
+          <a class="navbar-brand" href="javascript:void(0)">
+            <img src="../assets/img/brand/logo.png" class="navbar-brand-img" alt="...">
+          </a>
         </div>
-      </div>
-    </div>
-  </nav>
-  <!-- Main content -->
-  <div class="main-content" id="panel">
-    <!-- Topnav -->
-    <nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Search form -->
-          <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
-            <div class="form-group mb-0">
-              <div class="input-group input-group-alternative input-group-merge">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="fas fa-search"></i></span>
-                </div>
-                <input class="form-control" placeholder="Search" type="text">
-              </div>
-            </div>
-            <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
-              <span aria-hidden="true">×</span>
-            </button>
-          </form>
-          <!-- Navbar links -->
-          <ul class="navbar-nav align-items-center  ml-md-auto ">
-            <li class="nav-item d-xl-none">
-              <!-- Sidenav toggler -->
-              <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
-                <div class="sidenav-toggler-inner">
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
-                  <i class="sidenav-toggler-line"></i>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item d-sm-none">
-              <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
-                <i class="ni ni-zoom-split-in"></i>
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="ni ni-bell-55"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
-                <!-- Dropdown header -->
-                <div class="px-3 py-3">
-                  <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong> notifications.</h6>
-                </div>
-                <!-- List group -->
-                <div class="list-group list-group-flush">
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-1.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>2 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-2.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>3 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-3.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>5 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Your posts have been liked a lot.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>2 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="../assets/img/theme/team-5.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>3 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-                <!-- View all -->
-                <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View all</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="ni ni-ungroup"></i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default  dropdown-menu-right ">
-                <div class="row shortcuts px-4">
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-red">
-                      <i class="ni ni-calendar-grid-58"></i>
-                    </span>
-                    <small>Calendar</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-orange">
-                      <i class="ni ni-email-83"></i>
-                    </span>
-                    <small>Email</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-info">
-                      <i class="ni ni-credit-card"></i>
-                    </span>
-                    <small>Payments</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-green">
-                      <i class="ni ni-books"></i>
-                    </span>
-                    <small>Reports</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-purple">
-                      <i class="ni ni-pin-3"></i>
-                    </span>
-                    <small>Maps</small>
-                  </a>
-                  <a href="#!" class="col-4 shortcut-item">
-                    <span class="shortcut-media avatar rounded-circle bg-gradient-yellow">
-                      <i class="ni ni-basket"></i>
-                    </span>
-                    <small>Shop</small>
-                  </a>
-                </div>
-              </div>
-            </li>
-          </ul>
-          <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
-            <li class="nav-item dropdown">
-              <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="media align-items-center">
-                  <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../assets/img/theme/team-4.jpg">
-                  </span>
-                  <div class="media-body  ml-2  d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
-                  </div>
-                </div>
-              </a>
-              <div class="dropdown-menu  dropdown-menu-right ">
-                <div class="dropdown-header noti-title">
-                  <h6 class="text-overflow m-0">Welcome!</h6>
-                </div>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-single-02"></i>
-                  <span>My profile</span>
+        <div class="navbar-inner">
+          <!-- Collapse -->
+          <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+            <!-- Nav items -->
+            <ul class="navbar-nav">
+
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html">
+                  <i class="mdi mdi-nature text-green"></i>
+                  <span class="nav-link-text">홈</span>
                 </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-settings-gear-65"></i>
-                  <span>Settings</span>
+              </li>
+  
+  
+              <li class="nav-item">
+                <a class="nav-link" href="scboard.html">
+                  <i class="ni ni-send text-orange"></i>
+                  <span class="nav-link-text">익명이존</span>
                 </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-calendar-grid-58"></i>
-                  <span>Activity</span>
+              </li>
+  
+              <div class="btnz"></div>
+  
+   
+      
+  
+            </ul>
+            <!-- Divider -->
+            <hr class="my-3">
+            <!-- Heading -->
+  
+  
+            
+            <h6 class="navbar-heading p-0 text-muted">
+              <span class="docs-normal">For Teacher's</span>
+            </h6>
+            <ul class="navbar-nav mb-md-3">
+  
+              <li class="nav-item">
+                <a class="nav-link" href="notice.html">
+                  <i class="mdi mdi-information text-yellow"></i>
+                  <span class="nav-link-text">마한아 공지</span>
                 </a>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-support-16"></i>
-                  <span>Support</span>
+              </li>
+  
+  
+              
+              <li class="nav-item">
+                <a class="nav-link" href="teacher.html">
+                  <i class="ni ni-badge text-blue"></i>
+                  <span class="nav-link-text">Class Plan</span>
                 </a>
-                <div class="dropdown-divider"></div>
-                <a href="#!" class="dropdown-item">
-                  <i class="ni ni-user-run"></i>
-                  <span>Logout</span>
+              </li>
+  
+  
+  
+            </ul>
+            
+  
+            <hr class="my-3">
+  
+            <h6 class="navbar-heading p-0 text-muted">
+              <span class="docs-normal">Time Tables</span>
+            </h6>
+            <!-- Navigation -->
+            <ul class="navbar-nav mb-md-3">
+            
+  
+              <li class="nav-item">
+                <a class="nav-link" href="g12.html">
+                  <i class="mdi mdi-book text-green"></i>
+                  <span class="nav-link-text">12학년</span>
                 </a>
-              </div>
-            </li>
-          </ul>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="g11.html">
+                  <i class="mdi mdi-book text-primary"></i>
+                  <span class="nav-link-text">11학년</span>
+                </a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="g10.html">
+                  <i class="mdi mdi-book text-orange"></i>
+                  <span class="nav-link-text">10학년</span>
+                </a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="g9.html">
+                  <i class="mdi mdi-book text-yellow"></i>
+                  <span class="nav-link-text">9학년</span>
+                </a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="g8.html">
+                  <i class="mdi mdi-book text-purple"></i>
+                  <span class="nav-link-text">8학년</span>
+                </a>
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link" href="g7.html">
+                  <i class="mdi mdi-book text-pink"></i>
+                  <span class="nav-link-text">7학년</span>
+                </a>
+              </li>
+  
+              
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
+  
+  
+
+
+
+
+
+    
+
+  <!-- Main content -->
+  <div class="main-content" id="panel">
+    <!-- Topnav -->
+        <!-- Topnav -->
+        <nav class="navbar navbar-top navbar-expand navbar-dark border-bottom" style="background-color: #25204d;">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <!-- Search form -->
+              <form class="navbar-search navbar-search-light form-inline mr-sm-3" id="navbar-search-main">
+                <div class="form-group mb-0">
+      
+      
+      
+       
+      
+      
+      
+      
+                </div>
+                <button type="button" class="close" data-action="search-close" data-target="#navbar-search-main" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+              </form>
+              <!-- Navbar links -->
+              <ul class="navbar-nav align-items-center  ml-md-auto ">
+             
+                <li class="nav-item d-sm-none">
+                  <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
+                    <i class="ni ni-zoom-split-in"></i>
+                  </a>
+                </li>
+        
+        
+                 
+        
+        
+                
+        
+              </ul>
+              <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
+        
+        
+                <li class="nav-item d-xl-none">
+                  <!-- Sidenav toggler -->
+                  <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
+                    <div class="sidenav-toggler-inner">
+                      <i class="sidenav-toggler-line"></i>
+                      <i class="sidenav-toggler-line"></i>
+                      <i class="sidenav-toggler-line"></i>
+                    </div>
+                  </div>
+                </li>
+        
+        
+                <li class="nav-item dropdown">
+                  
+                  <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="media align-items-center">
+                      <span class="avatar avatar-sm rounded-circle">
+                        <img alt="Image placeholder" src="../assets/img/theme/users.jpg">
+                      </span>
+                      <div class="media-body  ml-2  d-none d-lg-block">
+                        <span id="joinmenu" class="mb-0 text-sm  font-weight-bold">로그인</span>
+                      </div>
+                    </div>
+                  </a>
+        
+                  <div class="dropdown-menu  dropdown-menu-right ">
+                    <div class="dropdown-header noti-title">
+                      <h6 class="text-overflow m-0">Welcome!</h6>
+                    </div>
+                     
+                    <div class="dropdown-divider"></div>
+                    <a href="loginform.html" class="dropdown-item">
+                      <i class="ni ni-user-run"></i>
+                      <span id="loginmenu">로그인/가입</span>
+                    </a>
+                  </div>
+        
+        
+        
+        
+        
+        
+                </li>
+              </ul>
+      
+            </div>
+          </div>
+        </nav>
+    <!-- Header -->
+
+
+
+
+
+
     <!-- Header -->
     <!-- Header -->
-    <div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url(../assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
+    <div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url(https://c4.wallpaperflare.com/wallpaper/458/631/620/space-exploration-universe-solar-system-nasa-hd-wallpaper-preview.jpg); background-size: cover; background-position: center top;">
       <!-- Mask -->
       <span class="mask bg-gradient-default opacity-8"></span>
       <!-- Header container -->
       <div class="container-fluid d-flex align-items-center">
         <div class="row">
           <div class="col-lg-7 col-md-10">
-            <h1 class="display-2 text-white">Hello Jesse</h1>
-            <p class="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
-            <a href="#!" class="btn btn-neutral">Edit profile</a>
+            <h1 id="nicname" class="display-2 text-white"><a id="hello">안녕하세요, username님!</a></h1>
+
+
+
+            <p class="text-white mt-0 mb-5">이곳에서 프로필, 게시물을 관리하고 내가 쓴 글을 관리할 수 있습니다.</p>
+            <!-- <a href="#!" class="btn btn-neutral">프로필 편집</a> -->
+
+
           </div>
         </div>
       </div>
@@ -398,53 +304,63 @@
       <div class="row">
         <div class="col-xl-4 order-xl-2">
           <div class="card card-profile">
-            <img src="../assets/img/theme/img-1-1000x600.jpg" alt="Image placeholder" class="card-img-top">
+
+
+
+
+            <img src="https://res.allmacwallpaper.com/get/macbook-air-wallpapers/material-design-flow-blue-green-8k/23077-720.jpg" alt="Image placeholder" class="card-img-top">
             <div class="row justify-content-center">
               <div class="col-lg-3 order-lg-2">
                 <div class="card-profile-image">
                   <a href="#">
-                    <img src="../assets/img/theme/team-4.jpg" class="rounded-circle">
+                    <img id="myimage" style="background: rgba(255, 255, 255, 0.801);" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/ManilHankuk.png/300px-ManilHankuk.png" class="rounded-circle">
+                    <div id="showfile"></div>
+
                   </a>
                 </div>
               </div>
             </div>
             <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
               <div class="d-flex justify-content-between">
-                <a href="#" class="btn btn-sm btn-info  mr-4 ">Connect</a>
-                <a href="#" class="btn btn-sm btn-default float-right">Message</a>
+
+                
               </div>
             </div>
+
+
+
+
             <div class="card-body pt-0">
               <div class="row">
                 <div class="col">
                   <div class="card-profile-stats d-flex justify-content-center">
-                    <div>
-                      <span class="heading">22</span>
-                      <span class="description">Friends</span>
+                    <!-- <div>
+                      <span class="heading"><a id="inf1">0</a></span>
+                      <span class="description">게시물</span>
                     </div>
                     <div>
-                      <span class="heading">10</span>
-                      <span class="description">Photos</span>
+                      <span class="heading"><a id="inf2">0</a></span>
+                      <span class="description">기여도</span>
                     </div>
                     <div>
-                      <span class="heading">89</span>
-                      <span class="description">Comments</span>
-                    </div>
+                      <span class="heading"><a id="inf3">0</a></span>
+                      <span class="description">씨앗들</span>
+                    </div> -->
                   </div>
                 </div>
               </div>
               <div class="text-center">
                 <h5 class="h3">
-                  Jessica Jones<span class="font-weight-light">, 27</span>
+                  김기훈
                 </h5>
                 <div class="h5 font-weight-300">
-                  <i class="ni location_pin mr-2"></i>Bucharest, Romania
+                  <i class="ni location_pin mr-2"></i><a id="gradez"></a>
                 </div>
                 <div class="h5 mt-4">
-                  <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
+                  <i class="ni business_briefcase-24 mr-2"></i><a id="namewrite">mhaZone Profile</a>
                 </div>
                 <div>
-                  <i class="ni education_hat mr-2"></i>University of Computer Science
+                  <i class="ni education_hat mr-2"></i>
                 </div>
               </div>
             </div>
@@ -455,123 +371,531 @@
             <div class="card-header">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h3 class="mb-0">Edit profile </h3>
+                  <h3 class="mb-0">information </h3>
                 </div>
+
+
+
                 <div class="col-4 text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">Settings</a>
+                  <!-- <a href="#!" id="changeBtn" class="btn btn-sm btn-primary">수정하기</a> -->
                 </div>
+
+
+                
               </div>
             </div>
             <div class="card-body">
               <form>
-                <h6 class="heading-small text-muted mb-4">User information</h6>
+
+                <h6 class="heading-small text-muted mb-4">내가 쓴 공지</h6>
+
+
+
+
+
                 <div class="pl-lg-4">
                   <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-username">Username</label>
-                        <input type="text" id="input-username" class="form-control" placeholder="Username" value="lucky.jesse">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-email">Email address</label>
-                        <input type="email" id="input-email" class="form-control" placeholder="jesse@example.com">
-                      </div>
-                    </div>
+                   
                   </div>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-first-name">First name</label>
-                        <input type="text" id="input-first-name" class="form-control" placeholder="First name" value="Lucky">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-last-name">Last name</label>
-                        <input type="text" id="input-last-name" class="form-control" placeholder="Last name" value="Jesse">
-                      </div>
-                    </div>
-                  </div>
+
+
+ 
+
+
+                  
+
                 </div>
-                <hr class="my-4" />
-                <!-- Address -->
-                <h6 class="heading-small text-muted mb-4">Contact information</h6>
-                <div class="pl-lg-4">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-address">Address</label>
-                        <input id="input-address" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-city">City</label>
-                        <input type="text" id="input-city" class="form-control" placeholder="City" value="New York">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-country">Country</label>
-                        <input type="text" id="input-country" class="form-control" placeholder="Country" value="United States">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-country">Postal code</label>
-                        <input type="number" id="input-postal-code" class="form-control" placeholder="Postal code">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <hr class="my-4" />
-                <!-- Description -->
-                <h6 class="heading-small text-muted mb-4">About me</h6>
+
                 <div class="pl-lg-4">
                   <div class="form-group">
-                    <label class="form-control-label">About Me</label>
-                    <textarea rows="4" class="form-control" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
-                  </div>
+
+                    
+
+                    <div class="noticeList scrollh"  style="overflow:scroll;width:auto; height: 200px;;"></div>
+
+
+                    <div id="statetxtP">
+                      <p id="statetxt"></p>
+                    </div>
+  
+                    </div>
+                    
                 </div>
+                
+
+                <hr class="my-4" />
+                <!-- Address -->
+                <h6 class="heading-small text-muted mb-4">내가 쓴 글들</h6>
+
+                <label class="form-control-label">-</label>
+
+                
+                  <div class="boardList scrollh"  style="overflow:scroll;width:auto; height: 800px;;"></div>
+
+                <!--내가 쓴 게시물들 불러오는 부분임.-->
+
+
+ 
+
+
+
+
+                <hr class="my-4" />
+                <!-- Description -->
+                
+
+
               </form>
             </div>
           </div>
         </div>
       </div>
       <!-- Footer -->
+     
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
             <div class="copyright text-center  text-lg-left  text-muted">
-              &copy; 2020 <a href="https://www.creative-tim.com" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+              &copy; 2021 <a href="#" class="font-weight-bold ml-1" target="_blank">mhaZone (reusemap HB), All rights reserved.</a>
             </div>
           </div>
           <div class="col-lg-6">
             <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+      
+              
+              
               <li class="nav-item">
-                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+                <a href="http://mha.or.kr" class="nav-link" target="_blank">마닐라한국아카데미</a>
               </li>
               <li class="nav-item">
-                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
+                <a href="personaldata.html" class="nav-link" target="_blank">개인정보처리방침</a>
               </li>
-              <li class="nav-item">
-                <a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a>
-              </li>
+               
+              
             </ul>
           </div>
         </div>
       </footer>
+
     </div>
   </div>
   <!-- Argon Scripts -->
   <!-- Core -->
+
+
+
+
+
+
+ <!-- Core -->
+ <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+ <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
+ <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+ <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+ <!-- Optional JS -->
+ <script src="../assets/vendor/chart.js/dist/Chart.min.js"></script>
+ <script src="../assets/vendor/chart.js/dist/Chart.extension.js"></script>
+ <!-- Argon JS -->
+ <script src="../assets/js/argon.js?v=1.2.0"></script>
+
+<script src="../assets/js/time.js"></script>
+<!--login유무 session js 파일 -->
+<script src="../assets/js/sessionCheck.js"></script>
+
+
+
+
+
+ <!--스크립트 부분. 자신의 스크립트 코드로 변경하세요! -->
+ <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+ <script>
+
+   var firebaseEmailAuth; //파이어베이스 email 인증 모듈 전역변수
+   var firebaseDatabase; //파이어베이스 db 모듈 전역변수
+   
+   //var currentTime; // 현재 시간 가져오는 함수, time.js 파일에 따로 빼놓았다.
+
+   var name; //유저 이름
+   var loginUserKey; //로그인한 유저의 부모 key
+   var userInfo; //로그인한 유저의 정보 object type
+   var comment; //유저가 쓴글 내용 저장
+   var url; //사진이 저장될 url
+
+
+ 
+
+	//파이어 베이스 초기화 코드
+	var config = {
+		apiKey: "AIzaSyDQLUtjdMgOLDIZlPusi5YPKBiuQduD9Go",
+		databaseURL: "https://mhazone-mha-default-rtdb.firebaseio.com/",
+        authDomain: "mhazone-mha.firebaseapp.com",
+        projectId: "mhazone-mha",
+        storageBucket: "mhazone-mha.appspot.com",
+        messagingSenderId: "967342331429",
+        appId: "1:967342331429:web:8a5689ea4c254f037951cc",
+        measurementId: "G-Z33QJ15H02"
+	 
+	};
+	//파이어베이스 초기화
+	firebase.initializeApp(config);
+	//인증모듈 객체 가져오기
+	firebaseEmailAuth = firebase.auth();
+	//데이터베이스 모듈객체 가져오기
+	firebaseDatabase = firebase.database();
+
+   </script>
+
+  <script>
+    $(document).ready(function () {
+        //세션체크 함수먼저 호출!
+        userSessionCheck();
+        setTimeout(function() {
+            //내가쓴 글만 가져오는 함수
+            boardLists();
+        }, 1000);
+
+
+    });
+    
+    //수정 버튼이 click 되기를 대기하고 있는 이벤트 함수
+    $(document).on('click', '#changeBtn', function () {
+            changeButtonAction();
+    });
+
+    //수정, 저장하기 버튼 눌렀을 때 작동하는 함수
+    function changeButtonAction(){
+        console.log("버튼이 눌렀습니다");
+        var changeBtn = document.getElementById("changeBtn");
+        var changeBtnText = changeBtn.textContent; //버튼의 text제목을 가져온다.
+        
+        //버튼이 수정하기 버튼이면
+        if (changeBtnText == "수정하기") {
+            console.log("수정하기 버튼 - input file 나타나고 - p 태그 대신 input text 태그로 변경시키기 - 저장버튼 활성화 작업을 시작합니다");
+
+            //input file 붙여주기 - id가 fileButton 인 filetpye의 엘리먼트를 붙여주었다.
+
+
+
+            var html = "<input type=\"file\" id=\"fileButton\" class\"btn-default\"/>";
+            $("#showfile").append(html);
+            console.log("input file 붙여주기 완료");
+
+            //기존에 한줄 메시지 없애주고, 새로운 input text 붙여주기
+            var parent = document.getElementById("statetxtP");
+            var child = document.getElementById("statetxt");
+            parent.removeChild(child);
+            console.log("한줄 메시지가 들어있는 p 태그 삭제 완료");
+
+            //한줄 메시지 적을 textarea 창 활성화
+            var newTextarea = "<textarea class=\"form-control\" rows=\"3\" id=\"comment\"></textarea>";
+            $("#statetxtP").prepend(newTextarea);
+            console.log("한줄 메시지 적을 textarea 창 활성화 완료");
+
+            //저장하기 버튼 활성화
+            changeBtn.textContent = "저장하기"
+            changeBtn.className = "btn btn-success"; //bootstrap 클래스 속성 변경해주기
+        } else {
+
+                console.log("저장 버튼 - input file 사라지게 input text태그 사라지고 p 태그에 넣고 저장버튼 비활성화 수정버튼 활성화를 시작합니다");
+
+                //저장하기 함수 호출
+                console.log("저장하기 함수 호출");
+                var saveChack = imageStateMsgAllSave();
+
+                if (saveChack) {
+                    //활성화된 input file 객체 삭제                    
+                    var parent = document.getElementById("showfile");
+                    var child = document.getElementById("fileButton");
+                    parent.removeChild(child);
+                    console.log("활성화된 input file 객체 삭제 완료");
+
+                    //input text area 객체 삭제해주기
+                    var parentTwo = document.getElementById("statetxtP");
+                    var childTwo = document.getElementById("comment");
+                    parentTwo.removeChild(childTwo);
+                    console.log("활성화된 input text area 객체 삭제 완료");
+
+
+                    //p태그에 수정한 한줄 메시지 넣어주기
+                    var htmlThree = "<p id=\"statetxt\">" + comment + "</p>";
+                    $("#statetxtP").prepend(htmlThree);
+                    console.log("할줄메시지가 들어있는 p 태그 활성화");
+
+                    changeBtn.textContent = "수정하기"
+                    changeBtn.className = "btn btn-default";
+
+                    console.log("저장되었습니다");
+                }          
+
+        }
+    }
+
+
+    //이미지와 한줄글 최종 저장하는 함수!
+    function imageStateMsgAllSave() {
+        console.log("imageStateMsgAllSave로 들어왔습니다");
+
+        //파일을 파이어 베이스 스토리지에 저장하는 로직
+        var fileButton = document.getElementById("fileButton");
+        comment = document.getElementById("comment").value;
+        alert(comment);
+        //수정 버튼을 눌러서 fileButton 객체가 생기면~! 작동
+        if (fileButton) {
+            //fileButton.addEventListener('change', function (e) {
+            console.log("fileButton.addEventListener('change', function(e){ 함수 호출 - 들어왔습니다");
+            var file = fileButton.files[0];
+            //현재 유저 키를 파일이름으로 지정
+            var storageRef = firebase.storage().ref(loginUserKey);
+            var task = storageRef.put(file);
+            // #.핵심
+            //이곳에서 파이어베이스 스토리지에도 저장해주고, 데이터베이스에도 저장해줘야 함.
+            //유저키(부모키)를 레퍼런스로 잡고 url 추가해줌 userSessionCheck() 먼저 실행
+            //사진을 업데이트 하고 현재 상태글 업데이트 하고, 다시 불러오기
+            //비동기 방식으로 움직임
+            //최종완료되었을때 이곳에서 끝난다
+            task.then(function (snapshot) {
+                url = snapshot.downloadURL;
+                console.log("파이어베이스 스토리지에 저장된 주소 =  " + url);
+                //파이어베이스에 이미지를 저장한후 그 url을 바로 가져와서 img 태그에 적용해줌
+                document.querySelector('#myimage').src = url;
+
+                //여기에 user 레퍼런스에 사진 url 저장
+                //선택된 키가 있으면 수정
+                userRef = firebaseDatabase.ref('users/' + loginUserKey);
+                userRef.update({
+                    createtime: currentTime,
+                    name: name,
+                    imgURl: url,
+                    comment: comment
+                });
+                console.log("파이어베이스 데이터베이스 user 레퍼런스에 성공적으로 저장 완료");
+                alert("성공적으로 변경되었습니다.")
+
+            })
+                .catch(function (error) {
+                    console.error(error);
+                    return;
+                });
+
+            //});
+
+        }
+        return true;
+    }
+
+ //감사리스트 가져오기
+ function boardLists() {
+        console.log("땡스 리스트 함수안으로 들어왔습니다")
+
+        var thanksRef = firebaseDatabase.ref('anounymous');
+        thanksRef.on('child_added', on_thanks_list)
+
+
+        var thanksRefz = firebaseDatabase.ref('users');
+        thanksRefz.on('child_added', on_profile_list)
+
+
+        var thanksRefm = firebaseDatabase.ref('notice');
+        thanksRefm.on('child_added', on_notice_list)
+
+    }
+
+
+    function on_profile_list(data) {
+
+
+      if (loginUserKey == data.val().userkey) {
+
+      var key = data.key;
+            var Data = data.val();
+            var comment = Data.comment;
+            var createtime = Data.createtime;
+            var grade = Data.grd;
+            var name = Data.name;
+            var subject = Data.subject;
+		        var userkey = Data.userkey;
+           
+      
+
+            //  <a> 코듭분에 텍스트 표시하기
+            document.getElementById('gradez').innerText = grade + '학년';
+            document.getElementById('hello').innerText = '안녕하세요, ' + name + '님!';
+
+
+      }
+
+    }
+
+
+    function on_notice_list(data) {
+        console.log("on_thanks_list() 함수안으로 들어왔습니다 리스트를 가져오겠습니다")
+        //글 게수만큼 반복된다.
+        //alert(loginUserKey);
+       // alert(data.val().userkey);
+        //헌재 로그인한 유저의 key와 감사리스트 객체의 user key가 일치하는 것 만 가져오기
+        if (loginUserKey == data.val().userkey) {
+            var key = data.key;
+            var Data = data.val();
+            var comment = Data.comment;
+            var createtime = Data.createtime;
+            var name = Data.name;
+            var brdnm = Data.boardno;
+            var subject = Data.subject;
+		        var userkey = Data.userkey;
+            var cmtcount = Data.cmtcount;
+
+  
+
+            var mod_btn_key = key + "mod_btn"
+
+            //감사리스트 동적으로 붙이기
+            var html =
+
+            "<div class=\"card\" id='" + brdnm + "' onclick=\"show_board_page(this.id)\">" +
+                "<div class=\"card-header bg-transparent\">" + "<div class=\"row align-items-center\">" + "<div class=\"col\">" +
+                "<h5 style=\"font-size: 20px\" class=\"h3 mb-0\">" + "<a>" + subject +"</a></h5>" +
+                "<h6 class=\"text-uppercase text-muted ls-1 mb-1\">" + name + " :: " + createtime + "</h6>" +
+                "</br>" +
+                "<a style=\"font-size: 17px\">" + comment + "</a></br></br>" + "<a style=\"color: gray; font-size: 12px; float: left;\">" + "<i class=\"mdi mdi-chat text-blue\"></i>" + " " + cmtcount + "</a>" +
+                "<div align=\"right\" id='" + mod_btn_key + "'>" +
+
+                  " " +
+                "<button type=\"button\" class=\"btn btn-danger\" onclick=\"btn_deletez('" + key + "')\">삭제</button>" +
+                "</div></div>" +
+                "<hr>";
+
+
+            $(".noticeList").prepend(html);
+        }
+
+
+        
+        function show_board_page(key) {
+          location.href="noticecom.html?"+ key;
+        }
+
+
+    }
+
+ 
+
+ 
+        //삭제하기 버튼
+        function btn_deletez(thankKey) {
+            var check = confirm("이 공지를 삭제하시겠습니까?")
+
+            if (check) {
+                removeThankz = firebaseDatabase.ref("notice/" + thankKey);
+
+                removeThankz.remove()
+                    .then(function() {
+                        console.log("Remove succeeded.")
+
+                    })
+                    .catch(function(error) {
+                        console.log("Remove failed: " + error.message)
+                    });
+            }
+
+            window.location.reload();
+        }
+
+
+
+
+
+
+
+
+//땡스리스트 thanks 테이블의 thanks 키 들을 연속적으로 가져온다.
+function on_thanks_list(data) {
+        console.log("on_thanks_list() 함수안으로 들어왔습니다 리스트를 가져오겠습니다")
+        //글 게수만큼 반복된다.
+        //alert(loginUserKey);
+       // alert(data.val().userkey);
+        //헌재 로그인한 유저의 key와 감사리스트 객체의 user key가 일치하는 것 만 가져오기
+        if (loginUserKey == data.val().userkey) {
+            var key = data.key;
+            var Data = data.val();
+            var comment = Data.comment;
+            var createtime = Data.createtime;
+            var name = Data.name;
+            var brdnm = Data.boardno;
+            var subject = Data.subject;
+		        var userkey = Data.userkey;
+            var cmtcount = Data.cmtcount;
+
+  
+
+            var mod_btn_key = key + "mod_btn"
+
+            //감사리스트 동적으로 붙이기
+            var html =
+
+            "<div class=\"card\" id='" + brdnm + "' onclick=\"show_board_page(this.id)\">" +
+                "<div class=\"card-header bg-transparent\">" + "<div class=\"row align-items-center\">" + "<div class=\"col\">" +
+                "<h5 style=\"font-size: 20px\" class=\"h3 mb-0\">" + "<a>" + subject +"</a></h5>" +
+                "<h6 class=\"text-uppercase text-muted ls-1 mb-1\">" + name + " :: " + createtime + "</h6>" +
+                "</br>" +
+                "<a style=\"font-size: 17px\">" + comment + "</a></br></br>" + "<a style=\"color: gray; font-size: 12px; float: left;\">" + "<i class=\"mdi mdi-chat text-blue\"></i>" + " " + cmtcount + "</a>" +
+                "<div align=\"right\" id='" + mod_btn_key + "'>" +
+
+                  " " +
+                "<button type=\"button\" class=\"btn btn-danger\" onclick=\"btn_delete('" + key + "')\">삭제</button>" +
+                "</div></div>" +
+                "<hr>";
+
+
+            $(".boardList").prepend(html);
+        }
+
+
+        
+        
+
+
+  
+        function show_board_page(key) {
+       
+          location.href="comments.html?"+ key;
+          
+
+        }
+
+
+
+
+
+    }
+
+ 
+
+ 
+        //삭제하기 버튼
+        function btn_delete(thankKey) {
+            var check = confirm("이 글을 삭제하시겠습니까?")
+
+            if (check) {
+                removeThank = firebaseDatabase.ref("anounymous/" + thankKey);
+
+                removeThank.remove()
+                    .then(function() {
+                        console.log("Remove succeeded.")
+
+                    })
+                    .catch(function(error) {
+                        console.log("Remove failed: " + error.message)
+                    });
+            }
+
+            window.location.reload();
+        }
+
+</script>
+
+
+
   <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
   <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
