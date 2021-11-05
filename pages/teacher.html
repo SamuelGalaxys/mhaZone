@@ -24,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
     <meta name="author" content="Creative Tim">
-    <title>마한아존 - 마닐라한국아카데미 커뮤니티</title>
+    <title>mhaZone - Teacher's timetable</title>
     <!-- Favicon -->
     <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png">
     <!-- Fonts -->
@@ -267,6 +267,9 @@
 
               
               <a class="btn btn-primary" id="bellbutton" margin="right" style="background-color: #F5E8C7; color: rgb(49, 49, 49); "><i class="mdi mdi-bell text-black"></i>Click to set bell time for LIVE class.</a>
+              
+              <a href="http://mha.or.kr" class="btn btn-primary" margin="right" style="background-color: #ffffff; color: rgb(0, 0, 0); float: right;"><i class="mdi mdi-earth text-black"></i> 마닐라한국아카데미</a>
+              <a href="https://www.facebook.com/1994MHA2017" class="btn btn-primary" margin="right" style="background-color: #ffffff; color: rgb(10, 6, 255); float: right;"><i class="mdi mdi-facebook-box text-black"></i> facebook</a>
 
 
 
@@ -2690,7 +2693,7 @@ if (week[now.getDay()] == "FRI") {
 
         //삭제하기 버튼
         function btn_deletez(thankKey) {
-            var check = confirm("이 시간표를 삭제하시겠습니까?")
+            var check = confirm("Are you sure to delete this timetable?")
 
             if (check) {
                 removeThankz = firebaseDatabase.ref("timetables/teacher/" + thankKey);
@@ -2712,7 +2715,7 @@ if (week[now.getDay()] == "FRI") {
 
 
 
-        
+
 
 
 
