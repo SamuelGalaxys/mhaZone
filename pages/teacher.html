@@ -1113,19 +1113,17 @@ var name = Data.name;
       
        
                         
-                      "</table></div>" + "</br>"+ "</br>"+ "</br>"+ "</br>"+ "</br>" ;
+                      "</table></div>" + "</br>"+ "<button style=\"float:right\" type=\"button\" class=\"btn btn-danger\" onclick=\"btn_deletez('" + key + "')\">Delete 삭제</button>" +
+                      "</br>"+ "</br>"+ "</br>"+ "</br>"+ "</br>"+ "</br>" ;
 
        //   $(".thanksList").append(html);   //아래로 붙이기
           $(".TableList").prepend(html);   //위로 붙이기
 
 
+ 
 
 
-
-
-
-
-
+ 
 
 
 
@@ -2684,6 +2682,37 @@ if (week[now.getDay()] == "FRI") {
 
 }
 
+
+
+
+
+
+
+        //삭제하기 버튼
+        function btn_deletez(thankKey) {
+            var check = confirm("이 시간표를 삭제하시겠습니까?")
+
+            if (check) {
+                removeThankz = firebaseDatabase.ref("timetables/teacher/" + thankKey);
+
+                removeThankz.remove()
+                    .then(function() {
+                        console.log("Remove succeeded.")
+
+                    })
+                    .catch(function(error) {
+                        console.log("Remove failed: " + error.message)
+                    });
+            }
+
+            window.location.reload();
+        }
+
+
+
+
+
+        
 
 
 
