@@ -377,8 +377,8 @@
             <div class="card-header bg-transparent">
               <div class="row align-items-center">
                 <div class="col">
-                  <h5 style="color: #ffffff; font-size: 22px" class="h3 mb-0">2022 학생회 보궐 선거 안내.</h5>
-                  <h6 class="text-light text-uppercase ls-1 mb-1">Overview</h6>
+                  <a id="adtitle" style="color: #ffffff; font-size: 22px" class="h3 mb-0">2022 학생회 보궐 선거 안내.</a>
+                  <h6 id="adname" class="text-light text-uppercase ls-1 mb-1">Overview</h6>
                 </div>
 
                 <div class="col">
@@ -389,8 +389,8 @@
               </div>
             </div>
             <div class="card-body">
-              <a style="color: white;">마한아 학생에게만 표시되는 게시판입니다.
-                내용 입력.</br> 이곳은 공지판입니다.</a>
+              <a id="adtext" style="color: white;">마한아 학생에게만 표시되는 게시판입니다.
+                내용 입력. 이곳은 공지판입니다.</a>
             </div>
           </div>
 
@@ -848,6 +848,9 @@
 
 
 
+            document.getElementById('adtitle').innerText = subject;
+            document.getElementById('adtext').innerText = comment;
+            document.getElementById('adname').innerText = name + '- 최근 공지';
 
     
 		//리스트 동적으로 붙이기

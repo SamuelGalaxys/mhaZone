@@ -813,6 +813,7 @@
 
 		//thanks 라는 테이블을 만들고 하위 데이터에 유저 아이디를 넣어준다. 그곳에 push로 가상의 키를 넣고, 객체를 넣어준다.!!!!
 		var TMclasstable = firebaseDatabase.ref("timetables/teacher");
+		var TMclasstableZ = TMclasstable.push(); // 해당 객체의 key 값이 자동으로 생성된다.
 
     var TMclasstableLOG = firebaseDatabase.ref("logs/timetables/teacher");
     var TMLOG = TMclasstableLOG.push(); // 해당 객체의 key 값이 자동으로 생성된다.
@@ -1014,7 +1015,7 @@
       
 		};
 		//위에서 thankRef.push()로 만들어진 key아래 위치에 저장해준다.
-		TMclasstable.set(obj);
+		TMclasstableZ.set(obj);
 		TMLOG.set(obj);
 
     

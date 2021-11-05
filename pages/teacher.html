@@ -748,7 +748,7 @@ function boardList() {
     //alert(loginUserKey)
     //글이 저장된 레퍼런스 값 가져오기
     var thanksRef = firebaseDatabase.ref('timetables/teacher');
-    thanksRef.on('value', on_thanks_list)
+    thanksRef.on('child_added', on_thanks_list)
 
     var POPUPIF = firebaseDatabase.ref('set/popup');
     POPUPIF.on('value', on_popup_list)
@@ -761,7 +761,7 @@ function boardList() {
     //alert(loginUserKey)
     //글이 저장된 레퍼런스 값 가져오기
     var thanksRef = firebaseDatabase.ref('timetables/teacher');
-    thanksRef.on('value', on_thanks_list)
+    thanksRef.on('child_added', on_thanks_list)
 
     var POPUPIF = firebaseDatabase.ref('set/popup');
     POPUPIF.on('value', on_popup_list)
@@ -804,16 +804,20 @@ function on_popup_list(data) {
  
 function on_thanks_list(data) {
 
+
+  var key = data.key;
+
+var Data = data.val();
+var comment = Data.comment;
+var createtime = Data.createtime;
+var name = Data.name;
+
+
   if (loginUserKey == data.val().userkey) {
 
 
   console.log("on_thanks_list() 함수안으로 들어왔습니다 리스트를 가져오겠습니다")
-  var key = data.key;
-
-  var Data = data.val();
-  var comment = Data.comment;
-  var createtime = Data.createtime;
-  var name = Data.name;
+ 
 
 
   var mon0 = Data.mon0;
