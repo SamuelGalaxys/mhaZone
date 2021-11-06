@@ -313,7 +313,7 @@
               <div class="col-lg-3 order-lg-2">
                 <div class="card-profile-image">
                   <a href="#">
-                    <img id="myimage" style="background: rgba(255, 255, 255, 0.801);" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/ManilHankuk.png/300px-ManilHankuk.png" class="rounded-circle">
+                    <img id="myimage" style="background: rgb(255, 255, 255);" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/ManilHankuk.png/300px-ManilHankuk.png" class="rounded-circle">
                     <div id="showfile"></div>
 
                   </a>
@@ -334,18 +334,27 @@
               <div class="row">
                 <div class="col">
                   <div class="card-profile-stats d-flex justify-content-center">
-                    <!-- <div>
-                      <span class="heading"><a id="inf1">0</a></span>
-                      <span class="description">게시물</span>
+                    
+                    
+                    
+                    <div>
+                      <span class="heading"><a style="font-size: 20px;" id="noticeTK">0</a></span>
+                      <span class="description">공지쿠키</span>
                     </div>
                     <div>
-                      <span class="heading"><a id="inf2">0</a></span>
-                      <span class="description">기여도</span>
+                      <span class="heading"><a style="font-size: 20px;" id="storeTK">0</a></span>
+                      <span class="description">매점티켓</span>
                     </div>
                     <div>
-                      <span class="heading"><a id="inf3">0</a></span>
-                      <span class="description">씨앗들</span>
-                    </div> -->
+                      <span class="heading"><a style="font-size: 20px;" id="inf3">0</a></span>
+                      <span class="description">내기여도</span>
+                    </div> 
+                    
+
+
+
+
+
                   </div>
                 </div>
               </div>
@@ -353,11 +362,15 @@
                 <h5 class="h3">
                   <a id="namesz"></a>
                 </h5>
+              </br> 
                 <div class="h5 font-weight-300">
                   <i class="ni location_pin mr-2"></i><a id="gradez"></a>
+                </br>
+                  <!-- <i class="ni location_pin mr-2"></i><a id="personalid"></a> -->
+
                 </div>
                 <div class="h5 mt-4">
-                  <i class="ni business_briefcase-24 mr-2"></i><a id="namewrite">mhaZone Profile</a>
+                  <i class="ni business_briefcase-24 mr-2"></i><a id="namewrite">MANILA HANKUK ACADEMY</a>
                 </div>
                 <div>
                   <i class="ni education_hat mr-2"></i>
@@ -722,6 +735,7 @@
             document.getElementById('gradez').innerText = grade + '학년';
             document.getElementById('hello').innerText = '안녕하세요, ' + name + '님!';
             document.getElementById('namesz').innerText = name;
+          //  document.getElementById('personalid').innerText = userkey;
 
 
       }
